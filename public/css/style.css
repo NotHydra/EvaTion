@@ -493,12 +493,12 @@ table th {
 /* Bulma Elements */
 .box {
   background-color: white;
-  border-radius: 6px;
+  border-radius: 0px;
   -webkit-box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
           box-shadow: 0 0.5em 1em -0.125em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
   color: #4a4a4a;
   display: block;
-  padding: 1.25rem;
+  padding: 0px;
 }
 
 a.box:hover, a.box:focus {
@@ -5437,11 +5437,11 @@ button.dropdown-item.is-active {
 }
 
 .menu-label:not(:first-child) {
-  margin-top: 1em;
+  margin-top: 0px;
 }
 
 .menu-label:not(:last-child) {
-  margin-bottom: 1em;
+  margin-bottom: 0px;
 }
 
 .message {
@@ -12925,5 +12925,34 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
 .footer {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem;
+}
+
+#sidebar {
+  width: 12rem;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+}
+
+#sidebar #sidebar-brand {
+  height: 6rem;
+  border-bottom: 1px solid #363636;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sidebar #copyright-container {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  border-top: 1px solid #363636;
 }
 /*# sourceMappingURL=style.css.map */
