@@ -15,7 +15,7 @@ const list_of_page_attribute: Array<Array<string>> = [
     ['setting', 'fa-gear']
 ];
 
-const list_of_stat_attribute = [
+const list_of_stat_attribute: Array<Array<string>> = [
     ['People', 'fa-user-group', 'info'],
     ['Prosperity', 'fa-face-smile', 'success'],
     ['Crime Rate', 'fa-radiation', 'danger'],
