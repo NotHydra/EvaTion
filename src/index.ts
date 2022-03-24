@@ -15,12 +15,19 @@ const list_of_page_attribute: Array<Array<string>> = [
     ['setting', 'fa-gear']
 ];
 
+const list_of_stat_attribute = [
+    ['People', 'fa-user-group', 'info'],
+    ['Prosperity', 'fa-face-smile', 'success'],
+    ['Crime Rate', 'fa-radiation', 'danger'],
+    ['Money', 'fa-coins', 'warning']
+];
+
 app.get('/', (req: Request, res: Response) => {
     res.redirect('/home');
 });
 
 app.get('/home', (req: Request, res: Response) => {
-    res.render('home', { title: 'Home', list_of_page_attribute });
+    res.render('home', { title: 'Home', list_of_page_attribute, list_of_stat_attribute });
 });
 
 app.get('/stats', (req: Request, res: Response) => {
