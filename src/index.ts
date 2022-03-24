@@ -8,11 +8,11 @@ app.use(express.static('public'));
 const port: any = process.env.PORT || 5000;
 
 const list_of_page_attribute: Array<Array<string>> = [
-    ["home", "fa-home"],
-    ["stats", "fa-bars-progress"],
-    ["upgrade", "fa-angles-up"],
-    ["history", "fa-list-ul"],
-    ["setting", "fa-gear"]
+    ['home', 'fa-home'],
+    ['stats', 'fa-bars-progress'],
+    ['upgrade', 'fa-angles-up'],
+    ['history', 'fa-list-ul'],
+    ['setting', 'fa-gear']
 ];
 
 app.get('/', (req: Request, res: Response) => {

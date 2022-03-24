@@ -7,5 +7,42 @@
     <body>
         <%- include('partials/nav'); %>
         
+        <div id="main-container" class="container is-fluid">
+            <section class="section mt-2 pt-2">
+                <div class="columns mr-6">
+                    <% 
+                        const list_of_stat_attribute = [
+                            ['People', 'fa-user-group', 'info'],
+                            ['Prosperity', 'fa-face-smile', 'success'],
+                            ['Crime Rate', 'fa-radiation', 'danger'],
+                            ['Money', 'fa-coins', 'warning']
+                        ];
+                    %> 
+
+                    <% for(i = 0; i < list_of_stat_attribute.length; i++) {%>
+                        <div class="column">
+                            <div class="card">
+                                <div class="card-content">
+                                  <div class="content">
+                                    <span class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i][2] %> content-icon-title">
+                                        <span class="icon">
+                                            <i class="fa-solid <%= list_of_stat_attribute[i][1] %>"></i>
+                                        </span>
+    
+                                        <div><%= list_of_stat_attribute[i][0] %></div>
+                                    </span>
+                                    
+                                    <div class="content-progress" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+                                        <div style="position: absolute; color: white; margin-bottom: 0.15rem;">50/100 (50%)</div>
+                                        <progress class="progress is-<%= list_of_stat_attribute[i][2] %> is-medium" value="50" max="100">100%</progress>
+                                    </div>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+            </section>
+        </div>
     </body>
 </html>
