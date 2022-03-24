@@ -4,15 +4,22 @@
     </div>
     
     <ul class="menu-list">
-        <li><a href="home">Home</a></li>
-        <li><a href="stats">Stats</a></li>
-        <li><a href="upgrade">Upgrade</a></li>
-        <li><a href="history">History</a></li>
-        <li><a href="setting">Setting</a></li>
+        <% for(i = 0; i < list_of_page_attribute.length; i++){ %>
+            <li>
+                <a href="<%= list_of_page_attribute[i][0] %>">
+                    <span class="icon-text">
+                        <span class="icon">
+                            <i class="fas <%= list_of_page_attribute[i][1] %>"></i>
+                        </span>
+                        
+                        <span><%= list_of_page_attribute[i][0].charAt(0).toUpperCase() + list_of_page_attribute[i][0].slice(1) %></span>
+                    </span>
+                </a>
+            </li>
+        <% } %>
     </ul>
     
     <div id="copyright-container" class="pt-2 pb-2">
         <p class="is-size-6">Copyright © 2022 XI-RPL</p>
     </div>
-    
 </div>
