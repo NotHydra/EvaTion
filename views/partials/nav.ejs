@@ -4,6 +4,16 @@
     </div>
     
     <ul class="menu-list">
+        <%
+            const list_of_page_attribute = [
+                ['home', 'fa-home'],
+                ['stats', 'fa-bars-progress'],
+                ['upgrade', 'fa-angles-up'],
+                ['history', 'fa-list-ul'],
+                ['setting', 'fa-gear']
+            ];
+        %>
+
         <% for(i = 0; i < list_of_page_attribute.length; i++){ %>
             <li>
                 <a href="<%= list_of_page_attribute[i][0] %>">

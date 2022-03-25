@@ -10,6 +10,15 @@
         <div id="main-container" class="container is-fluid">
             <section class="section mt-2 pt-2">
                 <div class="columns mr-6">
+                    <%
+                        const list_of_stat_attribute: Array<Array<string>> = [
+                            ['People', 'fa-user-group', 'info'],
+                            ['Prosperity', 'fa-face-smile', 'success'],
+                            ['Crime Rate', 'fa-radiation', 'danger'],
+                            ['Money', 'fa-coins', 'warning']
+                        ];
+                    %>
+                    
                     <% for(i = 0; i < list_of_stat_attribute.length; i++) {%>
                         <div class="column">
                             <div class="card">

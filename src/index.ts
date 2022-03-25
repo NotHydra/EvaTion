@@ -7,43 +7,28 @@ app.use(express.static('public'));
 
 const port: any = process.env.PORT || 5000;
 
-const list_of_page_attribute: Array<Array<string>> = [
-    ['home', 'fa-home'],
-    ['stats', 'fa-bars-progress'],
-    ['upgrade', 'fa-angles-up'],
-    ['history', 'fa-list-ul'],
-    ['setting', 'fa-gear']
-];
-
-const list_of_stat_attribute: Array<Array<string>> = [
-    ['People', 'fa-user-group', 'info'],
-    ['Prosperity', 'fa-face-smile', 'success'],
-    ['Crime Rate', 'fa-radiation', 'danger'],
-    ['Money', 'fa-coins', 'warning']
-];
-
 app.get('/', (req: Request, res: Response) => {
     res.redirect('/home');
 });
 
 app.get('/home', (req: Request, res: Response) => {
-    res.render('home', { title: 'Home', list_of_page_attribute, list_of_stat_attribute });
+    res.render('home', { title: 'Home' });
 });
 
 app.get('/stats', (req: Request, res: Response) => {
-    res.render('stats', { title: 'Stats', list_of_page_attribute });
+    res.render('stats', { title: 'Stats' });
 });
 
 app.get('/upgrade', (req: Request, res: Response) => {
-    res.render('upgrade', { title: 'Upgrade', list_of_page_attribute });
+    res.render('upgrade', { title: 'Upgrade' });
 });
 
 app.get('/history', (req: Request, res: Response) => {
-    res.render('history', { title: 'History', list_of_page_attribute });
+    res.render('history', { title: 'History' });
 });
 
 app.get('/setting', (req: Request, res: Response) => {
-    res.render('setting', { title: 'Setting', list_of_page_attribute });
+    res.render('setting', { title: 'Setting' });
 });
 
 app.listen(port, () => {console.log(`Listening in http://localhost:${port}`);});
