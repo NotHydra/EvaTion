@@ -7,9 +7,9 @@
     <body>
         <%- include('partials/nav'); %>
         
-        <div id="main-container" class="container is-fluid">
-            <section class="section mt-2 pt-2">
-                <div class="columns mr-6">
+        <div id="main-container" class="container is-fluid mb-0 pb-0">
+            <section class="section mt-2 pt-2 mb-0 pb-0">
+                <div class="columns mr-6 home-first-row-card">
                     <%
                         const list_of_stat_attribute = [
                             ['People', 'fa-user-group', 'info'],
@@ -24,16 +24,16 @@
                             <div class="card">
                                 <div class="card-content">
                                   <div class="content">
-                                    <span class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i][2] %> content-icon-title">
-                                        <span class="icon">
+                                    <div class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i][2] %>">
+                                        <div class="icon">
                                             <i class="fa-solid <%= list_of_stat_attribute[i][1] %>"></i>
-                                        </span>
+                                        </div>
     
-                                        <div><%= list_of_stat_attribute[i][0] %></div>
-                                    </span>
+                                        <div class="text"><%= list_of_stat_attribute[i][0] %></div>
+                                    </div>
                                     
-                                    <div class="content-progress" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-                                        <div style="position: absolute; color: white; margin-bottom: 0.15rem;">50/100 (50%)</div>
+                                    <div class="content-progress">
+                                        <div class="text">50/100 (50%)</div>
                                         <progress class="progress is-<%= list_of_stat_attribute[i][2] %> is-medium" value="50" max="100">100%</progress>
                                     </div>
                                   </div>
@@ -41,6 +41,76 @@
                             </div>
                         </div>
                     <% } %>
+                </div>
+
+                <div class="columns mr-6 home-second-row-card">
+                    <div class="column is-three-quarters">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="title is-4 m-0 p-0 mb-1">
+                                    Crime Case
+                                </div>
+
+                                <div class="content has-text-justified pr-1">
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore inventore, ducimus necessitatibus atque ea minus recusandae voluptas quisquam earum quis eaque ipsum deleniti ad error accusamus rem nesciunt rerum! Sit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum similique nulla adipisci cum expedita alias sed. Saepe modi, obcaecati quam eum, tenetur quaerat nesciunt ut cum suscipit debitis expedita ex!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum doloribus commodi cumque deserunt voluptatem iure quae magni. Optio deleniti nobis explicabo assumenda saepe similique, sapiente temporibus non quas laborum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae fuga laboriosam quas blanditiis eaque, distinctio explicabo sunt qui sequi. Est minima ex laborum explicabo enim, itaque doloremque et laboriosam.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore inventore, ducimus necessitatibus atque ea minus recusandae voluptas quisquam earum quis eaque ipsum deleniti ad error accusamus rem nesciunt rerum! Sit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum similique nulla adipisci cum expedita alias sed. Saepe modi, obcaecati quam eum, tenetur quaerat nesciunt ut cum suscipit debitis expedita ex!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum doloribus commodi cumque deserunt voluptatem iure quae magni. Optio deleniti nobis explicabo assumenda saepe similique, sapiente temporibus non quas laborum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae fuga laboriosam quas blanditiis eaque, distinctio explicabo sunt qui sequi. Est minima ex laborum explicabo enim, itaque doloremque et laboriosam.
+                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore inventore, ducimus necessitatibus atque ea minus recusandae voluptas quisquam earum quis eaque ipsum deleniti ad error accusamus rem nesciunt rerum! Sit.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum similique nulla adipisci cum expedita alias sed. Saepe modi, obcaecati quam eum, tenetur quaerat nesciunt ut cum suscipit debitis expedita ex!
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum doloribus commodi cumque deserunt voluptatem iure quae magni. Optio deleniti nobis explicabo assumenda saepe similique, sapiente temporibus non quas laborum.
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae fuga laboriosam quas blanditiis eaque, distinctio explicabo sunt qui sequi. Est minima ex laborum explicabo enim, itaque doloremque et laboriosam.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="title is-4 m-0 p-0 mb-1">
+                                    Crime History
+                                </div>
+
+                                <div class="content has-text-justified pr-1">
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi impedit molestiae minus architecto quidem adipisci quaerat possimus assumenda explicabo quod ea repudiandae harum quo, asperiores animi nam similique laudantium.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi impedit molestiae minus architecto quidem adipisci quaerat possimus assumenda explicabo quod ea repudiandae harum quo, asperiores animi nam similique laudantium.
+                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi impedit molestiae minus architecto quidem adipisci quaerat possimus assumenda explicabo quod ea repudiandae harum quo, asperiores animi nam similique laudantium.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="columns mr-6 home-third-row-card">
+                    <div class="column">
+                        <div class="card has-background-success card-button" id="card-button-innocent">
+                            <div class="card-content">
+                                <div class="title is-4 has-text-white">Innocent</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="column">
+                        <div class="card has-background-danger card-button" id="card-button-guilty">
+                            <div class="card-content">
+                                <div class="title is-4 has-text-white">Guilty</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="column is-one-quarter">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="title is-5 m-1 p-0">3 Out of 5 Cases for Today</div>
+                                <div class="button is-info m-0 p-0">Go to Next Day</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

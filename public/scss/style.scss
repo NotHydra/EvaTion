@@ -6,8 +6,18 @@ $warning: #FFBB00;
 
 @import "../../node_modules/bulma/bulma.sass";
 
-body{
-    height: 10000px;
+::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #A4A4A4;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background-color: #919191;
 }
 
 #sidebar{
@@ -43,10 +53,81 @@ body{
 #main-container{
     margin-left: 8rem;
 
-    .content-icon-title{
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+    .home-first-row-card{
+        .card{
+            height: 110px;
+
+            .icon-text{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+    
+                .text{
+                    white-space: nowrap;
+                }
+            }
+    
+            .content-progress{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+    
+                .text{
+                    color: white;
+    
+                    position: absolute;
+                    
+                    margin-bottom: 0.15rem;
+                }
+            }
+        }
+    }
+
+    .home-second-row-card{
+        .card{
+            height: 475px;
+
+            .content{
+                height: 395px;
+
+                overflow-y: auto;
+            }
+        }
+    }
+
+    .home-third-row-card{
+        .card{
+            height: 90px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .card-content{
+                display: flex;
+                flex-direction: column;
+   
+            }
+        }
+
+        .card-button{
+            user-select: none;
+
+            cursor: pointer;
+        }
+
+        #card-button-innocent{
+            &:hover{
+                background-color: #50C08E !important;
+            }
+        }
+
+        #card-button-guilty{
+            &:hover{
+                background-color: #E74566 !important;
+            }
+        }
     }
 }
