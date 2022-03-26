@@ -1,10 +1,5 @@
 @charset "utf-8";
-
-$menu-label-spacing: 0px;
-$progress-bar-background-color: #A4A4A4;
-$warning: #FFBB00;
-
-@import "../../node_modules/bulma/bulma.sass";
+@import url("https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css");
 
 ::-webkit-scrollbar{
     width: 6px;
@@ -20,6 +15,10 @@ $warning: #FFBB00;
     background-color: #919191;
 }
 
+#yellow{
+
+}
+
 #sidebar{
     width: 12rem;
 
@@ -31,6 +30,9 @@ $warning: #FFBB00;
 
     #sidebar-brand{
         height: 6rem;
+
+        margin-bottom: 0;
+
         border-bottom: 1px solid hsl(0, 0%, 21%);
 
         display: flex;
@@ -82,6 +84,33 @@ $warning: #FFBB00;
                     position: absolute;
                     
                     margin-bottom: 0.15rem;
+                }
+
+                progress{
+                    &::-webkit-progress-bar{
+                        background-color: #A4A4A4;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        #warning_card{
+            .icon-text{
+                div{
+                    color: #FFBB00 !important;
+                }
+            }
+
+            progress{
+                color: #FFBB00 !important;
+
+                &::-moz-progress-bar{
+                    background: #FFBB00 !important;
+                }
+
+                &::-webkit-progress-value{
+                    background: #FFBB00 !important;
                 }
             }
         }

@@ -14,63 +14,62 @@
         "current_day": 2,
         "total_crime_case" : 8,
         "crime_case": [{
-                "day": 1,
-                "case_current" : 5,
-                "case_max" : 5,
-                "case": [{
-                    "case_id": 1,
-                    "case_name": "name1",
-                    "case_age": "age1",
-                    "case_done": true
-                },
-                {
-                    "case_id": 2,
-                    "case_name": "name2",
-                    "case_age": "age2",
-                    "case_done": true
-                },
-                {
-                    "case_id": 3,
-                    "case_name": "name3",
-                    "case_age": "age3",
-                    "case_done": true
-                },
-                {
-                    "case_id": 4,
-                    "case_name": "name4",
-                    "case_age": "age4",
-                    "case_done": true
-                },
-                {
-                    "case_id": 5,
-                    "case_name": "name5",
-                    "case_age": "age5",
-                    "case_done": true
-                }]
+            "day": 1,
+            "case_current" : 5,
+            "case_max" : 5,
+            "case": [{
+                "case_id": 1,
+                "case_name": "name1",
+                "case_age": "age1",
+                "case_done": true
             },
             {
-                "day": 2,
-                "case_current" : 2,
-                "case_max" : 3,
-                "case": [{
-                    "case_id": 6,
-                    "case_name": "name6",
-                    "case_age": "age6",
-                    "case_done": true
-                },
-                {
-                    "case_id": 7,
-                    "case_name": "name7",
-                    "case_age": "age7",
-                    "case_done": true
-                },
-                {
-                    "case_id": 8,
-                    "case_name": "name8",
-                    "case_age": "age8",
-                    "case_done": false
-                }]
-            }
-        ]
+                "case_id": 2,
+                "case_name": "name2",
+                "case_age": "age2",
+                "case_done": true
+            },
+            {
+                "case_id": 3,
+                "case_name": "name3",
+                "case_age": "age3",
+                "case_done": true
+            },
+            {
+                "case_id": 4,
+                "case_name": "name4",
+                "case_age": "age4",
+                "case_done": true
+            },
+            {
+                "case_id": 5,
+                "case_name": "name5",
+                "case_age": "age5",
+                "case_done": true
+            }]
+        },
+        {
+            "day": 2,
+            "case_current" : 2,
+            "case_max" : 3,
+            "case": [{
+                "case_id": 6,
+                "case_name": "name6",
+                "case_age": "age6",
+                "case_done": true
+            },
+            {
+                "case_id": 7,
+                "case_name": "name7",
+                "case_age": "age7",
+                "case_done": true
+            },
+            {
+                "case_id": 8,
+                "case_name": "name8",
+                "case_age": "age8",
+                "case_done": false
+            }]
+        }]
     }
 ]
