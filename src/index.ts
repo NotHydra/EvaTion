@@ -8,6 +8,7 @@ app.use(express.static('public'));
 
 const port: any = process.env.PORT || 5000;
 const user_data = JSON.parse(fs.readFileSync('./json/users.json', 'utf-8'));
+const case_data = JSON.parse(fs.readFileSync('./json/cases.json', 'utf-8'));
 
 app.get('/', (req: Request, res: Response) => {
     res.redirect('/home');

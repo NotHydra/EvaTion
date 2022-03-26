@@ -12,29 +12,29 @@
                 <div class="columns mr-6 home-first-row-card">
                     <%
                         const list_of_stat_attribute = [
-                            ['Penduduk', 'fa-user-group', 'info', user_data[0].people_current, user_data[0].people_max, (user_data[0].people_current / user_data[0].people_max) * 100],
-                            ['Kemakmuran', 'fa-face-smile', 'success',  user_data[0].prosperity_current, user_data[0].prosperity_max, (user_data[0].prosperity_current / user_data[0].prosperity_max) * 100],
-                            ['Kriminalitas', 'fa-radiation', 'danger',  user_data[0].crime_rate_current, user_data[0].crime_rate_max, (user_data[0].crime_rate_current / user_data[0].crime_rate_max) * 100],
-                            ['Uang', 'fa-coins', 'warning',  user_data[0].money_current, user_data[0].money_max, (user_data[0].money_current / user_data[0].money_max) * 100]
+                            {display : "Penduduk", icon : "fa-user-group", color : "info", current : user_data[0].people_current, max : user_data[0].people_max, percentage : (user_data[0].people_current / user_data[0].people_max) * 100},
+                            {display : "Kemakmuran", icon : "fa-face-smile", color : "success", current : user_data[0].prosperity_current, max : user_data[0].prosperity_max, percentage : (user_data[0].prosperity_current / user_data[0].prosperity_max) * 100},
+                            {display : "Kriminalitas", icon : "fa-radiation", color : "danger", current : user_data[0].crime_rate_current, max : user_data[0].crime_rate_max, percentage : (user_data[0].crime_rate_current / user_data[0].crime_rate_max) * 100},
+                            {display : "Keuangan", icon : "fa-coins", color : "warning", current : user_data[0].money_current, max : user_data[0].money_max, percentage : (user_data[0].money_current / user_data[0].money_max) * 100}
                         ];
                     %>
                     
                     <% for(i = 0; i < list_of_stat_attribute.length; i++) {%>
                         <div class="column">
-                            <div class="card" id="<%= list_of_stat_attribute[i][2].toLowerCase() %>_card">
+                            <div class="card" id="<%= list_of_stat_attribute[i].color %>_card">
                                 <div class="card-content">
                                   <div class="content">
-                                    <div class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i][2] %>">
+                                    <div class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i].color %>">
                                         <div class="icon">
-                                            <i class="fa-solid <%= list_of_stat_attribute[i][1] %>"></i>
+                                            <i class="fa-solid <%= list_of_stat_attribute[i].icon %>"></i>
                                         </div>
     
-                                        <div class="text"><%= list_of_stat_attribute[i][0] %></div>
+                                        <div class="text"><%= list_of_stat_attribute[i].display %></div>
                                     </div>
                                     
                                     <div class="content-progress">
-                                        <div class="text"><%= list_of_stat_attribute[i][3] %>/<%= list_of_stat_attribute[i][4] %></div>
-                                        <progress class="progress is-<%= list_of_stat_attribute[i][2] %> is-medium" value="<%= list_of_stat_attribute[i][5] %>" max="100">100%</progress>
+                                        <div class="text"><%= list_of_stat_attribute[i].current %>/<%= list_of_stat_attribute[i].max %></div>
+                                        <progress class="progress is-<%= list_of_stat_attribute[i].color %> is-medium" value="<%= list_of_stat_attribute[i].percentage %>" max="100"><%= list_of_stat_attribute[i].percentage %>%</progress>
                                     </div>
                                   </div>
                                 </div>
@@ -47,7 +47,7 @@
                     <div class="column is-three-quarters">
                         <div class="card">
                             <div class="card-content">
-                                <div class="title is-4 m-0 p-0 mb-1">
+                                <div class="title is-4 m-0 p-0 mb-1" style="white-space: nowrap;">
                                     Kasus Kriminal
                                 </div>
 
@@ -72,7 +72,7 @@
                     <div class="column">
                         <div class="card">
                             <div class="card-content">
-                                <div class="title is-4 m-0 p-0 mb-1">
+                                <div class="title is-4 m-0 p-0 mb-1" style="white-space: nowrap;">
                                     Sejarah Kriminal
                                 </div>
 
@@ -111,7 +111,7 @@
                                     let case_max = user_data[0].crime_case[user_data[0].crime_case.length - 1].case_max;                          
                                 %>
 
-                                <div class="title is-5"><%= case_current %> dari <%= case_max %> Kasus Hari Ini</div>
+                                <div class="title is-5 has-text-centered"><%= case_current %> dari <%= case_max %> Kasus Hari Ini</div>
                             </div>
                         </div>
                     </div>

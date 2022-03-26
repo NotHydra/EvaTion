@@ -6,23 +6,23 @@
     <ul class="menu-list">
         <%
             const list_of_page_attribute = [
-                ['Utama', 'home', 'fa-home'],
-                ['Informasi', 'stats', 'fa-bars-progress'],
-                ['Peningkatan', 'upgrade', 'fa-angles-up'],
-                ['Berita', 'history', 'fa-list-ul'],
-                ['Pengaturan', 'setting', 'fa-gear']
+                {display : "Utama", link : "home", icon : "fa-home"},
+                {display : "Informasi", link : "stats", icon : "fa-bars-progress"},
+                {display : "Peningkatan", link : "upgrade", icon : "fa-angles-up"},
+                {display : "Berita", link : "history", icon : "fa-list-ul"},
+                {display : "Pengaturan", link : "setting", icon : "fa-gear"}
             ];
         %>
 
         <% for(i = 0; i < list_of_page_attribute.length; i++){ %>
             <li>
-                <a href="<%= list_of_page_attribute[i][1] %>">
+                <a href="<%= list_of_page_attribute[i].link %>">
                     <span class="icon-text">
                         <span class="icon">
-                            <i class="fas <%= list_of_page_attribute[i][2] %>"></i>
+                            <i class="fas <%= list_of_page_attribute[i].icon %>"></i>
                         </span>
                         
-                        <span><%= list_of_page_attribute[i][0] %></span>
+                        <span><%= list_of_page_attribute[i].display %></span>
                     </span>
                 </a>
             </li>
