@@ -12964,11 +12964,14 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
           align-items: center;
 }
 
-#sidebar #copyright-container {
+#sidebar #bottom-container {
   width: 100%;
   position: absolute;
   bottom: 0;
   text-align: center;
+}
+
+#sidebar #bottom-container p {
   border-top: 1px solid #363636;
 }
 

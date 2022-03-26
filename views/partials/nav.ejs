@@ -6,30 +6,31 @@
     <ul class="menu-list">
         <%
             const list_of_page_attribute = [
-                ['home', 'fa-home'],
-                ['stats', 'fa-bars-progress'],
-                ['upgrade', 'fa-angles-up'],
-                ['history', 'fa-list-ul'],
-                ['setting', 'fa-gear']
+                ['Utama', 'home', 'fa-home'],
+                ['Informasi', 'stats', 'fa-bars-progress'],
+                ['Peningkatan', 'upgrade', 'fa-angles-up'],
+                ['Berita', 'history', 'fa-list-ul'],
+                ['Pengaturan', 'setting', 'fa-gear']
             ];
         %>
 
         <% for(i = 0; i < list_of_page_attribute.length; i++){ %>
             <li>
-                <a href="<%= list_of_page_attribute[i][0] %>">
+                <a href="<%= list_of_page_attribute[i][1] %>">
                     <span class="icon-text">
                         <span class="icon">
-                            <i class="fas <%= list_of_page_attribute[i][1] %>"></i>
+                            <i class="fas <%= list_of_page_attribute[i][2] %>"></i>
                         </span>
                         
-                        <span><%= list_of_page_attribute[i][0].charAt(0).toUpperCase() + list_of_page_attribute[i][0].slice(1) %></span>
+                        <span><%= list_of_page_attribute[i][0] %></span>
                     </span>
                 </a>
             </li>
         <% } %>
     </ul>
     
-    <div id="copyright-container" class="pt-2 pb-2">
-        <p class="is-size-6">Copyright © 2022 XI-RPL</p>
+    <div id="bottom-container">
+        <div><%= user_data[0].username %></div>
+        <p class="is-size-6 pt-2 pb-2">Copyright © 2022 XI-RPL</p>
     </div>
 </aside>
