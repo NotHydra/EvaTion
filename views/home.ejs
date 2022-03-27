@@ -52,18 +52,20 @@
                                 </div>
 
                                 <div class="content has-text-justified pr-1">
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore inventore, ducimus necessitatibus atque ea minus recusandae voluptas quisquam earum quis eaque ipsum deleniti ad error accusamus rem nesciunt rerum! Sit.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum similique nulla adipisci cum expedita alias sed. Saepe modi, obcaecati quam eum, tenetur quaerat nesciunt ut cum suscipit debitis expedita ex!
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum doloribus commodi cumque deserunt voluptatem iure quae magni. Optio deleniti nobis explicabo assumenda saepe similique, sapiente temporibus non quas laborum.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae fuga laboriosam quas blanditiis eaque, distinctio explicabo sunt qui sequi. Est minima ex laborum explicabo enim, itaque doloremque et laboriosam.
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore inventore, ducimus necessitatibus atque ea minus recusandae voluptas quisquam earum quis eaque ipsum deleniti ad error accusamus rem nesciunt rerum! Sit.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum similique nulla adipisci cum expedita alias sed. Saepe modi, obcaecati quam eum, tenetur quaerat nesciunt ut cum suscipit debitis expedita ex!
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum doloribus commodi cumque deserunt voluptatem iure quae magni. Optio deleniti nobis explicabo assumenda saepe similique, sapiente temporibus non quas laborum.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae fuga laboriosam quas blanditiis eaque, distinctio explicabo sunt qui sequi. Est minima ex laborum explicabo enim, itaque doloremque et laboriosam.
-                                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore inventore, ducimus necessitatibus atque ea minus recusandae voluptas quisquam earum quis eaque ipsum deleniti ad error accusamus rem nesciunt rerum! Sit.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum similique nulla adipisci cum expedita alias sed. Saepe modi, obcaecati quam eum, tenetur quaerat nesciunt ut cum suscipit debitis expedita ex!
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum doloribus commodi cumque deserunt voluptatem iure quae magni. Optio deleniti nobis explicabo assumenda saepe similique, sapiente temporibus non quas laborum.
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente recusandae fuga laboriosam quas blanditiis eaque, distinctio explicabo sunt qui sequi. Est minima ex laborum explicabo enim, itaque doloremque et laboriosam.
+                                    <% 
+                                        let current_day = user_data.crime_case.length
+                                        let current_case = user_data.crime_case[current_day - 1].case.length
+                                        let current_case_data = user_data.crime_case[current_day - 1].case[current_case - 1]
+                                        let case_theme = current_case_data.case_theme
+                                    %>
+
+                                    <% for(let i = 0; i < case_theme.length; i++){%>
+                                        <% if(current_case_data.case_is_guilty == true){ %>
+                                            <div><%= i+1 %>. <%= case_theme[i].crime %></div>
+                                        <% } else if(current_case_data.case_is_guilty == false){ %>
+                                            <div><%= i+1 %>. <%= case_theme[i].crime %>, tetapi setelah penyelidikan lebih lanjut dinyatakan tidak bersalah</div>
+                                        <% } %>
+                                    <% } %>
                                 </div>
                             </div>
                         </div>
@@ -77,9 +79,8 @@
                                 </div>
 
                                 <div class="content has-text-justified pr-1">
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi impedit molestiae minus architecto quidem adipisci quaerat possimus assumenda explicabo quod ea repudiandae harum quo, asperiores animi nam similique laudantium.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi impedit molestiae minus architecto quidem adipisci quaerat possimus assumenda explicabo quod ea repudiandae harum quo, asperiores animi nam similique laudantium.
-                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi impedit molestiae minus architecto quidem adipisci quaerat possimus assumenda explicabo quod ea repudiandae harum quo, asperiores animi nam similique laudantium.
+                                    <div>Nama : <%= current_case_data.case_name %></div>
+                                    <div>Umur : <%= current_case_data.case_age %></div>
                                 </div>
                             </div>
                         </div>
