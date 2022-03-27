@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html lang="en" class="has-background-light">
+<html lang="en" class="has-background-light">
     <head>
         <%- include('partials/head', { title }); %>
     </head>
@@ -12,10 +12,10 @@
                 <div class="columns mr-6 home-first-row-card">
                     <%
                         const list_of_stat_attribute = [
-                            {display : "Penduduk", icon : "fa-user-group", color : "info", current : user_data[0].people_current, max : user_data[0].people_max, percentage : (user_data[0].people_current / user_data[0].people_max) * 100},
-                            {display : "Kemakmuran", icon : "fa-face-smile", color : "success", current : user_data[0].prosperity_current, max : user_data[0].prosperity_max, percentage : (user_data[0].prosperity_current / user_data[0].prosperity_max) * 100},
-                            {display : "Kriminalitas", icon : "fa-radiation", color : "danger", current : user_data[0].crime_rate_current, max : user_data[0].crime_rate_max, percentage : (user_data[0].crime_rate_current / user_data[0].crime_rate_max) * 100},
-                            {display : "Keuangan", icon : "fa-coins", color : "warning", current : user_data[0].money_current, max : user_data[0].money_max, percentage : (user_data[0].money_current / user_data[0].money_max) * 100}
+                            {display : "Penduduk", icon : "fa-user-group", color : "info", current : user_data.people_current, max : user_data.people_max, percentage : (user_data.people_current / user_data.people_max) * 100},
+                            {display : "Kemakmuran", icon : "fa-face-smile", color : "success", current : user_data.prosperity_current, max : user_data.prosperity_max, percentage : (user_data.prosperity_current / user_data.prosperity_max) * 100},
+                            {display : "Kriminalitas", icon : "fa-radiation", color : "danger", current : user_data.crime_rate_current, max : user_data.crime_rate_max, percentage : (user_data.crime_rate_current / user_data.crime_rate_max) * 100},
+                            {display : "Keuangan", icon : "fa-coins", color : "warning", current : user_data.money_current, max : user_data.money_max, percentage : (user_data.money_current / user_data.money_max) * 100}
                         ];
                     %>
                     
@@ -107,8 +107,8 @@
                         <div class="card">
                             <div class="card-content">
                                 <% 
-                                    let case_current = user_data[0].crime_case[user_data[0].crime_case.length - 1].case_current;
-                                    let case_max = user_data[0].crime_case[user_data[0].crime_case.length - 1].case_max;                          
+                                    let case_current = user_data.crime_case[user_data.crime_case.length - 1].case_current;
+                                    let case_max = user_data.crime_case[user_data.crime_case.length - 1].case_max;                          
                                 %>
 
                                 <div class="title is-5 has-text-centered"><%= case_current %> dari <%= case_max %> Kasus Hari Ini</div>
