@@ -13,6 +13,10 @@
   background-color: #919191;
 }
 
+.has_title_underline {
+  border-bottom: 3px solid #363636;
+}
+
 #sidebar {
   width: 12rem;
   position: fixed;
@@ -25,7 +29,7 @@
 #sidebar #sidebar-brand {
   height: 6rem;
   margin-bottom: 0;
-  border-bottom: 1px solid #363636;
+  border-bottom: 2px solid #363636;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -45,7 +49,7 @@
 }
 
 #sidebar #bottom-container p {
-  border-top: 1px solid #363636;
+  border-top: 2px solid #363636;
 }
 
 #main-container {
@@ -165,5 +169,25 @@
 
 #main-container .home-third-row-card #card-button-guilty:hover {
   background-color: #E74566 !important;
+}
+
+#login-container .hero-body, #register-container .hero-body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#login-container .hero-body .column, #register-container .hero-body .column {
+  margin-bottom: 10rem;
 }
 /*# sourceMappingURL=style.css.map */
