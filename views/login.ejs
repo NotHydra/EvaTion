@@ -5,15 +5,15 @@
     </head>
 
     <body>
-        <% if(messages.error) {%>
-            <%= messages.error %>
-        <% }%>
-
         <section id="login-container" class="hero is-fullheight">
             <div class="hero-body">
                 <div class="columns is-centered">
                     <div class="column box p-4">
                         <h1 class="title is-4 has-text-centered mb-3">EVATION</h1>
+
+                        <% if(messages.error) {%>
+                            <%= messages.error %>
+                        <% }%>
             
                         <form action="/login" method="POST">
                             <div class="field">
