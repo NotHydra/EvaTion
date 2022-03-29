@@ -52,20 +52,12 @@
                                 </div>
 
                                 <div class="content has-text-justified pr-1">
-                                    <% 
+                                    <%
                                         let current_day = user_data.crime_case.length
                                         let current_case = user_data.crime_case[current_day - 1].case.length
-                                        let current_case_data = user_data.crime_case[current_day - 1].case[current_case - 1]
-                                        let case_theme = current_case_data.case_theme
                                     %>
 
-                                    <% for(let i = 0; i < case_theme.length; i++){%>
-                                        <% if(current_case_data.case_is_guilty == true){ %>
-                                            <div><%= i+1 %>. <%= case_theme[i].crime %></div>
-                                        <% } else if(current_case_data.case_is_guilty == false){ %>
-                                            <div><%= i+1 %>. <%= case_theme[i].crime %>, tetapi setelah penyelidikan lebih lanjut dinyatakan tidak bersalah</div>
-                                        <% } %>
-                                    <% } %>
+                                    <div><%= case_datas[user_data.crime_case[current_day - 1].case[current_case - 1].case_id - 1].crime %></div>
                                 </div>
                             </div>
                         </div>
@@ -79,8 +71,15 @@
                                 </div>
 
                                 <div class="content has-text-justified pr-1">
-                                    <div>Nama : <%= current_case_data.case_name %></div>
-                                    <div>Umur : <%= current_case_data.case_age %></div>
+                                    <% 
+                                        let case_identity = user_data.crime_case[current_day - 1].case[current_case - 1].case_identity
+                                    %>
+
+                                    <% for(let i = 0; i < user_data.crime_case[current_day - 1].case[current_case - 1].case_identity.length; i++) { %>
+                                        <div><%= case_identity[i][0]; %>, <%= case_identity[i][2].toLowerCase(); %>.</div>
+                                        <div>berusia <%= case_identity[i][1]; %> tahun.</div>
+                                        <br>
+                                    <% }%>
                                 </div>
                             </div>
                         </div>
@@ -89,17 +88,23 @@
 
                 <div class="columns mr-6 home-third-row-card">
                     <div class="column">
-                        <div class="card has-background-success card-button" id="card-button-innocent">
+                        <div class="card has-background-success card-button" id="card-button-innocent" onclick="document.getElementById('form-innocent').submit();">
                             <div class="card-content">
-                                <div class="title is-4 has-text-white">Tidak Bersalah</div>
+                                <form action="/home" method="POST" id="form-innocent">
+                                    <input type="hidden" name="response" value="innocent">
+                                    <div class="title is-4 has-text-white">Tidak Bersalah</div>
+                                </form>
                             </div>
                         </div>
                     </div>
                     
                     <div class="column">
-                        <div class="card has-background-danger card-button" id="card-button-guilty">
-                            <div class="card-content">
-                                <div class="title is-4 has-text-white">Bersalah</div>
+                        <div class="card has-background-danger card-button" id="card-button-guilty" onclick="document.getElementById('form-guilty').submit();">
+                            <div class="card-content">           
+                                <form action="/home" method="POST" id="form-guilty">
+                                    <input type="hidden" name="response" value="guilty">
+                                    <div class="title is-4 has-text-white">Bersalah</div>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -109,10 +114,11 @@
                             <div class="card-content">
                                 <% 
                                     let case_current = user_data.crime_case[user_data.crime_case.length - 1].case_current;
-                                    let case_max = user_data.crime_case[user_data.crime_case.length - 1].case_max;                          
+                                    let case_max = user_data.crime_case[user_data.crime_case.length - 1].case_max;   
+                                    let case_left = case_max - case_current + 1                       
                                 %>
 
-                                <div class="title is-5 has-text-centered"><%= case_current %> dari <%= case_max %> Kasus Hari Ini</div>
+                                <div class="title is-5 has-text-centered">Sisa <%= case_left %> Kasus Hari Ini</div>
                             </div>
                         </div>
                     </div>

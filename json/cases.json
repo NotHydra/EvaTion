@@ -1,252 +1,170 @@
 [
-      {
-          "id": 1,
-          "crime": "Kekerasan dalam rumah tangga",
-          "rank": 5
+    {
+        "id": 1,
+        "crime": "Seorang putra dari orang tua asing didiskriminasi oleh teman sekolahnya karena rambutnya yang seperti diwarna, para guru telah mencoba untuk menghentikan diskriminasi tersebut tetapi telah berhenti karena tidak begitu efektif. Orang tua anak laki-laki itu sekarang menuntut sekolah atas kelalaiannya.",
+        "conclusion": "Sekolah bersalah berdasarkan UU No.23 tahun 2002, pasal 4, dan pasal 13.",
+        "identity" : [["Male", 5, [25, 35]], ["Female", 2, [25, 30]]],
+        "case_is_guilty" : true,
+        "rank": 3
     },
     {
-          "id": 2,
-          "crime": "Pembuangan limbah beracun ke tanah",
-          "rank": 5
+        "id": 2,
+        "crime": "Seorang pasangan mengadopsi seorang anak dari gubuk yg kusuh, orang tuanya pun memberikannya karena tidak mampu menjamin pertumbuhannya, setelah pemilik rumah dekat gubuk itu tau, dia menuntut orang tua anak tersebut dengan penelantaran.",
+        "conclusion": "Menurut UU No.23 tahun 2002, pasal 7 ayat 2, orang tua anak terebut tidak bersalah.",
+        "identity" : [["Male", 1, [25, 35]], ["Female", 1, [25, 30]]],
+        "case_is_guilty" : false,
+        "rank": 0 
     },
     {
-          "id": 3,
-          "crime": "Pelecehan anak",
-          "rank": 5
+        "id": 3,
+        "crime": "Seorang paman menuntut saudaranya atas anak mereka karena melihat tanda-tanda kekerasan di anak tersebut.",
+        "conclusion": "Orang tua anak tersebut melanggar UU No.23 tahun 2002, pasal 13, dan pasal 16.",
+        "identity" : [["Male", 1, [35, 45]]],
+        "case_is_guilty" : true,
+        "rank": 4
     },
     {
-          "id": 4,
-          "crime": "Perdagangan anak",
-          "rank": 5
+        "id": 4,
+        "crime": "Seorang pengedar narkotika ditangkap warga sekitar dan langsung dituntut dalam hukum, setelah di periksa, orang tersebut mendapat narkotika dari sebuah farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009, pasal 12, pengedar itu bersalah, dan sesuai UU No.35 tahun 2009 pasal 12, dan 14 ayat 1,2,3 dan 4, farmasi juga bersalah.",
+        "identity" : [["Male", 1, [25, 55]]],
+        "case_is_guilty" : true,
+        "rank": 5
     },
     {
-          "id": 5,
-          "crime": "Secara sadar melepaskan asap beracun ke udara",
-          "rank": 5
+        "id": 5,
+        "crime": "Suatu desa memberikan akte elahiran 35 hari setelah di diajukan permohonanya dikarenakan tidak diketahuinya orang tua anak tersebut.",
+        "conclusion": "Menurut UU No.23 tahun 2002, pasal 28 ayat 2, dan mengingat pasal 27 ayat 4, desa bersalah.",
+        "identity" : [["Male", 1, [45, 55]]],
+        "case_is_guilty" : true,
+        "rank": 3
     },
     {
-          "id": 6,
-          "crime": "Penyebaran informasi yang sangat meresahkan melalui media sosial",
-          "rank": 5
+        "id": 6,
+        "crime": "Test6",
+        "conclusion": "Test6",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 7,
-          "crime": "Penebangan liar",
-          "rank": 5
+        "id": 7,
+        "crime": "Test7",
+        "conclusion": "Test7",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 8,
-          "crime": "Perburuan ilegal",
-          "rank": 5
+        "id": 8,
+        "crime": "Test8",
+        "conclusion": "Test8",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 9,
-          "crime": "Penghancuran alam yang disengaja",
-          "rank": 5
+        "id": 9,
+        "crime": "Test9",
+        "conclusion": "Test9",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 10,
-          "crime": "Pelecehan cyber",
-          "rank": 5
+        "id": 10,
+        "crime": "Test10",
+        "conclusion": "Test10",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 11,
-          "crime": "Penelantaran anak",
-          "rank": 5
+        "id": 11,
+        "crime": "Test11",
+        "conclusion": "Test11",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 12,
-          "crime": "Kegiatan seksual terhadap anak di bawah umur",
-          "rank": 5
+        "id": 12,
+        "crime": "Test12",
+        "conclusion": "Test12",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 13,
-          "crime": "Pengikisan tanah tanpa izin",
-          "rank": 5
+        "id": 13,
+        "crime": "Test13",
+        "conclusion": "Test13",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 14,
-          "crime": "Pencemaran nama baik",
-          "rank": 5
+        "id": 14,
+        "crime": "Test14",
+        "conclusion": "Test14",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 15,
-          "crime": "Pendistribusian obat-obatan terlarang",
-          "rank": 4
+        "id": 15,
+        "crime": "Test15",
+        "conclusion": "Test15",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 16,
-          "crime": "Pencurian identitas",
-          "rank": 4
+        "id": 16,
+        "crime": "Test16",
+        "conclusion": "Test16",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 17,
-          "crime": "Pendistribusian KTP palsu",
-          "rank": 4
+        "id": 17,
+        "crime": "Test17",
+        "conclusion": "Test17",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 18,
-          "crime": "Melakukan tindak korupsi",
-          "rank": 4
+        "id": 18,
+        "crime": "Test18",
+        "conclusion": "Test18",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 19,
-          "crime": "Peretasan domain publik website",
-          "rank": 4
+        "id": 19,
+        "crime": "Test19",
+        "conclusion": "Test19",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 20,
-          "crime": "Melakukan kegiatan stalking secara online",
-          "rank": 4
+        "id": 20,
+        "crime": "Test20",
+        "conclusion": "Test20",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     },
     {
-          "id": 21,
-          "crime": "Penggunaan api di daerah yang rawan terbakar",
-          "rank": 4
-    },
-    {
-          "id": 22,
-          "crime": "Membahayakan anak",
-          "rank": 4
-    },
-    {
-          "id": 23,
-          "crime": "Percobaan menelantarkan anak",
-          "rank": 4
-    },
-    {
-          "id": 24,
-          "crime": "Penyebaran informasi palsu",
-          "rank": 4
-    },
-    {
-          "id": 25,
-          "crime": "Penumpukan sampah sembarangan di tempat umum",
-          "rank": 4
-    },
-    {
-          "id": 26,
-          "crime": "Penghancuran perdamaian yang disengaja di tempat-tempat umum",
-          "rank": 4
-    },
-    {
-          "id": 27,
-          "crime": "Pelecehan verbal yang ekstrim",
-          "rank": 4
-    },
-    {
-          "id": 28,
-          "crime": "Tindakan phising",
-          "rank": 4
-    },
-    {
-          "id": 29,
-          "crime": "Penyebaran produk menyesatkan di media sosial",
-          "rank": 4
-    },
-    {
-          "id": 30,
-          "crime": "Tindakan penipuan",
-          "rank": 4
-    },
-    {
-          "id": 31,
-          "crime": "Peniruan identitas orang lain di media sosial",
-          "rank": 4
-    },
-    {
-          "id": 32,
-          "crime": "Upaya jahat untuk mengganggu internet negara",
-          "rank": 4
-    },
-    {
-          "id": 33,
-          "crime": "Kepemilikan identitas palsu",
-          "rank": 3
-    },
-    {
-          "id": 34,
-          "crime": "Penggunaan obat-obatan terlarang",
-          "rank": 3
-    },
-    {
-          "id": 35,
-          "crime": "Penghancuran alam yang tidak disengaja",
-          "rank": 3
-    },
-    {
-          "id": 36,
-          "crime": "Penggunaan virus komputer untuk menghancurkan elektronik orang lain dari dalam",
-          "rank": 3
-    },
-    {
-          "id": 37,
-          "crime": "Menghasut kebencian di media sosial",
-          "rank": 3
-    },
-    {
-          "id": 38,
-          "crime": "Penggunaan malware komputer untuk menghancurkan elektronik orang lain dari dalam",
-          "rank": 3
-    },
-    {
-          "id": 39,
-          "crime": "Menghancurkan properti orang lain",
-          "rank": 2
-    },
-    {
-          "id": 40,
-          "crime": "Cyber bullying",
-          "rank": 2
-    },
-    {
-          "id": 41,
-          "crime": "Menggunakan api untuk membakar sampah yang beracun jika dibakar",
-          "rank": 2
-    },
-    {
-          "id": 42,
-          "crime": "Pembuangan sampah massal",
-          "rank": 2
-    },
-    {
-          "id": 43,
-          "crime": "Kepemilikan barang ilegal tanpa surat izin",
-          "rank": 1
-    },
-    {
-          "id": 44,
-          "crime": "Kepemilikan obat-obatan terlarang",
-          "rank": 1
-    },
-    {
-          "id": 45,
-          "crime": "Bullying",
-          "rank": 1
-    },
-    {
-          "id": 46,
-          "crime": "Mencoba menyebarkan informasi palsu",
-          "rank": 1
-    },
-    {
-          "id": 47,
-          "crime": "Membuang sampah sembarangan",
-          "rank": 1
-    },
-    {
-          "id": 48,
-          "crime": "Memancing di tempat yang tidak izinkan",
-          "rank": 1
-    },
-    {
-          "id": 49,
-          "crime": "Kenakalan anak",
-          "rank": 1
-    },
-    {
-          "id": 50,
-          "crime": "Serangan yang tidak disengaja",
-          "rank": 1
+        "id": 21,
+        "crime": "Test21",
+        "conclusion": "Test21",
+        "identity" : [["Male", 1, [0, 100]]],
+        "case_is_guilty" : false,
+        "rank": 0
     }
 ]

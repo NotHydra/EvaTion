@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV !== 'production'){
-    require('dotenv').config()
-}
+    require('dotenv').config();
+};
 
 import express, { Application, Request, Response, NextFunction } from 'express';
 import fs from 'fs';
@@ -9,185 +9,234 @@ import passport from 'passport';
 import flash from 'express-flash';
 import session from 'express-session';
 import methodOverride from 'method-override';
+import alea from 'alea';
 
 const app: Application = express();
+const prng: any = new (alea as any)();
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 app.use(express.urlencoded({ extended: false }));
-app.use(flash())
-app.use(session({
-    // @ts-ignore
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: false
-}))
-app.use(passport.initialize())
-app.use(passport.session())
-app.use(methodOverride('_method'))
+app.use(flash());
+// @ts-ignore
+app.use(session({ secret: process.env.SESSION_SECRET, resave: false, saveUninitialized: false }));
+app.use(passport.initialize());
+app.use(passport.session());
+app.use(methodOverride('_method'));
 
 const port: any = process.env.PORT || 5000;
-const list_of_names: Array<string> = ["Dwi", "Nur", "Dewi", "Tri", "Dian", "Sri", "Putri", "Eka", "Sari", "Ayu", "Wahyu", "Indah", "Siti", "Ika", "Agus", "Fitri", "Ratna", "Andi", "Agung", "Ahmad", "Kurniawan", "Budi", "Adi", "Eko", "Nurul", "Putra", "Arif", "Puspita", "Ari", "Indra", "Dyah", "Rizki", "Maria", "Ratih", "Pratiwi", "Kartika", "Wulandari", "Fajar", "Bayu", "Lestari", "Anita", "Muhamad", "Kusuma", "Rahmawati", "Fitria", "Retno", "Kurnia", "Novita", "Aditya", "Ria", "Nugroho", "Putu", "Handayani", "Rahayu", "Yunita", "Rina", "Ade", "Widya", "Intan", "Diah", "Agustina", "Made", "Abdul", "Setiawan", "Rizky", "Rini", "Wahyuni", "Yulia", "Maya", "Puji", "Utami", "Amalia", "Dina", "Devi", "Citra", "Arief", "Bagus", "Hidayat", "Hendra", "Eva", "Endah", "Raden", "Novi", "Astuti", "Irma", "Achmad", "Aulia", "Surya", "Amelia", "Prima", "Angga", "Hadi", "Diana", "Anggraini", "Wulan", "Saputra", "Yuni", "Prasetyo", "Reza", "Suci"]
-const user_data: any = JSON.parse(fs.readFileSync('./json/users.json', 'utf-8'));
-const case_data: any = JSON.parse(fs.readFileSync('./json/cases.json', 'utf-8'));
+const user_datas: any = JSON.parse(fs.readFileSync('./json/users.json', 'utf-8'));
+const case_datas: any = JSON.parse(fs.readFileSync('./json/cases.json', 'utf-8'));
+const list_of_name: any = {
+    "male": ["Putra", "Wahyu", "Agus", "Agung", "Ahmad", "Kurniawan", "Budi", "Adi", "Eko", "Arief", "Ari", "Indra", "Rizki", "Yusuf", "Fajar", "Bayu", "Aditya", "Nugroho", "Abdul", "Setiawan", "Riski", "Bagus", "Hidayat", "Rian", "Hendra", "Raden", "Surya", "Angga", "Hadi", "Adam", "Rudi", "Andri", "Taufik", "Hanif"],
+    "female": ["Nur", "Dewi", "Dian", "Sri", "Putri", "Sari", "Ayu", "Indah", "Siti", "Fitri", "Ratna", "Puspita", "Ratih", "Pratiwi", "Tika", "Wulandari", "Lestari", "Febri", "Anita", "Rahma", "Fitria", "Novi", "Ria", "Rahayu", "Yunita", "Rina", "Widya", "Intan", "Agustina", "Rini", "Yulia", "Maya", "Utami", "Amel", "Devi", "Citra", "Diana", "Wulan", "Yuni", "Sinta", "Cantika"]
+};
 
-const initializePassport = require('./passport-config')
+const initializePassport = require('./passport-config');
 initializePassport(
     passport,
     // @ts-ignore
-    username => user_data.find(user => user.username === username),
+    username => user_datas.find(user => user.username === username),
     // @ts-ignore
-    id => user_data.find(user => user.id === id)
-)
+    id => user_datas.find(user => user.id === id)
+);
 
 //#region Functions
-function checkAuthenticated(req: Request, res: Response, next: NextFunction){
+function check_authenticated(req: Request, res: Response, next: NextFunction){
     if(req.isAuthenticated()){
-        return next()
+        return next();
     }
 
-    res.redirect('/login')
-}
+    res.redirect('/login');
+};
 
-function checkNotAuthenticated(req: Request, res: Response, next: NextFunction){
+function check_not_authenticated(req: Request, res: Response, next: NextFunction){
     if(req.isAuthenticated()){
-        return res.redirect('/')
+        return res.redirect('/');
     }
 
-    next()
-}
+    next();
+};
 
-function getRandomNumber(min: number, max: number){
-    max += 1
+function get_random_number(min: number, max: number){
+    let value: number = Math.floor(prng() * (max - min + 1) + min);
 
-    let value = Math.floor(Math.random() * (max - min) + min);
+    return value;
+};
 
-    if(value == max){
-        value -= 1
+function get_random_case(){
+    let random_case_theme: number = get_random_number(1, case_datas.length);
+
+    return random_case_theme;
+};
+
+function check_random_case_id(crime_case_taken: any, random_case_theme: any){
+    for(let i = 0; i < crime_case_taken.length; i++){
+        if(random_case_theme == crime_case_taken[i]){
+            random_case_theme = get_random_case();
+            i = -1;
+        };
+    };
+};
+
+function get_random_case_identity(random_case_theme: any){
+    let random_case_identity: any = [];
+    let case_identity = case_datas[random_case_theme - 1].identity;
+
+    for(let i = 0; i < case_identity.length; i++){
+        for(let j = 0; j < case_identity[i][1]; j++){
+            if(case_identity[i][0] == "Male"){
+                let temp_random_number = get_random_number(0, list_of_name.male.length - 1);
+                let temp_random_name = list_of_name.male[temp_random_number];
+                let temp_random_age = get_random_number(case_identity[i][2][0], case_identity[i][2][1]);
+
+                random_case_identity.push([temp_random_name, temp_random_age, "Pria"]);
+            }
+
+            else if(case_identity[i][0] == "Female"){
+                let temp_random_number = get_random_number(0, list_of_name.female.length - 1);
+                let temp_random_name = list_of_name.female[temp_random_number];
+                let temp_random_age = get_random_number(case_identity[i][2][0], case_identity[i][2][1]);
+
+                random_case_identity.push([temp_random_name, temp_random_age, "Wanita"]);
+            }
+        }
     }
 
-    return value
-}
-
-function getRandomCaseTheme(random_case_theme: any, case_rank: any){
-    let random_case_number = getRandomNumber(0, case_data.length - 1)
-
-    return random_case_number;
-}
+    return random_case_identity;
+};
 
 //#endregion Functions
 
 //#region Main Request
-app.get('/', checkAuthenticated, (req: Request, res: Response) => {
+app.get('/', check_authenticated, (req: Request, res: Response) => {
     res.redirect('/home');
 });
 
-app.get('/home', checkAuthenticated, (req: Request, res: Response) => {
-    res.render('home', { title: 'Utama', user_data: req.user });
+app.get('/home', check_authenticated, (req: Request, res: Response) => {
+    res.render('home', { title: 'Utama', user_data: req.user, case_datas });
 });
 
-app.get('/stats', checkAuthenticated, (req: Request, res: Response) => {
+app.get('/stats', check_authenticated, (req: Request, res: Response) => {
     res.render('stats', { title: 'Informasi', user_data: req.user });
 });
 
-app.get('/upgrade', checkAuthenticated, (req: Request, res: Response) => {
+app.get('/upgrade', check_authenticated, (req: Request, res: Response) => {
     res.render('upgrade', { title: 'Peningkatan', user_data: req.user });
 });
 
-app.get('/history', checkAuthenticated, (req: Request, res: Response) => {
+app.get('/history', check_authenticated, (req: Request, res: Response) => {
     res.render('history', { title: 'Berita', user_data: req.user });
 });
 
-app.get('/setting', checkAuthenticated, (req: Request, res: Response) => {
+app.get('/setting', check_authenticated, (req: Request, res: Response) => {
     res.render('setting', { title: 'Pengaturan', user_data: req.user });
+});
+
+app.post('/home', check_authenticated, (req: Request, res: Response) => {
+    // @ts-ignore
+    let crime_case_data: any = req.user.crime_case;
+    let current_day_length: number = crime_case_data.length - 1;
+    let case_data = crime_case_data[current_day_length].case;
+    let current_case_length: number = case_data.length - 1;
+    let current_case_data: any = case_data[current_case_length];
+
+    if(req.body.response == 'guilty' && current_case_data.case_response == null){
+        current_case_data.case_response = 'guilty';
+    }
+
+    else if(req.body.response == 'innocent' && current_case_data.case_response == null){
+        current_case_data.case_response = 'innocent';
+    }
+
+    if(crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max){
+        crime_case_data[current_day_length].case_current += 1;
+        
+        let random_case_theme: any = get_random_case();
+
+        // @ts-ignore
+        let crime_case_taken = req.user.crime_case_taken;
+
+        check_random_case_id(crime_case_taken, random_case_theme);
+        
+        let random_case_identity: any = get_random_case_identity(random_case_theme);
+
+        case_data.push({
+            "case_id": random_case_theme,  
+            "case_response": null,
+            "case_identity" : random_case_identity
+        });
+
+        crime_case_taken.push(random_case_theme);
+    }
+
+    else if(crime_case_data[current_day_length].case_current >= crime_case_data[current_day_length].case_max){
+        const random_case_max: number = get_random_number(1, 2);
+
+        let random_case_theme: any = get_random_case();
+
+        // @ts-ignore
+        let crime_case_taken = req.user.crime_case_taken;
+
+        check_random_case_id(crime_case_taken, random_case_theme);
+
+        let random_case_identity: any = get_random_case_identity(random_case_theme);
+
+        crime_case_data.push({
+            "day": crime_case_data.length + 1,
+            "case_current" : 1,
+            "case_max" : random_case_max,
+            "case": [
+                {
+                    "case_id": random_case_theme,  
+                    "case_response": null,
+                    "case_identity" : random_case_identity
+                }
+            ]
+        });
+
+        crime_case_taken.push(random_case_theme);
+    }
+
+    fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
+    res.redirect('/home');
 });
 
 //#endregion Main Request
 
 //#region Authentication Request
-app.get('/login', checkNotAuthenticated, (req: Request, res: Response) => {
-    res.render('login', { title: 'Login' })
+app.get('/login', check_not_authenticated, (req: Request, res: Response) => {
+    res.render('login', { title: 'Login' });
 });
 
-app.post('/login', checkNotAuthenticated, passport.authenticate('local', {
+app.post('/login', check_not_authenticated, passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true
 }));
 
-app.get('/register', checkNotAuthenticated, (req: Request, res: Response) => {
-    res.render('register', { title: 'Register' })
+app.get('/register', check_not_authenticated, (req: Request, res: Response) => {
+    res.render('register', { title: 'Register' });
 });
 
-app.post('/register', checkNotAuthenticated, async (req: Request, res: Response) => {
-    let username_is_valid = true
-    for(let i = 0; i < user_data.length; i++){
-        if(String(req.body.username) == user_data[i].username){
+app.post('/register', check_not_authenticated, async (req: Request, res: Response) => {
+    let username_is_valid = true;
+    for(let i = 0; i < user_datas.length; i++){
+        if(String(req.body.username) == user_datas[i].username){
             username_is_valid = false;
             break;
         }
     };
 
     if(username_is_valid){
-        const temp_case_status: number = getRandomNumber(0, 3);
-
         const hashedPassword: any = await bcrypt.hash(req.body.password, 12);
-        const random_case_max: number = getRandomNumber(3, 5);
-        const random_case_name: string = list_of_names[getRandomNumber(0, 99)];
-        const random_case_age: number = getRandomNumber(19, 78);
+        const random_case_max: number = get_random_number(1, 2);
 
-        let case_is_guilty;
-        if(temp_case_status == 0){
-            case_is_guilty = false;
-        }
-        
-        else if(temp_case_status == 1 || temp_case_status == 2 || temp_case_status == 3){
-            case_is_guilty = true;
-        }
+        let random_case_theme: any = get_random_case();
 
-        let random_case_theme: any = [];
-        let case_rank: any = [];
-        if(!case_is_guilty){
-            let random_case_number = getRandomCaseTheme(random_case_theme, case_rank)
+        let random_case_identity: any = get_random_case_identity(random_case_theme)
 
-            random_case_theme.push(case_data[random_case_number])
-            case_rank.push(case_data[random_case_number].rank)
-        }
-
-        else if(case_is_guilty){
-            let random_case_number = [];
-
-            for(let i = 0; i < 4; i++){
-                let temp_random_case_number = getRandomCaseTheme(random_case_theme, case_rank)
-
-                let random_case_number_is_valid = true
-                for(let j = 0; j < random_case_number.length; j++){
-                    if(temp_random_case_number == random_case_number[j]){
-                        random_case_number_is_valid = false
-                    }
-                }
-
-                if(random_case_number_is_valid){
-                    random_case_number.push(temp_random_case_number)
-                }
-
-                else if (!random_case_number_is_valid){
-                    i -= 1;
-                }
-            }
-
-            let random_case_theme_value_range = getRandomNumber(1, 100)
-            let case_theme_range = [0, 25, 50, 75]
-
-            for(let i = 0; i < random_case_number.length; i++){
-                if(random_case_theme_value_range > case_theme_range[i]){
-                    random_case_theme.push(case_data[random_case_number[i]])
-                    case_rank.push(case_data[random_case_number[i]].rank)
-                }
-            }
-        }
-
-        user_data.push({
-            "id": user_data.length + 1,
+        user_datas.push({
+            "id": user_datas.length + 1,
             "username": String(req.body.username),
             "password": hashedPassword,
             "people_current": 50,
@@ -198,6 +247,7 @@ app.post('/register', checkNotAuthenticated, async (req: Request, res: Response)
             "crime_rate_max": 100,
             "money_current": 50,
             "money_max": 100,
+            "crime_case_taken" : [random_case_theme],
             "crime_case": [
                 {
                     "day": 1,
@@ -205,37 +255,32 @@ app.post('/register', checkNotAuthenticated, async (req: Request, res: Response)
                     "case_max" : random_case_max,
                     "case": [
                         {
-                            "case_id": 1,
-                            "case_theme": random_case_theme,
-                            "case_name": random_case_name,
-                            "case_age": random_case_age,
-                            "case_is_guilty": case_is_guilty,
-                            "crime_rank": Math.max.apply(null, case_rank),
-                            "case_done": false
+                            "case_id": random_case_theme,  
+                            "case_response": null,
+                            "case_identity" : random_case_identity
                         }
                     ]
                 }
             ]
         });
 
-        fs.writeFileSync('./json/users.json', JSON.stringify(user_data, null, 4))
-
+        fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
         res.redirect('/login');
     }
 
     else if(!username_is_valid){
-        req.flash('info', 'Username already taken')
-        res.redirect('/register')
+        req.flash('info', 'Username already taken');
+        res.redirect('/register');
     }
 });
 
-app.get('/logout', checkAuthenticated, (req: Request, res: Response) => {
-    res.render('logout', { title: 'Logout' })
+app.get('/logout', check_authenticated, (req: Request, res: Response) => {
+    res.render('logout', { title: 'Logout' });
 });
 
-app.delete('/logout', checkAuthenticated, (req: Request, res: Response) => {
+app.delete('/logout', check_authenticated, (req: Request, res: Response) => {
     req.logOut();
-    res.redirect('/login')
+    res.redirect('/login');
 });
 
 //#endregion Authentication Request
