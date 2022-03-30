@@ -54,6 +54,12 @@
     }
 }
 
+.notification{
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
 #main-container{
     margin-left: 8rem;
 
@@ -172,6 +178,11 @@
 
         .column{
             margin-bottom: 10rem;
+            height: 275px;
+            width: 275px;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
         }
     }
 }

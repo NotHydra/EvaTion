@@ -19,14 +19,14 @@ function initialize(passport, getUserByUsername, getUserById) {
     const authenticateUser = (username, password, done) => __awaiter(this, void 0, void 0, function* () {
         const user = getUserByUsername(username);
         if (user == null) {
-            return done(null, false, { message: 'No user with that username or password' });
+            return done(null, false, { message: 'Username atau password salah' });
         }
         try {
             if (yield bcrypt_1.default.compare(password, user.password)) {
                 return done(null, user);
             }
             else {
-                return done(null, false, { message: 'No user with that username or password' });
+                return done(null, false, { message: 'Username atau password salah' });
             }
         }
         catch (e) {

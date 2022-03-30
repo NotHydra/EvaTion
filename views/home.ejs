@@ -57,6 +57,7 @@
                                         let current_case = user_data.crime_case[current_day - 1].case.length
                                     %>
 
+                                    <div class="has-text-weight-semibold mb-3">Hari Ke-<%= current_day %>, Kasus Ke-<%= current_case %></div>
                                     <div><%= case_datas[user_data.crime_case[current_day - 1].case[current_case - 1].case_id - 1].crime %></div>
                                 </div>
                             </div>

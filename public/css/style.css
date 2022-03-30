@@ -52,6 +52,12 @@
   border-top: 2px solid #363636;
 }
 
+.notification {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
 #main-container {
   margin-left: 8rem;
 }
@@ -189,5 +195,17 @@
 
 #login-container .hero-body .column, #register-container .hero-body .column {
   margin-bottom: 10rem;
+  height: 275px;
+  width: 275px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 /*# sourceMappingURL=style.css.map */

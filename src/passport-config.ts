@@ -8,7 +8,7 @@ function initialize(passport: any, getUserByUsername: any, getUserById: any){
         const user = getUserByUsername(username)
 
         if(user == null){
-            return done(null, false, { message: 'No user with that username or password' })
+            return done(null, false, { message: 'Username atau password salah' })
         }
 
         try{
@@ -17,7 +17,7 @@ function initialize(passport: any, getUserByUsername: any, getUserById: any){
             }
 
             else{
-                return done(null, false, { message: 'No user with that username or password'})
+                return done(null, false, { message: 'Username atau password salah'})
             }
         }
 
