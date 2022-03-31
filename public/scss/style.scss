@@ -166,6 +166,16 @@
                 background-color: #E74566 !important;
             }
         }
+
+        #card-button-innocent-disabled{
+            background-color: hsl(141, 53%, 31%) !important;
+            cursor: not-allowed;
+        }
+
+        #card-button-guilty-disabled{
+            background-color: hsl(348, 75%, 34%) !important;
+            cursor: not-allowed;
+        }
     }
 }
 

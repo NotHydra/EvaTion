@@ -123,60 +123,64 @@ app.post('/home', check_authenticated, (req, res) => {
     let case_data = crime_case_data[current_day_length].case;
     let current_case_length = case_data.length - 1;
     let current_case_data = case_data[current_case_length];
-    if (req.body.response == 'guilty' && current_case_data.case_response == null) {
-        current_case_data.case_response = 'guilty';
-    }
-    else if (req.body.response == 'innocent' && current_case_data.case_response == null) {
-        current_case_data.case_response = 'innocent';
-    }
-    if (crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max) {
-        crime_case_data[current_day_length].case_current += 1;
-        let random_case_theme = get_random_case();
-        // @ts-ignore
-        let crime_case_taken = req.user.crime_case_taken;
-        for (let i = 0; i < crime_case_taken.length; i++) {
-            if (random_case_theme == crime_case_taken[i]) {
-                random_case_theme = get_random_case();
-                i = -1;
-            }
-            ;
+    if (req.body.type == 'response') {
+        if (req.body.response == 'guilty' && current_case_data.case_response == null) {
+            current_case_data.case_response = 'guilty';
         }
-        ;
-        let random_case_identity = get_random_case_identity(random_case_theme);
-        case_data.push({
-            "case_id": random_case_theme,
-            "case_response": null,
-            "case_identity": random_case_identity
-        });
-        crime_case_taken.push(random_case_theme);
-    }
-    else if (crime_case_data[current_day_length].case_current >= crime_case_data[current_day_length].case_max) {
-        const random_case_max = get_random_number(1, 2);
-        let random_case_theme = get_random_case();
-        // @ts-ignore
-        let crime_case_taken = req.user.crime_case_taken;
-        for (let i = 0; i < crime_case_taken.length; i++) {
-            if (random_case_theme == crime_case_taken[i]) {
-                random_case_theme = get_random_case();
-                i = -1;
-            }
-            ;
+        if (req.body.response == 'innocent' && current_case_data.case_response == null) {
+            current_case_data.case_response = 'innocent';
         }
-        ;
-        let random_case_identity = get_random_case_identity(random_case_theme);
-        crime_case_data.push({
-            "day": crime_case_data.length + 1,
-            "case_current": 1,
-            "case_max": random_case_max,
-            "case": [
-                {
-                    "case_id": random_case_theme,
-                    "case_response": null,
-                    "case_identity": random_case_identity
+        if (crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max) {
+            crime_case_data[current_day_length].case_current += 1;
+            let random_case_theme = get_random_case();
+            // @ts-ignore
+            let crime_case_taken = req.user.crime_case_taken;
+            for (let i = 0; i < crime_case_taken.length; i++) {
+                if (random_case_theme == crime_case_taken[i]) {
+                    random_case_theme = get_random_case();
+                    i = -1;
                 }
-            ]
-        });
-        crime_case_taken.push(random_case_theme);
+                ;
+            }
+            ;
+            let random_case_identity = get_random_case_identity(random_case_theme);
+            case_data.push({
+                "case_id": random_case_theme,
+                "case_response": null,
+                "case_identity": random_case_identity
+            });
+            crime_case_taken.push(random_case_theme);
+        }
+    }
+    if (req.body.type == 'next') {
+        if (crime_case_data[current_day_length].case_current >= crime_case_data[current_day_length].case_max) {
+            const random_case_max = get_random_number(1, 2);
+            let random_case_theme = get_random_case();
+            // @ts-ignore
+            let crime_case_taken = req.user.crime_case_taken;
+            for (let i = 0; i < crime_case_taken.length; i++) {
+                if (random_case_theme == crime_case_taken[i]) {
+                    random_case_theme = get_random_case();
+                    i = -1;
+                }
+                ;
+            }
+            ;
+            let random_case_identity = get_random_case_identity(random_case_theme);
+            crime_case_data.push({
+                "day": crime_case_data.length + 1,
+                "case_current": 0,
+                "case_max": random_case_max,
+                "case": [
+                    {
+                        "case_id": random_case_theme,
+                        "case_response": null,
+                        "case_identity": random_case_identity
+                    }
+                ]
+            });
+            crime_case_taken.push(random_case_theme);
+        }
     }
     fs_1.default.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
     res.redirect('/home');
@@ -259,7 +263,7 @@ app.post('/register', check_not_authenticated, (req, res) => __awaiter(void 0, v
             "crime_case": [
                 {
                     "day": 1,
-                    "case_current": 1,
+                    "case_current": 0,
                     "case_max": random_case_max,
                     "case": [
                         {

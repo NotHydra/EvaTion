@@ -177,6 +177,16 @@
   background-color: #E74566 !important;
 }
 
+#main-container .home-third-row-card #card-button-innocent-disabled {
+  background-color: #257942 !important;
+  cursor: not-allowed;
+}
+
+#main-container .home-third-row-card #card-button-guilty-disabled {
+  background-color: #981630 !important;
+  cursor: not-allowed;
+}
+
 #login-container .hero-body, #register-container .hero-body {
   display: -webkit-box;
   display: -ms-flexbox;

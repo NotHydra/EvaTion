@@ -17,6 +17,22 @@
                             {display : "Kriminalitas", icon : "fa-radiation", color : "danger", current : user_data.crime_rate_current, max : user_data.crime_rate_max, percentage : (user_data.crime_rate_current / user_data.crime_rate_max) * 100},
                             {display : "Keuangan", icon : "fa-coins", color : "warning", current : user_data.money_current, max : user_data.money_max, percentage : (user_data.money_current / user_data.money_max) * 100}
                         ];
+
+                        let current_day = user_data.crime_case.length
+                        let current_case = user_data.crime_case[current_day - 1].case.length
+ 
+                        let case_identity = user_data.crime_case[current_day - 1].case[current_case - 1].case_identity
+                        
+
+                        let case_current = user_data.crime_case[user_data.crime_case.length - 1].case_current;
+                        let case_max = user_data.crime_case[user_data.crime_case.length - 1].case_max;
+
+                        let case_left = case_max - case_current
+                        
+                        let today_case_is_done = false
+                        if(case_current == case_max){
+                            today_case_is_done = true
+                        }
                     %>
                     
                     <% for(i = 0; i < list_of_stat_attribute.length; i++) {%>
@@ -52,13 +68,13 @@
                                 </div>
 
                                 <div class="content has-text-justified pr-1">
-                                    <%
-                                        let current_day = user_data.crime_case.length
-                                        let current_case = user_data.crime_case[current_day - 1].case.length
-                                    %>
-
-                                    <div class="has-text-weight-semibold mb-3">Hari Ke-<%= current_day %>, Kasus Ke-<%= current_case %></div>
-                                    <div><%= case_datas[user_data.crime_case[current_day - 1].case[current_case - 1].case_id - 1].crime %></div>
+                                    <% if(!today_case_is_done) {%>
+                                        <div class="has-text-weight-semibold mb-3">Hari Ke-<%= current_day %>, Kasus Ke-<%= current_case %></div>
+                                        <div><%= case_datas[user_data.crime_case[current_day - 1].case[current_case - 1].case_id - 1].crime %></div>
+                                    <% } else if(today_case_is_done) {%>
+                                        <div>Kasus untuk hari ini sudah habis, pindah ke hari berikutnya!</div>
+                                    <% } %> 
+                                    
                                 </div>
                             </div>
                         </div>
@@ -72,15 +88,15 @@
                                 </div>
 
                                 <div class="content has-text-justified pr-1">
-                                    <% 
-                                        let case_identity = user_data.crime_case[current_day - 1].case[current_case - 1].case_identity
-                                    %>
-
-                                    <% for(let i = 0; i < user_data.crime_case[current_day - 1].case[current_case - 1].case_identity.length; i++) { %>
-                                        <div><%= case_identity[i][0]; %>, <%= case_identity[i][2].toLowerCase(); %>.</div>
-                                        <div>berusia <%= case_identity[i][1]; %> tahun.</div>
-                                        <br>
-                                    <% }%>
+                                    <% if(!today_case_is_done) {%>
+                                        <% for(let i = 0; i < user_data.crime_case[current_day - 1].case[current_case - 1].case_identity.length; i++) { %>
+                                            <div><%= case_identity[i][0]; %>, <%= case_identity[i][2].toLowerCase(); %>.</div>
+                                            <div>berusia <%= case_identity[i][1]; %> tahun.</div>
+                                            <br>
+                                        <% }%>
+                                    <% } else if(today_case_is_done) {%>
+                                        <div>Kasus untuk hari ini sudah habis, pindah ke hari berikutnya!</div>
+                                    <% } %> 
                                 </div>
                             </div>
                         </div>
@@ -89,42 +105,79 @@
 
                 <div class="columns mr-6 home-third-row-card">
                     <div class="column">
-                        <div class="card has-background-success card-button" id="card-button-innocent" onclick="document.getElementById('form-innocent').submit();">
-                            <div class="card-content">
-                                <form action="/home" method="POST" id="form-innocent">
-                                    <input type="hidden" name="response" value="innocent">
-                                    <div class="title is-4 has-text-white">Tidak Bersalah</div>
-                                </form>
+                        <% if(!today_case_is_done) {%>
+                            <div class="card has-background-success card-button" id="card-button-innocent" onclick="document.getElementById('form-innocent').submit();">
+                                <div class="card-content">
+                                    <form action="/home" method="POST" id="form-innocent">
+                                        <input type="hidden" name="response" value="innocent">
+                                        <input type="hidden" name="type" value="response">
+                                        <div class="title is-4 has-text-white">Tidak Bersalah</div>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
+                        <% } else if(today_case_is_done) {%>
+                            <div class="card has-background-success card-button" id="card-button-innocent-disabled">
+                                <div class="card-content">
+                                    <form action="/home" method="POST" id="form-innocent">
+                                        <input type="hidden" name="response" value="innocent">
+                                        <input type="hidden" name="type" value="response">
+                                        <div class="title is-4 has-text-grey">Tidak Bersalah</div>
+                                    </form>
+                                </div>
+                            </div>
+                        <% } %>  
                     </div>
                     
                     <div class="column">
-                        <div class="card has-background-danger card-button" id="card-button-guilty" onclick="document.getElementById('form-guilty').submit();">
-                            <div class="card-content">           
-                                <form action="/home" method="POST" id="form-guilty">
-                                    <input type="hidden" name="response" value="guilty">
-                                    <div class="title is-4 has-text-white">Bersalah</div>
-                                </form>
+                        <% if(!today_case_is_done) {%>
+                            <div class="card has-background-danger card-button" id="card-button-guilty" onclick="document.getElementById('form-guilty').submit();">
+                                <div class="card-content">           
+                                    <form action="/home" method="POST" id="form-guilty">
+                                        <input type="hidden" name="response" value="guilty">
+                                        <input type="hidden" name="type" value="response">
+                                        <div class="title is-4 has-text-white">Bersalah</div>
+                                    </form>
+                                </div>
                             </div>
-                        </div>
+                        <% } else if(today_case_is_done) {%>
+                            <div class="card has-background-danger card-button" id="card-button-guilty-disabled">
+                                <div class="card-content">           
+                                    <form action="/home" method="POST" id="form-guilty">
+                                        <input type="hidden" name="response" value="guilty">
+                                        <input type="hidden" name="type" value="response">
+                                        <div class="title is-4 has-text-grey">Bersalah</div>
+                                    </form>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>
 
                     <div class="column is-one-quarter">
-                        <div class="card">
-                            <div class="card-content">
-                                <% 
-                                    let case_current = user_data.crime_case[user_data.crime_case.length - 1].case_current;
-                                    let case_max = user_data.crime_case[user_data.crime_case.length - 1].case_max;   
-                                    let case_left = case_max - case_current + 1                       
-                                %>
-
-                                <div class="title is-5 has-text-centered">Sisa <%= case_left %> Kasus Hari Ini</div>
+                        <% if(!today_case_is_done) {%>
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="title is-5 has-text-centered">Sisa <%= case_left %> Kasus Hari Ini</div>
+                                </div>
                             </div>
-                        </div>
+                        
+                        <% } else if(today_case_is_done) {%>
+                            <div class="card has-background-success card-button" id="card-button-innocent" onclick="document.getElementById('form-next').submit();">
+                                <div class="card-content">
+                                    <form action="/home" method="POST" id="form-next">
+                                        <input type="hidden" name="type" value="next">
+                                        <div class="title is-4 has-text-white">Ke Hari Berikutnya</div>
+                                    </form>
+                                </div>
+                            </div>
+                        <% } %>
                     </div>
                 </div>
             </section>
         </div>
     </body>
+    
+    <script>
+        
+
+    </script>
 </html>
