@@ -1,457 +1,457 @@
 [
     {
         "id": 1,
-        "crime": "Crime1",
-        "conclusion": "Conclusion1",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pengedar narkotika ditangkap warga sekitar dan langsung dituntut atas hukum, setelah diperiksa Ia mendapatkan narkotika tersebut dari sebuah farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009, pasal 12, 112, dan 114. Pengedar itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
+                    28,
                     40
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 2,
-        "crime": "Crime2",
-        "conclusion": "Conclusion2",
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pengedar narkotika ditangkap warga sekitar dan langsung dituntut atas hukum, setelah diperiksa Ia mendapatkan narkotika tersebut dari sebuah farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 12, 14, 135, and 136. Farmasi bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    30,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 4
     },
     {
         "id": 3,
-        "crime": "Crime3",
-        "conclusion": "Conclusion3",
+        "crime": "Industri farmasi dilaporkan memproduksi narkotika, setelah digrebek warga sekitar, pemiliknya setuju untuk datang ke Pengadilan.",
+        "conclusion": "Menurut pasal 11 dari UU no 35 tahun 2009, pemerintah dapat memberi izin kepada farmasi tertentu. Jadi pemilik farmasi tidak bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
-        "case_is_guilty": true,
-        "rank": 1
+        "case_is_guilty": false,
+        "rank": 0
     },
     {
         "id": 4,
-        "crime": "Crime4",
-        "conclusion": "Conclusion4",
+        "crime": "Farmasi di sebuah desa tertangkap menyimpan ganja berbentuk tumbuhan, dan juga diketahui menanamnya tanpa izin, terhitung berat penyimpanan narkotikanya sebanyak 3,5 KG.",
+        "conclusion": "Sesuai UU no.35 tahun 2009 pasal 111 ayat 2. Pemilik farmasi itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 5
     },
     {
         "id": 5,
-        "crime": "Crime5",
-        "conclusion": "Conclusion5",
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu tertangkap dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut pasal 14 dalam UU no.35 tahun 2009. Farmasi bersalah dan akan dicabut izin produksinya.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 4
     },
     {
         "id": 6,
-        "crime": "Crime6",
-        "conclusion": "Conclusion6",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu tertangkap dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 7,
-        "crime": "Crime7",
-        "conclusion": "Conclusion7",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu tertangkap dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009, pasal  55, 112, 114, 127 dan 134 ayat (1). Pecandu bersalah dan akan direhabilitas sesuai pasal 56.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 8,
-        "crime": "Crime8",
-        "conclusion": "Conclusion8",
+        "crime": "Kasus ini diarahkan kepada keluarga pecandu. Seorang pecandu tertangkap polisi dan setelah diselidiki Ia mengaku bahwa keluarganya tidak ada melarangnya sama sekali.",
+        "conclusion": "Sesuai UU no.35 tahun 2009 pasal 134 ayat (2). Keluarga itu melawan pasal 55 dan bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 9,
-        "crime": "Crime9",
-        "conclusion": "Conclusion9",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu tertangkap polisi dan setelah diselidiki Ia mengaku bahwa keluarganya tidak ada melarangnya sama sekali.",
+        "conclusion": "Menurut UU no.35 tahun 2009, pasal  55, 112, 114, 127 dan 134 ayat (1). Pecandu bersalah dan akan direhabilitas sesuai pasal 56.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 10,
-        "crime": "Crime10",
-        "conclusion": "Conclusion10",
+        "crime": "Sebuah rumah sakit dilaporkan memproduksi dan menggunakan narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 11 ayat(1). Hanya industri farmasi yang dapat diizinkan pemerintah untuk memproduksi narkotika, rumah sakit bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 4
     },
     {
         "id": 11,
-        "crime": "Crime11",
-        "conclusion": "Conclusion11",
+        "crime": "Seorang staff menemukan narkotika didalam kabinet obat-obatan farmasi lain dan langsung melaporkannya.",
+        "conclusion": "Menurut pasal 14  ayat (1) UU no.35 tahun 2009. Narkotika harus disimpan secara khusus, ini berarti farmasi itu bersalah dan kemungkinan akan dicabut izin khususnya.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 12,
-        "crime": "Crime12",
-        "conclusion": "Conclusion12",
+        "crime": "Saat sedang melakukan pengecekan, sebuah narkotika yg berada pada tablet obat tanpa label ditemukan dalam sebuah farmasi. ",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 135. Pengurus industri bersalah karena tidak melabel narkotika tersebut.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
-        "case_is_guilty": true,
-        "rank": 1
+        "case_is_guilty": false,
+        "rank": 0
     },
     {
         "id": 13,
-        "crime": "Crime13",
-        "conclusion": "Conclusion13",
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut  pasal 16 UU no.35 tahun 2009. Tanggung jawab pengimporan dibawa oleh perusahaan dagang, dan farmasi tidak bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 5
     },
     {
         "id": 14,
-        "crime": "Crime14",
-        "conclusion": "Conclusion14",
+        "crime": "Kasus ini diarahkan kepada industri perdagangan. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Perdagangan bersalah dan kemungkinan akan diberhentikan aktifitas impor-ekspornya.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 4
     },
     {
         "id": 15,
-        "crime": "Crime15",
-        "conclusion": "Conclusion15",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 16,
-        "crime": "Crime16",
-        "conclusion": "Conclusion16",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah dan hanya akan diberi rehabilitasi.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
-        "case_is_guilty": true,
-        "rank": 1
+        "case_is_guilty": false,
+        "rank": 0
     },
     {
         "id": 17,
-        "crime": "Crime17",
-        "conclusion": "Conclusion17",
+        "crime": "Pimpinan rumah sakit ditangkap setelah dilaporkan mengedarkan narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009. Pasal 147 a, pimpinan rumah sakit itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 5
     },
     {
         "id": 18,
-        "crime": "Crime18",
-        "conclusion": "Conclusion18",
+        "crime": "Seorang petugas laboratorium dilaporkan memalsukan hasil laboratorium.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 142. Petugas itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 5
     },
     {
         "id": 19,
-        "crime": "Crime19",
-        "conclusion": "Conclusion19",
+        "crime": "Kasus ini diarahkan kepada pemilik rumah. Sebuah rumah digrebek setelah dilaporkan menyimpan narkotika, tetangga rumah tersebut menyangkal adanya narkotika dalam rumah itu tetapi setelah di periksa ternyata rumah tersebut memiliki narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 112. Pemilik rumah bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 20,
-        "crime": "Crime20",
-        "conclusion": "Conclusion20",
+        "crime": "Kasus ini diarahkan kepada tetangga rumah tersangka. Sebuah rumah digrebek setelah dilaporkan menyimpan narkotika, tetangga rumah tersebut menyangkal adanya narkotika dalam rumah itu tetapi setelah di periksa ternyata rumah tersebut memiliki narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 143. Tetangga itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 2
     },
     {
         "id": 21,
-        "crime": "Crime21",
-        "conclusion": "Conclusion21",
+        "crime": "Kasus ini diarahkan kepada rumah sakit. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 11 ayat (1) hanya industri farmasi yang dapat diizinkan pemerintah untuk mengimpor narkotika. Rumah sakit bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 5
     },
     {
         "id": 22,
-        "crime": "Crime22",
-        "conclusion": "Conclusion22",
+        "crime": "Kasus ini diarahkan kepada industri perdagangan. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
+        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Perdagangan bersalah karena tidak memastikan surat permintaan impor dan kemungkinan akan diberhentikan aktifitas impor-ekspornya.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 23,
-        "crime": "Crime23",
-        "conclusion": "Conclusion23",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
+        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    35
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 24,
-        "crime": "Crime24",
-        "conclusion": "Conclusion24",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah dan hanya akan diberi rehabilitasi.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
-        "case_is_guilty": true,
-        "rank": 1
+        "case_is_guilty": false,
+        "rank": 0
     },
     {
         "id": 25,
-        "crime": "Crime25",
-        "conclusion": "Conclusion25",
+        "crime": "Seorang pecandu dari luar negeri tertangkap di indonesia.",
+        "conclusion": "Menurut pasal 146 UU no.35 tahun 2009. Pecandu itu bersalah dan setelah selesai dipidana akan diusir dari negara.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 26,
-        "crime": "Crime26",
-        "conclusion": "Conclusion26",
+        "crime": "Kasus ini diarahkan kepada nahkoda. Narkotika ditemukan berada di tempat obat-obatan lain pada saat trasportasi",
+        "conclusion": "Menurut pasal 139 UU no.35 tahun 2009 nahkoda itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    25,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 2
     },
     {
         "id": 27,
-        "crime": "Crime27",
-        "conclusion": "Conclusion27",
+        "crime": "Seseorang tertangkap membawa narkotika dalam bungkusan di dalam airport.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 112. Orang itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    20,
+                    55
                 ]
             ]
         ],
@@ -460,563 +460,53 @@
     },
     {
         "id": 28,
-        "crime": "Crime28",
-        "conclusion": "Conclusion28",
+        "crime": "Kasus ini diarahkan kepada pengusaha. Pecandu narkoba tertangkap dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri dan diimpor oleh seorang pengusaha tanpa izin.",
+        "conclusion": "Menurut pasal 118 UU no.35 tahun 2009. Pengusaha bersalah.",
         "identity": [
             [
-                "Male",
+                "Female",
                 1,
                 [
                     35,
-                    40
+                    55
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 5
     },
     {
         "id": 29,
-        "crime": "Crime29",
-        "conclusion": "Conclusion29",
+        "crime": "Kasus ini diarahkan kepada pengedar. Pecandu narkoba tertangkap dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri dan diimpor oleh seorang pengusaha tanpa izin.",
+        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
         "identity": [
             [
                 "Male",
                 1,
                 [
                     35,
-                    40
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
+        "rank": 3
     },
     {
         "id": 30,
-        "crime": "Crime30",
-        "conclusion": "Conclusion30",
+        "crime": "Kasus ini diarahkan kepada pecandu. Pecandu narkoba tertangkap dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri dan diimpor oleh seorang pengusaha tanpa izin.",
+        "conclusion": "Menurut UU no.35 tahun 2009, pasal 55, 112, 114, 127, dan 134 ayat (1). Pecandu bersalah dan akan direhabilitas sesuai pasal 56.",
         "identity": [
             [
                 "Male",
                 1,
                 [
-                    35,
-                    40
+                    20,
+                    45
                 ]
             ]
         ],
         "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 31,
-        "crime": "Crime31",
-        "conclusion": "Conclusion31",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 32,
-        "crime": "Crime32",
-        "conclusion": "Conclusion32",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 33,
-        "crime": "Crime33",
-        "conclusion": "Conclusion33",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 34,
-        "crime": "Crime34",
-        "conclusion": "Conclusion34",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 35,
-        "crime": "Crime35",
-        "conclusion": "Conclusion35",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 36,
-        "crime": "Crime36",
-        "conclusion": "Conclusion36",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 37,
-        "crime": "Crime37",
-        "conclusion": "Conclusion37",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 38,
-        "crime": "Crime38",
-        "conclusion": "Conclusion38",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 39,
-        "crime": "Crime39",
-        "conclusion": "Conclusion39",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 40,
-        "crime": "Crime40",
-        "conclusion": "Conclusion40",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 41,
-        "crime": "Crime41",
-        "conclusion": "Conclusion41",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 42,
-        "crime": "Crime42",
-        "conclusion": "Conclusion42",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 43,
-        "crime": "Crime43",
-        "conclusion": "Conclusion43",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 44,
-        "crime": "Crime44",
-        "conclusion": "Conclusion44",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 45,
-        "crime": "Crime45",
-        "conclusion": "Conclusion45",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 46,
-        "crime": "Crime46",
-        "conclusion": "Conclusion46",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 47,
-        "crime": "Crime47",
-        "conclusion": "Conclusion47",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 48,
-        "crime": "Crime48",
-        "conclusion": "Conclusion48",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 49,
-        "crime": "Crime49",
-        "conclusion": "Conclusion49",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 50,
-        "crime": "Crime50",
-        "conclusion": "Conclusion50",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 51,
-        "crime": "Crime51",
-        "conclusion": "Conclusion51",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 52,
-        "crime": "Crime52",
-        "conclusion": "Conclusion52",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 53,
-        "crime": "Crime53",
-        "conclusion": "Conclusion53",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 54,
-        "crime": "Crime54",
-        "conclusion": "Conclusion54",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 55,
-        "crime": "Crime55",
-        "conclusion": "Conclusion55",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 56,
-        "crime": "Crime56",
-        "conclusion": "Conclusion56",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 57,
-        "crime": "Crime57",
-        "conclusion": "Conclusion57",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 58,
-        "crime": "Crime58",
-        "conclusion": "Conclusion58",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 59,
-        "crime": "Crime59",
-        "conclusion": "Conclusion59",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
-    },
-    {
-        "id": 60,
-        "crime": "Crime60",
-        "conclusion": "Conclusion60",
-        "identity": [
-            [
-                "Male",
-                1,
-                [
-                    35,
-                    40
-                ]
-            ]
-        ],
-        "case_is_guilty": true,
-        "rank": 1
+        "rank": 2
     }
 ]
