@@ -1,170 +1,1022 @@
 [
     {
         "id": 1,
-        "crime": "Seorang putra dari orang tua asing didiskriminasi oleh teman sekolahnya karena rambutnya yang seperti diwarna, para guru telah mencoba untuk menghentikan diskriminasi tersebut tetapi telah berhenti karena tidak begitu efektif. Orang tua anak laki-laki itu sekarang menuntut sekolah atas kelalaiannya.",
-        "conclusion": "Sekolah bersalah berdasarkan UU No.23 tahun 2002, pasal 4, dan pasal 13.",
-        "identity" : [["Male", 5, [25, 35]], ["Female", 2, [25, 30]]],
-        "case_is_guilty" : true,
-        "rank": 3
+        "crime": "Crime1",
+        "conclusion": "Conclusion1",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 2,
-        "crime": "Seorang pasangan mengadopsi seorang anak dari gubuk yg kusuh, orang tuanya pun memberikannya karena tidak mampu menjamin pertumbuhannya, setelah pemilik rumah dekat gubuk itu tau, dia menuntut orang tua anak tersebut dengan penelantaran.",
-        "conclusion": "Menurut UU No.23 tahun 2002, pasal 7 ayat 2, orang tua anak terebut tidak bersalah.",
-        "identity" : [["Male", 1, [25, 35]], ["Female", 1, [25, 30]]],
-        "case_is_guilty" : false,
-        "rank": 0 
+        "crime": "Crime2",
+        "conclusion": "Conclusion2",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 3,
-        "crime": "Seorang paman menuntut saudaranya atas anak mereka karena melihat tanda-tanda kekerasan di anak tersebut.",
-        "conclusion": "Orang tua anak tersebut melanggar UU No.23 tahun 2002, pasal 13, dan pasal 16.",
-        "identity" : [["Male", 1, [35, 45]]],
-        "case_is_guilty" : true,
-        "rank": 4
+        "crime": "Crime3",
+        "conclusion": "Conclusion3",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 4,
-        "crime": "Seorang pengedar narkotika ditangkap warga sekitar dan langsung dituntut dalam hukum, setelah di periksa, orang tersebut mendapat narkotika dari sebuah farmasi.",
-        "conclusion": "Menurut UU No.35 tahun 2009, pasal 12, pengedar itu bersalah, dan sesuai UU No.35 tahun 2009 pasal 12, dan 14 ayat 1,2,3 dan 4, farmasi juga bersalah.",
-        "identity" : [["Male", 1, [25, 55]]],
-        "case_is_guilty" : true,
-        "rank": 5
+        "crime": "Crime4",
+        "conclusion": "Conclusion4",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 5,
-        "crime": "Suatu desa memberikan akte elahiran 35 hari setelah di diajukan permohonanya dikarenakan tidak diketahuinya orang tua anak tersebut.",
-        "conclusion": "Menurut UU No.23 tahun 2002, pasal 28 ayat 2, dan mengingat pasal 27 ayat 4, desa bersalah.",
-        "identity" : [["Male", 1, [45, 55]]],
-        "case_is_guilty" : true,
-        "rank": 3
+        "crime": "Crime5",
+        "conclusion": "Conclusion5",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 6,
-        "crime": "Test6",
-        "conclusion": "Test6",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime6",
+        "conclusion": "Conclusion6",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 7,
-        "crime": "Test7",
-        "conclusion": "Test7",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime7",
+        "conclusion": "Conclusion7",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 8,
-        "crime": "Test8",
-        "conclusion": "Test8",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime8",
+        "conclusion": "Conclusion8",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 9,
-        "crime": "Test9",
-        "conclusion": "Test9",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime9",
+        "conclusion": "Conclusion9",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 10,
-        "crime": "Test10",
-        "conclusion": "Test10",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime10",
+        "conclusion": "Conclusion10",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 11,
-        "crime": "Test11",
-        "conclusion": "Test11",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime11",
+        "conclusion": "Conclusion11",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 12,
-        "crime": "Test12",
-        "conclusion": "Test12",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime12",
+        "conclusion": "Conclusion12",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 13,
-        "crime": "Test13",
-        "conclusion": "Test13",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime13",
+        "conclusion": "Conclusion13",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 14,
-        "crime": "Test14",
-        "conclusion": "Test14",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime14",
+        "conclusion": "Conclusion14",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 15,
-        "crime": "Test15",
-        "conclusion": "Test15",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime15",
+        "conclusion": "Conclusion15",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 16,
-        "crime": "Test16",
-        "conclusion": "Test16",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime16",
+        "conclusion": "Conclusion16",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 17,
-        "crime": "Test17",
-        "conclusion": "Test17",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime17",
+        "conclusion": "Conclusion17",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 18,
-        "crime": "Test18",
-        "conclusion": "Test18",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime18",
+        "conclusion": "Conclusion18",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 19,
-        "crime": "Test19",
-        "conclusion": "Test19",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime19",
+        "conclusion": "Conclusion19",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 20,
-        "crime": "Test20",
-        "conclusion": "Test20",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime20",
+        "conclusion": "Conclusion20",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     },
     {
         "id": 21,
-        "crime": "Test21",
-        "conclusion": "Test21",
-        "identity" : [["Male", 1, [0, 100]]],
-        "case_is_guilty" : false,
-        "rank": 0
+        "crime": "Crime21",
+        "conclusion": "Conclusion21",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 22,
+        "crime": "Crime22",
+        "conclusion": "Conclusion22",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 23,
+        "crime": "Crime23",
+        "conclusion": "Conclusion23",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 24,
+        "crime": "Crime24",
+        "conclusion": "Conclusion24",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 25,
+        "crime": "Crime25",
+        "conclusion": "Conclusion25",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 26,
+        "crime": "Crime26",
+        "conclusion": "Conclusion26",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 27,
+        "crime": "Crime27",
+        "conclusion": "Conclusion27",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 28,
+        "crime": "Crime28",
+        "conclusion": "Conclusion28",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 29,
+        "crime": "Crime29",
+        "conclusion": "Conclusion29",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 30,
+        "crime": "Crime30",
+        "conclusion": "Conclusion30",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 31,
+        "crime": "Crime31",
+        "conclusion": "Conclusion31",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 32,
+        "crime": "Crime32",
+        "conclusion": "Conclusion32",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 33,
+        "crime": "Crime33",
+        "conclusion": "Conclusion33",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 34,
+        "crime": "Crime34",
+        "conclusion": "Conclusion34",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 35,
+        "crime": "Crime35",
+        "conclusion": "Conclusion35",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 36,
+        "crime": "Crime36",
+        "conclusion": "Conclusion36",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 37,
+        "crime": "Crime37",
+        "conclusion": "Conclusion37",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 38,
+        "crime": "Crime38",
+        "conclusion": "Conclusion38",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 39,
+        "crime": "Crime39",
+        "conclusion": "Conclusion39",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 40,
+        "crime": "Crime40",
+        "conclusion": "Conclusion40",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 41,
+        "crime": "Crime41",
+        "conclusion": "Conclusion41",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 42,
+        "crime": "Crime42",
+        "conclusion": "Conclusion42",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 43,
+        "crime": "Crime43",
+        "conclusion": "Conclusion43",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 44,
+        "crime": "Crime44",
+        "conclusion": "Conclusion44",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 45,
+        "crime": "Crime45",
+        "conclusion": "Conclusion45",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 46,
+        "crime": "Crime46",
+        "conclusion": "Conclusion46",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 47,
+        "crime": "Crime47",
+        "conclusion": "Conclusion47",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 48,
+        "crime": "Crime48",
+        "conclusion": "Conclusion48",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 49,
+        "crime": "Crime49",
+        "conclusion": "Conclusion49",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 50,
+        "crime": "Crime50",
+        "conclusion": "Conclusion50",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 51,
+        "crime": "Crime51",
+        "conclusion": "Conclusion51",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 52,
+        "crime": "Crime52",
+        "conclusion": "Conclusion52",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 53,
+        "crime": "Crime53",
+        "conclusion": "Conclusion53",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 54,
+        "crime": "Crime54",
+        "conclusion": "Conclusion54",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 55,
+        "crime": "Crime55",
+        "conclusion": "Conclusion55",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 56,
+        "crime": "Crime56",
+        "conclusion": "Conclusion56",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 57,
+        "crime": "Crime57",
+        "conclusion": "Conclusion57",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 58,
+        "crime": "Crime58",
+        "conclusion": "Conclusion58",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 59,
+        "crime": "Crime59",
+        "conclusion": "Conclusion59",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
+    },
+    {
+        "id": 60,
+        "crime": "Crime60",
+        "conclusion": "Conclusion60",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    35,
+                    40
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 1
     }
 ]
