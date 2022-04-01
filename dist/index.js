@@ -123,15 +123,28 @@ app.post('/home', check_authenticated, (req, res) => {
     let case_data = crime_case_data[current_day_length].case;
     let current_case_length = case_data.length - 1;
     let current_case_data = case_data[current_case_length];
+    crime_case_data[current_day_length].case_current += 1;
     if (req.body.type == 'response') {
+        let response_is_guilty = null;
         if (req.body.response == 'guilty' && current_case_data.case_response == null) {
             current_case_data.case_response = 'guilty';
+            response_is_guilty = true;
         }
+        ;
         if (req.body.response == 'innocent' && current_case_data.case_response == null) {
             current_case_data.case_response = 'innocent';
+            response_is_guilty = false;
+        }
+        ;
+        let current_case_id = current_case_data.case_id;
+        let current_case_crime = case_datas[current_case_id - 1].crime;
+        let current_case_conclusion = case_datas[current_case_id - 1].conclusion;
+        let current_case_is_guilty = case_datas[current_case_id - 1].case_is_guilty;
+        let current_case_response_is_guilty = true;
+        if (current_case_data.case_response == 'innocent') {
+            current_case_response_is_guilty = false;
         }
         if (crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max) {
-            crime_case_data[current_day_length].case_current += 1;
             let random_case_theme = get_random_case();
             // @ts-ignore
             let crime_case_taken = req.user.crime_case_taken;
@@ -151,6 +164,7 @@ app.post('/home', check_authenticated, (req, res) => {
             });
             crime_case_taken.push(random_case_theme);
         }
+        res.redirect(`/home?previous_case_crime=${current_case_crime}&previous_case_conclusion=${current_case_conclusion}&previous_case_is_guilty=${current_case_is_guilty}&previous_case_response_is_guilty=${current_case_response_is_guilty}`);
     }
     if (req.body.type == 'next') {
         if (crime_case_data[current_day_length].case_current >= crime_case_data[current_day_length].case_max) {
@@ -181,9 +195,9 @@ app.post('/home', check_authenticated, (req, res) => {
             });
             crime_case_taken.push(random_case_theme);
         }
+        res.redirect('/home');
     }
     fs_1.default.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
-    res.redirect('/home');
 });
 //#endregion Main Request
 //#region Authentication Request

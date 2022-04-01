@@ -58,6 +58,40 @@
   right: 0;
 }
 
+#modal-confirmation section {
+  border-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#modal-confirmation section button {
+  width: 200px;
+  height: 75px;
+}
+
+#modal-response section {
+  border-radius: 0.25rem;
+}
+
+#modal-response .modal-success {
+  border: 3px solid #48c78e !important;
+}
+
+#modal-response .modal-danger {
+  border: 3px solid #f14668 !important;
+}
+
 #main-container {
   margin-left: 8rem;
 }
@@ -169,20 +203,20 @@
   cursor: pointer;
 }
 
-#main-container .home-third-row-card #card-button-innocent:hover {
+#main-container .home-third-row-card .card-button-innocent-active:hover {
   background-color: #50C08E !important;
 }
 
-#main-container .home-third-row-card #card-button-guilty:hover {
+#main-container .home-third-row-card .card-button-guilty-active:hover {
   background-color: #E74566 !important;
 }
 
-#main-container .home-third-row-card #card-button-innocent-disabled {
+#main-container .home-third-row-card .card-button-innocent-disabled {
   background-color: #257942 !important;
   cursor: not-allowed;
 }
 
-#main-container .home-third-row-card #card-button-guilty-disabled {
+#main-container .home-third-row-card .card-button-guilty-disabled {
   background-color: #981630 !important;
   cursor: not-allowed;
 }

@@ -105,51 +105,27 @@
 
                 <div class="columns mr-6 home-third-row-card">
                     <div class="column">
-                        <% if(!today_case_is_done) {%>
-                            <div class="card has-background-success card-button" id="card-button-innocent" onclick="document.getElementById('form-innocent').submit();">
-                                <div class="card-content">
-                                    <form action="/home" method="POST" id="form-innocent">
-                                        <input type="hidden" name="response" value="innocent">
-                                        <input type="hidden" name="type" value="response">
-                                        <div class="title is-4 has-text-white">Tidak Bersalah</div>
-                                    </form>
-                                </div>
+                        <div class="card has-background-success card-button card-button-innocent-active" id="card-button-innocent" onclick="trigger_modal('form-innocent')">
+                            <div class="card-content">
+                                <form action="/home" method="POST" id="form-innocent">
+                                    <input type="hidden" name="response" value="innocent">
+                                    <input type="hidden" name="type" value="response">
+                                    <div class="title is-4 has-text-white" id="form-innocent-title">Tidak Bersalah</div>
+                                </form>
                             </div>
-                        <% } else if(today_case_is_done) {%>
-                            <div class="card has-background-success card-button" id="card-button-innocent-disabled">
-                                <div class="card-content">
-                                    <form action="/home" method="POST" id="form-innocent">
-                                        <input type="hidden" name="response" value="innocent">
-                                        <input type="hidden" name="type" value="response">
-                                        <div class="title is-4 has-text-grey">Tidak Bersalah</div>
-                                    </form>
-                                </div>
-                            </div>
-                        <% } %>  
+                        </div>
                     </div>
                     
                     <div class="column">
-                        <% if(!today_case_is_done) {%>
-                            <div class="card has-background-danger card-button" id="card-button-guilty" onclick="document.getElementById('form-guilty').submit();">
-                                <div class="card-content">           
-                                    <form action="/home" method="POST" id="form-guilty">
-                                        <input type="hidden" name="response" value="guilty">
-                                        <input type="hidden" name="type" value="response">
-                                        <div class="title is-4 has-text-white">Bersalah</div>
-                                    </form>
-                                </div>
+                        <div class="card has-background-danger card-button card-button-guilty-active" id="card-button-guilty" onclick="trigger_modal('form-guilty')">
+                            <div class="card-content">           
+                                <form action="/home" method="POST" id="form-guilty">
+                                    <input type="hidden" name="response" value="guilty">
+                                    <input type="hidden" name="type" value="response">
+                                    <div class="title is-4 has-text-white" id="form-guilty-title">Bersalah</div>
+                                </form>
                             </div>
-                        <% } else if(today_case_is_done) {%>
-                            <div class="card has-background-danger card-button" id="card-button-guilty-disabled">
-                                <div class="card-content">           
-                                    <form action="/home" method="POST" id="form-guilty">
-                                        <input type="hidden" name="response" value="guilty">
-                                        <input type="hidden" name="type" value="response">
-                                        <div class="title is-4 has-text-grey">Bersalah</div>
-                                    </form>
-                                </div>
-                            </div>
-                        <% } %>
+                        </div>
                     </div>
 
                     <div class="column is-one-quarter">
@@ -173,11 +149,122 @@
                     </div>
                 </div>
             </section>
+
+            <div class="modal" id="modal-confirmation">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                  <section class="modal-card-body m-0 p-0 pt-6 pb-6">
+                    <h2 class="title is-3">Apakah anda yakin?</h2>
+                    <div class="buttons are-large">
+                      <button class="button is-success has-text-weight-bold" id="modal-confirm-button" onclick="">Iya</button>
+                      <button class="button is-danger has-text-weight-bold" onclick="untrigger_modal('modal-confirmation')">Tidak</button>
+                    </div>
+                  </section>
+                </div>
+            </div>
+
+            <div class="modal" id="modal-response">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+                    <section class="modal-card-body" id="modal-response-body">
+                        <div class="title is-4 m-0 p-0 mb-1 has_title_underline" style="white-space: nowrap; display: flex; flex-direction: row; justify-content: space-between;">
+                            <div id="modal-response-title"></div>
+                            <button class="delete" aria-label="close" onclick="untrigger_modal('modal-response')"></button>
+                        </div>
+
+                        <div class="has-text-justified pr-1" id="modal-response-description"></div>
+                        <br>
+                        
+                        <div>Sedangkan:</div>
+                        <div class="has-text-justified pr-1" id="modal-response-conclusion"></div>
+                        <br>
+
+                        <div>Evaluasi anda:</div>
+                        <div class="has-text-justified pr-1" id="modal-response-option"></div>
+                    </section>
+                </div>
+            </div>
         </div>
     </body>
     
     <script>
-        
+        function trigger_modal(id){
+            let element = document.getElementById('modal-confirmation');
+            element.classList.add('is-active');
+            element.classList.add('is-clipped');
 
+            document.getElementById('modal-confirm-button').setAttribute('onclick', `document.getElementById('${id}').submit()`);
+        }
+
+        function untrigger_modal(id){
+            let element = document.getElementById(id);
+            element.classList.remove('is-active');
+            element.classList.remove('is-clipped');
+        }
+
+        function response_modal(){
+            let url = new URL(window.location.href);
+            let previous_case_crime = url.searchParams.get('previous_case_crime');
+            let previous_case_conclusion = url.searchParams.get('previous_case_conclusion');
+            let previous_case_is_guilty = url.searchParams.get('previous_case_is_guilty');
+            let previous_case_response_is_guilty = url.searchParams.get('previous_case_response_is_guilty');
+
+            console.log(previous_case_crime);
+            console.log(previous_case_conclusion);
+            console.log(previous_case_is_guilty);
+            console.log(previous_case_response_is_guilty);
+
+            if(typeof(previous_case_crime) !== 'object' && typeof(previous_case_conclusion) !== 'object' && typeof(previous_case_is_guilty) !== 'object' && typeof(previous_case_response_is_guilty) !== 'object'){
+                let title_text;
+                if(previous_case_is_guilty == previous_case_response_is_guilty){
+                    title_text = "Evaluasi Anda Benar!";
+                    document.getElementById('modal-response-body').classList.add('modal-success');
+                }
+
+                else if(previous_case_is_guilty != previous_case_response_is_guilty){
+                    title_text = "Evaluasi Anda Salah!";
+                    document.getElementById('modal-response-body').classList.add('modal-danger');
+                };
+
+                let option_text;
+                if(previous_case_response_is_guilty == 'false'){
+                    option_text = 'Tidak bersalah';
+                }
+
+                else if(previous_case_response_is_guilty != 'false'){
+                    option_text = 'Bersalah';
+                };
+
+                document.getElementById('modal-response-title').innerHTML = title_text;
+                document.getElementById('modal-response-description').innerHTML = previous_case_crime;
+                document.getElementById('modal-response-conclusion').innerHTML = previous_case_conclusion;
+                document.getElementById('modal-response-option').innerHTML = option_text;
+
+                let element = document.getElementById('modal-response');
+                element.classList.add('is-active');
+                element.classList.add('is-clipped');
+            }
+        }
+
+        response_modal()
     </script>
+
+    <% if(today_case_is_done){ %>
+        <script>
+            document.getElementById('card-button-innocent').classList.remove('card-button-innocent-active')
+            document.getElementById('card-button-guilty').classList.remove('card-button-guilty-active')
+
+            document.getElementById('card-button-innocent').classList.add('card-button-innocent-disabled')
+            document.getElementById('card-button-guilty').classList.add('card-button-guilty-disabled')
+
+            document.getElementById('card-button-innocent').setAttribute('onclick', '');
+            document.getElementById('card-button-guilty').setAttribute('onclick', '');
+
+            document.getElementById('form-innocent-title').classList.remove('has-text-white')
+            document.getElementById('form-guilty-title').classList.remove('has-text-white')
+
+            document.getElementById('form-innocent-title').classList.add('has-text-grey')
+            document.getElementById('form-guilty-title').classList.add('has-text-grey')
+        </script>
+    <% } %>
 </html>

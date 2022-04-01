@@ -60,6 +60,38 @@
     right: 0;
 }
 
+#modal-confirmation{
+    section{
+        border-radius: 0.25rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        button{
+            width: 200px;
+            height: 75px;
+        }
+    }
+}
+
+#modal-response{
+    section{
+        border-radius: 0.25rem;
+    }
+    
+    .modal-success{
+        border: 3px solid #48c78e !important;
+    }
+
+    .modal-danger{
+        border: 3px solid #f14668 !important;
+    } 
+}
+
+
+
 #main-container{
     margin-left: 8rem;
 
@@ -155,24 +187,24 @@
             cursor: pointer;
         }
 
-        #card-button-innocent{
+        .card-button-innocent-active{
             &:hover{
                 background-color: #50C08E !important;
             }
         }
 
-        #card-button-guilty{
+        .card-button-guilty-active{
             &:hover{
                 background-color: #E74566 !important;
             }
         }
 
-        #card-button-innocent-disabled{
+        .card-button-innocent-disabled{
             background-color: hsl(141, 53%, 31%) !important;
             cursor: not-allowed;
         }
 
-        #card-button-guilty-disabled{
+        .card-button-guilty-disabled{
             background-color: hsl(348, 75%, 34%) !important;
             cursor: not-allowed;
         }

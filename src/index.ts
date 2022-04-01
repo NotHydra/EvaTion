@@ -2,7 +2,7 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 };
 
-import express, { Application, Request, Response, NextFunction } from 'express';
+import express, { Application, Request, Response, NextFunction, response } from 'express';
 import fs from 'fs';
 import bcrypt from 'bcrypt';
 import passport from 'passport';
@@ -131,19 +131,30 @@ app.post('/home', check_authenticated, (req: Request, res: Response) => {
     let case_data = crime_case_data[current_day_length].case;
     let current_case_length: number = case_data.length - 1;
     let current_case_data: any = case_data[current_case_length];
-
+    
+    crime_case_data[current_day_length].case_current += 1;
     if(req.body.type == 'response'){
+        let response_is_guilty = null;
         if(req.body.response == 'guilty' && current_case_data.case_response == null){
             current_case_data.case_response = 'guilty';
-        }
+            response_is_guilty = true;
+        };
     
         if(req.body.response == 'innocent' && current_case_data.case_response == null){
             current_case_data.case_response = 'innocent';
+            response_is_guilty = false;
+        };
+
+        let current_case_id = current_case_data.case_id;
+        let current_case_crime = case_datas[current_case_id - 1].crime;
+        let current_case_conclusion = case_datas[current_case_id - 1].conclusion;
+        let current_case_is_guilty = case_datas[current_case_id - 1].case_is_guilty;
+        let current_case_response_is_guilty = true;
+        if(current_case_data.case_response == 'innocent'){
+            current_case_response_is_guilty = false;
         }
-    
+
         if(crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max){
-            crime_case_data[current_day_length].case_current += 1;
-            
             let random_case_theme: any = get_random_case();
     
             // @ts-ignore
@@ -166,6 +177,8 @@ app.post('/home', check_authenticated, (req: Request, res: Response) => {
     
             crime_case_taken.push(random_case_theme);
         }
+
+        res.redirect(`/home?previous_case_crime=${current_case_crime}&previous_case_conclusion=${current_case_conclusion}&previous_case_is_guilty=${current_case_is_guilty}&previous_case_response_is_guilty=${current_case_response_is_guilty}`);
     }
 
     if(req.body.type == 'next'){
@@ -201,10 +214,11 @@ app.post('/home', check_authenticated, (req: Request, res: Response) => {
     
             crime_case_taken.push(random_case_theme);
         }
+
+        res.redirect('/home');
     }
 
-    fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
-    res.redirect('/home');
+    fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4)); 
 });
 
 //#endregion Main Request
