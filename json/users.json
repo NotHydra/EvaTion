@@ -1,3 +1,38 @@
 [
-    
+    {
+        "id": 1,
+        "username": "Test123",
+        "password": "$2b$12$hScnzyJLgPUv0b09dW.JGegJh71shVqaSqEMbID264bl9KNqKdE5y",
+        "people_current": 50,
+        "people_max": 100,
+        "prosperity_current": 50,
+        "prosperity_max": 100,
+        "crime_rate_current": 50,
+        "crime_rate_max": 100,
+        "money_current": 50,
+        "money_max": 100,
+        "crime_case_taken": [
+            10
+        ],
+        "crime_case": [
+            {
+                "day": 1,
+                "case_current": 0,
+                "case_max": 2,
+                "case": [
+                    {
+                        "case_id": 10,
+                        "case_response": null,
+                        "case_identity": [
+                            [
+                                "Hanif",
+                                26,
+                                "Pria"
+                            ]
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 ]

@@ -2,7 +2,7 @@ if (process.env.NODE_ENV !== 'production'){
     require('dotenv').config();
 };
 
-import express, { Application, Request, Response, NextFunction, response } from 'express';
+import express, { Application, Request, Response, NextFunction } from 'express';
 import fs from 'fs';
 import bcrypt from 'bcrypt';
 import passport from 'passport';
