@@ -6,6 +6,9 @@
 
     <body>
         <%- include('partials/nav', { user_data }); %>
+        <script>
+            document.getElementsByClassName('link-item')[1].classList.add('link-item-is-active');
+        </script>
         
         <div id="main-container" class="container is-fluid mb-0 pb-0">
             <section class="section mt-2 pt-2 mb-0 pb-0">

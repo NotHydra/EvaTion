@@ -13,15 +13,12 @@
   background-color: #919191;
 }
 
-.has_title_underline {
-  border-bottom: 3px solid #363636;
-}
-
 #sidebar {
   width: 12rem;
   position: fixed;
   top: 0;
   bottom: 0;
+  z-index: 99;
   -webkit-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -41,6 +38,12 @@
           align-items: center;
 }
 
+#sidebar .link-item-is-active {
+  background-color: whitesmoke;
+  color: #363636;
+  border-radius: 0;
+}
+
 #sidebar #bottom-container {
   width: 100%;
   position: absolute;
@@ -56,6 +59,14 @@
   position: absolute;
   left: 0;
   right: 0;
+}
+
+.has_title_underline {
+  border-bottom: 3px solid #363636;
+}
+
+#modal-confirmation {
+  z-index: 100;
 }
 
 #modal-confirmation section {
@@ -78,18 +89,6 @@
 #modal-confirmation section button {
   width: 200px;
   height: 75px;
-}
-
-#modal-response section {
-  border-radius: 0.25rem;
-}
-
-#modal-response .modal-success {
-  border: 3px solid #48c78e !important;
-}
-
-#modal-response .modal-danger {
-  border: 3px solid #f14668 !important;
 }
 
 #main-container {
@@ -219,6 +218,38 @@
 #main-container .home-third-row-card .card-button-guilty-disabled {
   background-color: #981630 !important;
   cursor: not-allowed;
+}
+
+#main-container #modal-response {
+  z-index: 100;
+}
+
+#main-container #modal-response section {
+  border-radius: 0.25rem;
+}
+
+#main-container #modal-response .modal-success {
+  border: 3px solid #48c78e !important;
+}
+
+#main-container #modal-response .modal-danger {
+  border: 3px solid #f14668 !important;
+}
+
+#setting-container {
+  margin-left: 8rem;
+}
+
+#setting-container .card-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+
+#setting-container #card-button-danger:hover {
+  background-color: #E74566 !important;
 }
 
 #login-container .hero-body, #register-container .hero-body {

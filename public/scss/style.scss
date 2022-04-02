@@ -15,16 +15,13 @@
     background-color: #919191;
 }
 
-.has_title_underline{
-    border-bottom: 3px solid hsl(0, 0%, 21%)
-}
-
 #sidebar{
     width: 12rem;
 
     position: fixed;
     top: 0;
     bottom: 0;
+    z-index: 99;
 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 
@@ -38,6 +35,12 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+
+    .link-item-is-active{
+        background-color: hsl(0, 0%, 96%);
+        color: hsl(0, 0%, 21%);
+        border-radius: 0;
     }
 
     #bottom-container{
@@ -60,7 +63,13 @@
     right: 0;
 }
 
+.has_title_underline{
+    border-bottom: 3px solid hsl(0, 0%, 21%)
+}
+
 #modal-confirmation{
+    z-index: 100;
+
     section{
         border-radius: 0.25rem;
 
@@ -75,22 +84,6 @@
         }
     }
 }
-
-#modal-response{
-    section{
-        border-radius: 0.25rem;
-    }
-    
-    .modal-success{
-        border: 3px solid #48c78e !important;
-    }
-
-    .modal-danger{
-        border: 3px solid #f14668 !important;
-    } 
-}
-
-
 
 #main-container{
     margin-left: 8rem;
@@ -207,6 +200,38 @@
         .card-button-guilty-disabled{
             background-color: hsl(348, 75%, 34%) !important;
             cursor: not-allowed;
+        }
+    }
+
+    #modal-response{
+        z-index: 100;
+
+        section{
+            border-radius: 0.25rem;
+        }
+        
+        .modal-success{
+            border: 3px solid #48c78e !important;
+        }
+    
+        .modal-danger{
+            border: 3px solid #f14668 !important;
+        } 
+    }
+}
+
+#setting-container{
+    margin-left: 8rem;
+    
+    .card-button{
+        user-select: none;
+
+        cursor: pointer;
+    }
+
+    #card-button-danger{
+        &:hover{
+            background-color: #E74566 !important;
         }
     }
 }

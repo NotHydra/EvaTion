@@ -221,6 +221,43 @@ app.post('/home', check_authenticated, (req: Request, res: Response) => {
     fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4)); 
 });
 
+app.post('/setting', check_authenticated, (req: Request, res: Response) => {
+    if(req.body.type == 'reset'){
+        const random_case_max: number = get_random_number(1, 2);
+        let random_case_theme: any = get_random_case();
+        let random_case_identity: any = get_random_case_identity(random_case_theme)
+
+        let user_request: any = req.user;
+        user_request.people_current = 50;
+        user_request.people_max = 100;
+        user_request.prosperity_current = 50;
+        user_request.prosperity_max = 100;
+        user_request.crime_rate_current = 50;
+        user_request.crime_rate_max = 100;
+        user_request.money_current = 50;
+        user_request.money_max = 100;
+        user_request.crime_case_taken = [random_case_theme];
+        user_request.crime_case = [
+            {
+                "day": 1,
+                "case_current" : 0,
+                "case_max" : random_case_max,
+                "case": [
+                    {
+                        "case_id": random_case_theme,  
+                        "case_response": null,
+                        "case_identity" : random_case_identity
+                    }
+                ]
+            }
+        ]
+
+        res.redirect('/setting');
+    }
+
+    fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4)); 
+});
+
 //#endregion Main Request
 
 //#region Authentication Request

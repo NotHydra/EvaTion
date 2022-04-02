@@ -52,7 +52,7 @@
     },
     {
         "id": 4,
-        "crime": "Farmasi di sebuah desa tertangkap menyimpan ganja berbentuk tumbuhan, dan juga diketahui menanamnya tanpa izin, terhitung berat penyimpanan narkotikanya sebanyak 3,5 KG.",
+        "crime": "Farmasi di sebuah desa tertangkap menyimpan ganja berbentuk tumbuhan, dan juga diketahui menanamnya tanpa izin, terhitung berat penyimpanan narkotikanya seberat 3,5 KG.",
         "conclusion": "Sesuai UU no.35 tahun 2009 pasal 111 ayat 2. Pemilik farmasi itu bersalah.",
         "identity": [
             [
@@ -200,8 +200,8 @@
                 ]
             ]
         ],
-        "case_is_guilty": false,
-        "rank": 0
+        "case_is_guilty": true,
+        "rank": 4
     },
     {
         "id": 13,
@@ -217,8 +217,8 @@
                 ]
             ]
         ],
-        "case_is_guilty": true,
-        "rank": 5
+        "case_is_guilty": false,
+        "rank": 0
     },
     {
         "id": 14,

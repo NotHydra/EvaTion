@@ -6,11 +6,77 @@
 
     <body>
         <%- include('partials/nav', { user_data }); %>
+        <script>
+            document.getElementsByClassName('link-item')[4].classList.add('link-item-is-active');
+        </script>
         
-        <div id="main-container" class="container is-fluid mb-0 pb-0">
+        <div id="setting-container" class="container is-fluid mb-0 pb-0">
             <section class="section mt-2 pt-2 mb-0 pb-0">
-                <div class="title is-4">Work In Progress</div>
+                <div class="columns mr-6">
+                    <div class="column">
+                        <div class="card mb-4">
+                            <div class="card-content">
+                                <div class="content">
+                                    <div class="title is-5"><%= user_data.username %></div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="card has-background-danger card-button mb-4" id="card-button-danger" onclick="trigger_modal('form-reset-data')">
+                            <div class="card-content">
+                              	<div class="content">
+									<form action="/setting" method="POST" id="form-reset-data">
+										<input type="hidden" name="type" value="reset">
+										<div class="title is-5 has-text-white">Mulai dari awal?</div>
+									</form>
+                            	</div>
+                            </div>
+                        </div>
+
+                        <div class="card has-background-danger card-button mb-4" id="card-button-danger" onclick="trigger_modal('form-logout')">
+                            <div class="card-content">
+                              	<div class="content">
+									<form action="/logout?_method=DELETE" method="POST" id="form-logout">
+										<input type="hidden" name="type" value="logout">
+										<div class="title is-5 has-text-white">Logout</div>
+									</form>
+                            	</div>
+                            </div>
+                        </div>
+
+                    </div>             
+                </div>
             </section>
+
+            <div class="modal" id="modal-confirmation">
+                <div class="modal-background"></div>
+                <div class="modal-card">
+					<section class="modal-card-body m-0 p-0 pt-6 pb-6">
+						<h2 class="title is-3">Apakah anda yakin?</h2>
+						<div class="buttons are-large">
+							<button class="button is-success has-text-weight-bold" id="modal-confirm-button" onclick="">Iya</button>
+							<button class="button is-danger has-text-weight-bold" onclick="untrigger_modal('modal-confirmation')">Tidak</button>
+						</div>
+					</section>
+                </div>
+            </div>
         </div>
     </body>
+
+    <script>
+        function trigger_modal(id){
+            let element = document.getElementById('modal-confirmation');
+            element.classList.add('is-active');
+            element.classList.add('is-clipped');
+
+            document.getElementById('modal-confirm-button').setAttribute('onclick', `document.getElementById('${id}').submit()`);
+        };
+
+        function untrigger_modal(id){
+            let element = document.getElementById(id);
+            element.classList.remove('is-active');
+            element.classList.remove('is-clipped');
+        };
+
+    </script>
 </html>

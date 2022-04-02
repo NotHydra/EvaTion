@@ -12,21 +12,102 @@
         "money_current": 50,
         "money_max": 100,
         "crime_case_taken": [
-            10
+            9,
+            4,
+            15,
+            6,
+            29,
+            1
         ],
         "crime_case": [
             {
                 "day": 1,
-                "case_current": 0,
+                "case_current": 2,
+                "case_max": 1,
+                "case": [
+                    {
+                        "case_id": 9,
+                        "case_response": "guilty",
+                        "case_identity": [
+                            [
+                                "Putra",
+                                43,
+                                "Pria"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "day": 2,
+                "case_current": 3,
                 "case_max": 2,
                 "case": [
                     {
-                        "case_id": 10,
+                        "case_id": 4,
+                        "case_response": "guilty",
+                        "case_identity": [
+                            [
+                                "Adam",
+                                29,
+                                "Pria"
+                            ]
+                        ]
+                    },
+                    {
+                        "case_id": 15,
+                        "case_response": "guilty",
+                        "case_identity": [
+                            [
+                                "Hanif",
+                                37,
+                                "Pria"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "day": 3,
+                "case_current": 2,
+                "case_max": 1,
+                "case": [
+                    {
+                        "case_id": 6,
+                        "case_response": "guilty",
+                        "case_identity": [
+                            [
+                                "Hendra",
+                                25,
+                                "Pria"
+                            ]
+                        ]
+                    }
+                ]
+            },
+            {
+                "day": 4,
+                "case_current": 1,
+                "case_max": 2,
+                "case": [
+                    {
+                        "case_id": 29,
+                        "case_response": "guilty",
+                        "case_identity": [
+                            [
+                                "Eko",
+                                38,
+                                "Pria"
+                            ]
+                        ]
+                    },
+                    {
+                        "case_id": 1,
                         "case_response": null,
                         "case_identity": [
                             [
                                 "Hanif",
-                                26,
+                                33,
                                 "Pria"
                             ]
                         ]

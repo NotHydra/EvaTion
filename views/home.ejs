@@ -6,6 +6,9 @@
 
     <body>
         <%- include('partials/nav', { user_data }); %>
+        <script>
+            document.getElementsByClassName('link-item')[0].classList.add('link-item-is-active');
+        </script>
         
         <div id="main-container" class="container is-fluid mb-0 pb-0">
             <section class="section mt-2 pt-2 mb-0 pb-0">
@@ -18,23 +21,23 @@
                             {display : "Keuangan", icon : "fa-coins", color : "warning", current : user_data.money_current, max : user_data.money_max, percentage : (user_data.money_current / user_data.money_max) * 100}
                         ];
 
-                        let current_day = user_data.crime_case.length
-                        let current_case = user_data.crime_case[current_day - 1].case.length
+                        let current_day = user_data.crime_case.length;
+                        let current_case = user_data.crime_case[current_day - 1].case.length;
  
-                        let case_identity = user_data.crime_case[current_day - 1].case[current_case - 1].case_identity
+                        let case_identity = user_data.crime_case[current_day - 1].case[current_case - 1].case_identity;
                         
 
                         let case_current = user_data.crime_case[user_data.crime_case.length - 1].case_current;
                         let case_max = user_data.crime_case[user_data.crime_case.length - 1].case_max;
 
-                        let case_left = case_max - case_current
+                        let case_left = case_max - case_current;
                         
-                        let today_case_is_done = false
+                        let today_case_is_done = false;
                         if(case_current == case_max){
-                            today_case_is_done = true
-                        }
+                            today_case_is_done = true;
+                        };
                     %>
-                    
+
                     <% for(i = 0; i < list_of_stat_attribute.length; i++) {%>
                         <div class="column">
                             <div class="card" id="<%= list_of_stat_attribute[i].color %>_card">
@@ -56,7 +59,7 @@
                                 </div>
                             </div>
                         </div>
-                    <% } %>
+                    <% }; %>
                 </div>
 
                 <div class="columns mr-6 home-second-row-card">
@@ -73,7 +76,7 @@
                                         <div><%= case_datas[user_data.crime_case[current_day - 1].case[current_case - 1].case_id - 1].crime %></div>
                                     <% } else if(today_case_is_done) {%>
                                         <div>Kasus untuk hari ini sudah habis, pindah ke hari berikutnya!</div>
-                                    <% } %> 
+                                    <% }; %> 
                                     
                                 </div>
                             </div>
@@ -96,7 +99,7 @@
                                         <% }%>
                                     <% } else if(today_case_is_done) {%>
                                         <div>Kasus untuk hari ini sudah habis, pindah ke hari berikutnya!</div>
-                                    <% } %> 
+                                    <% }; %> 
                                 </div>
                             </div>
                         </div>
@@ -145,7 +148,7 @@
                                     </form>
                                 </div>
                             </div>
-                        <% } %>
+                        <% }; %>
                     </div>
                 </div>
             </section>
@@ -194,13 +197,13 @@
             element.classList.add('is-clipped');
 
             document.getElementById('modal-confirm-button').setAttribute('onclick', `document.getElementById('${id}').submit()`);
-        }
+        };
 
         function untrigger_modal(id){
             let element = document.getElementById(id);
             element.classList.remove('is-active');
             element.classList.remove('is-clipped');
-        }
+        };
 
         function response_modal(){
             let url = new URL(window.location.href);
@@ -251,20 +254,20 @@
 
     <% if(today_case_is_done){ %>
         <script>
-            document.getElementById('card-button-innocent').classList.remove('card-button-innocent-active')
-            document.getElementById('card-button-guilty').classList.remove('card-button-guilty-active')
+            document.getElementById('card-button-innocent').classList.remove('card-button-innocent-active');
+            document.getElementById('card-button-guilty').classList.remove('card-button-guilty-active');
 
-            document.getElementById('card-button-innocent').classList.add('card-button-innocent-disabled')
-            document.getElementById('card-button-guilty').classList.add('card-button-guilty-disabled')
+            document.getElementById('card-button-innocent').classList.add('card-button-innocent-disabled');
+            document.getElementById('card-button-guilty').classList.add('card-button-guilty-disabled');
 
             document.getElementById('card-button-innocent').setAttribute('onclick', '');
             document.getElementById('card-button-guilty').setAttribute('onclick', '');
 
-            document.getElementById('form-innocent-title').classList.remove('has-text-white')
-            document.getElementById('form-guilty-title').classList.remove('has-text-white')
+            document.getElementById('form-innocent-title').classList.remove('has-text-white');
+            document.getElementById('form-guilty-title').classList.remove('has-text-white');
 
-            document.getElementById('form-innocent-title').classList.add('has-text-grey')
-            document.getElementById('form-guilty-title').classList.add('has-text-grey')
+            document.getElementById('form-innocent-title').classList.add('has-text-grey');
+            document.getElementById('form-guilty-title').classList.add('has-text-grey');
         </script>
-    <% } %>
+    <% }; %>
 </html>
