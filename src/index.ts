@@ -135,22 +135,6 @@ function main(case_datas: any, user_datas: any){
         res.render('home', { title: 'Utama', user_data: req.user, case_datas });
     });
 
-    app.get('/stats', check_authenticated, (req: Request, res: Response) => {
-        res.render('stats', { title: 'Informasi', user_data: req.user });
-    });
-
-    app.get('/upgrade', check_authenticated, (req: Request, res: Response) => {
-        res.render('upgrade', { title: 'Peningkatan', user_data: req.user });
-    });
-
-    app.get('/history', check_authenticated, (req: Request, res: Response) => {
-        res.render('history', { title: 'Berita', user_data: req.user });
-    });
-
-    app.get('/setting', check_authenticated, (req: Request, res: Response) => {
-        res.render('setting', { title: 'Pengaturan', user_data: req.user });
-    });
-
     app.post('/home', check_authenticated, (req: Request, res: Response) => {
         // @ts-ignore
         let crime_case_data: any = req.user.crime_case;
@@ -270,6 +254,22 @@ function main(case_datas: any, user_datas: any){
         })
     });
 
+    app.get('/stats', check_authenticated, (req: Request, res: Response) => {
+        res.render('stats', { title: 'Informasi', user_data: req.user });
+    });
+
+    app.get('/upgrade', check_authenticated, (req: Request, res: Response) => {
+        res.render('upgrade', { title: 'Peningkatan', user_data: req.user });
+    });
+
+    app.get('/history', check_authenticated, (req: Request, res: Response) => {
+        res.render('history', { title: 'Berita', user_data: req.user });
+    });
+
+    app.get('/setting', check_authenticated, (req: Request, res: Response) => {
+        res.render('setting', { title: 'Pengaturan', user_data: req.user });
+    });
+
     app.post('/setting', check_authenticated, (req: Request, res: Response) => {
         if(req.body.type == 'reset'){
             const random_case_max: number = get_random_number(1, 2);
@@ -321,7 +321,7 @@ function main(case_datas: any, user_datas: any){
         })
 
         .then(() =>{
-            console.log(`Saving User ${user_request.id} Data`)   
+            console.log(`Resetting User ${user_request.id} Data`)   
         })
 
         .catch((err) => {
