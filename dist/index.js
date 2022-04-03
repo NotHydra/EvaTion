@@ -24,6 +24,7 @@ const express_flash_1 = __importDefault(require("express-flash"));
 const express_session_1 = __importDefault(require("express-session"));
 const method_override_1 = __importDefault(require("method-override"));
 const alea_1 = __importDefault(require("alea"));
+const mongoose_1 = __importDefault(require("mongoose"));
 const app = (0, express_1.default)();
 const prng = new alea_1.default();
 app.set('view engine', 'ejs');
@@ -43,6 +44,12 @@ const list_of_name = {
     "male": ["Putra", "Wahyu", "Agus", "Agung", "Ahmad", "Kurniawan", "Budi", "Adi", "Eko", "Arief", "Ari", "Indra", "Rizki", "Yusuf", "Fajar", "Bayu", "Aditya", "Nugroho", "Abdul", "Setiawan", "Riski", "Bagus", "Hidayat", "Rian", "Hendra", "Raden", "Surya", "Angga", "Hadi", "Adam", "Rudi", "Andri", "Taufik", "Hanif"],
     "female": ["Nur", "Dewi", "Dian", "Sri", "Putri", "Sari", "Ayu", "Indah", "Siti", "Fitri", "Ratna", "Puspita", "Ratih", "Pratiwi", "Tika", "Wulandari", "Lestari", "Febri", "Anita", "Rahma", "Fitria", "Novi", "Ria", "Rahayu", "Yunita", "Rina", "Widya", "Intan", "Agustina", "Rini", "Yulia", "Maya", "Utami", "Amel", "Devi", "Citra", "Diana", "Wulan", "Yuni", "Sinta", "Cantika"]
 };
+const dbURI = 'mongodb+srv://Hydra:Irsw4nd410102005@rpl-class-web-database.2rqk3.mongodb.net/RPL-Class-Web?retryWrites=true&w=majority';
+mongoose_1.default.connect(process.env.MONGODB_URI || dbURI)
+    .then(() => {
+    app.listen(port, () => { console.log(`Listening in http://localhost:${port}`); });
+})
+    .catch((err) => console.log(err));
 const initializePassport = require('./passport-config');
 initializePassport(passport_1.default, 
 // @ts-ignore
@@ -357,4 +364,5 @@ app.delete('/logout', check_authenticated, (req, res) => {
     res.redirect('/login');
 });
 //#endregion Authentication Request
-app.listen(port, () => { console.log(`Listening in http://localhost:${port}`); });
+// let case_data_db: any = Case.find().then((result) => {return result})
+// console.log(case_data_db)
