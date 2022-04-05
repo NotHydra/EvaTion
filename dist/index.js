@@ -61,6 +61,7 @@ function find_data() {
     });
 }
 function main(case_datas, user_datas) {
+    let crime_rate_increase = 0;
     const initializePassport = require('./passport-config');
     initializePassport(passport_1.default, 
     // @ts-ignore
@@ -124,7 +125,8 @@ function main(case_datas, user_datas) {
     });
     app.post('/home', check_authenticated, (req, res) => {
         // @ts-ignore
-        let crime_case_data = req.user.crime_case;
+        let user_request = req.user;
+        let crime_case_data = user_request.crime_case;
         let current_day_length = crime_case_data.length - 1;
         let case_data = crime_case_data[current_day_length].case;
         let current_case_length = case_data.length - 1;
@@ -142,12 +144,23 @@ function main(case_datas, user_datas) {
             let current_case_crime = case_datas[current_case_id - 1].crime;
             let current_case_conclusion = case_datas[current_case_id - 1].conclusion;
             let current_case_is_guilty = case_datas[current_case_id - 1].case_is_guilty;
+            let current_case_rank = case_datas[current_case_id - 1].rank;
             let current_case_response_is_guilty = true;
             if (current_case_data.case_response == 'innocent') {
                 current_case_response_is_guilty = false;
             }
-            if (crime_case_data[current_day_length].case_current - 1 < crime_case_data[current_day_length].case_max) {
-                crime_case_data[current_day_length].case_current += 1;
+            if (current_case_response_is_guilty != current_case_is_guilty) {
+                if (current_case_rank != 0) {
+                    crime_rate_increase += current_case_rank * 5;
+                }
+                else if (current_case_rank == 0) {
+                    crime_rate_increase += get_random_number(5, 15);
+                }
+                ;
+            }
+            ;
+            crime_case_data[current_day_length].case_current += 1;
+            if (crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max) {
                 let random_case_theme = get_random_case();
                 // @ts-ignore
                 let crime_case_taken = req.user.crime_case_taken;
@@ -197,10 +210,45 @@ function main(case_datas, user_datas) {
                     ]
                 });
                 crime_case_taken.push(random_case_theme);
+                let random_crime_rate_decrease = get_random_number(5, 10);
+                user_request.crime_rate_current += crime_rate_increase;
+                user_request.crime_rate_current -= random_crime_rate_decrease;
+                console.log(crime_rate_increase, random_crime_rate_decrease);
+                crime_rate_increase = 0;
+                if (user_request.crime_rate_current < 0) {
+                    user_request.crime_rate_current = 0;
+                }
+                ;
+                if (user_request.crime_rate_current > user_request.crime_rate_max) {
+                    user_request.crime_rate_current = user_request.crime_rate_max;
+                }
+                ;
+                user_request.people_current += user_request.people_max * (10 / 100);
+                user_request.people_current -= (user_request.people_current * (user_request.crime_rate_current / 100)) / 2;
+                if (user_request.people_current < 0) {
+                    user_request.people_current = 0;
+                }
+                ;
+                if (user_request.people_current > user_request.people_max) {
+                    user_request.people_current = user_request.people_max;
+                }
+                ;
+                user_request.prosperity_current += user_request.prosperity_max * (((100 - user_request.crime_rate_current) / 100) / 4);
+                user_request.prosperity_current -= user_request.prosperity_current * ((user_request.crime_rate_current / 100) / 2);
+                if (user_request.prosperity_current < 0) {
+                    user_request.prosperity_current = 0;
+                }
+                ;
+                if (user_request.prosperity_current > user_request.prosperity_max) {
+                    user_request.prosperity_current = user_request.prosperity_max;
+                }
+                ;
             }
             res.redirect('/home');
         }
-        let user_request = req.user;
+        user_request.people_current = Math.trunc(user_request.people_current);
+        user_request.prosperity_current = Math.trunc(user_request.prosperity_current);
+        user_request.crime_rate_current = Math.trunc(user_request.crime_rate_current);
         user_model_1.default.findOneAndUpdate({ id: user_request.id }, {
             people_current: user_request.people_current,
             people_max: user_request.people_max,
@@ -238,11 +286,11 @@ function main(case_datas, user_datas) {
             let random_case_theme = get_random_case();
             let random_case_identity = get_random_case_identity(random_case_theme);
             let user_request = req.user;
-            user_request.people_current = 50;
+            user_request.people_current = 80;
             user_request.people_max = 100;
-            user_request.prosperity_current = 50;
+            user_request.prosperity_current = 90;
             user_request.prosperity_max = 100;
-            user_request.crime_rate_current = 50;
+            user_request.crime_rate_current = 20;
             user_request.crime_rate_max = 100;
             user_request.money_current = 50;
             user_request.money_max = 100;
@@ -263,7 +311,6 @@ function main(case_datas, user_datas) {
             ];
             res.redirect('/setting');
         }
-        // fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
         let user_request = req.user;
         user_model_1.default.findOneAndUpdate({ id: user_request.id }, {
             people_current: user_request.people_current,
@@ -350,11 +397,11 @@ function main(case_datas, user_datas) {
                 "id": user_datas.length + 1,
                 "username": String(req.body.username),
                 "password": hashedPassword,
-                "people_current": 50,
+                "people_current": 80,
                 "people_max": 100,
-                "prosperity_current": 50,
+                "prosperity_current": 90,
                 "prosperity_max": 100,
-                "crime_rate_current": 50,
+                "crime_rate_current": 20,
                 "crime_rate_max": 100,
                 "money_current": 50,
                 "money_max": 100,
@@ -378,7 +425,6 @@ function main(case_datas, user_datas) {
             const new_user = new user_model_1.default(new_user_dictionary);
             new_user.save()
                 .catch((err) => console.log(err));
-            // fs.writeFileSync('./json/users.json', JSON.stringify(user_datas, null, 4));
             res.redirect('/login');
         }
         else if (!has_no_error) {

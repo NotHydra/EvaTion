@@ -53,7 +53,7 @@
                                     
                                     <div class="content-progress">
                                         <div class="text"><%= list_of_stat_attribute[i].current %>/<%= list_of_stat_attribute[i].max %></div>
-                                        <progress class="progress is-<%= list_of_stat_attribute[i].color %> is-medium" value="<%= list_of_stat_attribute[i].percentage %>" max="100"><%= list_of_stat_attribute[i].percentage %>%</progress>
+                                        <progress class="progress is-<%= list_of_stat_attribute[i].color %> is-medium" value="<%= list_of_stat_attribute[i].percentage %>" max=<%= list_of_stat_attribute[i].max %>><%= list_of_stat_attribute[i].percentage %>%</progress>
                                     </div>
                                   </div>
                                 </div>
