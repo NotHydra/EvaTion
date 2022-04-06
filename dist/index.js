@@ -148,6 +148,35 @@ function main(case_datas, user_datas) {
                 crime_rate_increase += get_random_number(-5, 5);
             }
             ;
+            let money_increase_based_on_case = 0;
+            let money_increase_based_on_max = 0;
+            let money_increase_based_on_random = 0;
+            if (current_case_response_is_guilty == current_case_is_guilty) {
+                if (current_case_rank != 0) {
+                    money_increase_based_on_case = current_case_rank * 50;
+                    user_request.money_current += money_increase_based_on_case;
+                }
+                else if (current_case_rank == 0) {
+                    money_increase_based_on_case = get_random_number(2, 4) * 50;
+                    user_request.money_current += money_increase_based_on_case;
+                }
+                ;
+                money_increase_based_on_max = user_request.money_max * (5 / 100);
+                user_request.money_current += money_increase_based_on_max;
+                money_increase_based_on_random = get_random_number(1, 5) * 10;
+                user_request.money_current += money_increase_based_on_random;
+                if (user_request.money_current < 0) {
+                    user_request.money_current = 0;
+                }
+                ;
+                if (user_request.money_current > user_request.money_max) {
+                    user_request.money_current = user_request.money_max;
+                }
+                ;
+            }
+            ;
+            let money_increase_total = money_increase_based_on_case + money_increase_based_on_max + money_increase_based_on_random;
+            // console.log(money_increase_based_on_case, money_increase_based_on_max, money_increase_based_on_random, money_increase_total);
             crime_case_data[current_day_length].case_current += 1;
             if (crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max) {
                 let random_case_theme = get_random_case();
@@ -169,7 +198,7 @@ function main(case_datas, user_datas) {
                 });
                 crime_case_taken.push(random_case_theme);
             }
-            res.redirect(`/home?previous_case_crime=${current_case_crime}&previous_case_conclusion=${current_case_conclusion}&previous_case_is_guilty=${current_case_is_guilty}&previous_case_response_is_guilty=${current_case_response_is_guilty}`);
+            res.redirect(`/home?previous_case_crime=${current_case_crime}&previous_case_conclusion=${current_case_conclusion}&previous_case_is_guilty=${current_case_is_guilty}&previous_case_response_is_guilty=${current_case_response_is_guilty}&money_increase_total=${money_increase_total}`);
         }
         if (req.body.type == 'next') {
             if (crime_case_data[current_day_length].case_current >= crime_case_data[current_day_length].case_max) {
@@ -199,7 +228,7 @@ function main(case_datas, user_datas) {
                     ]
                 });
                 crime_case_taken.push(random_case_theme);
-                console.log(`Crime Rate Increase    : ${crime_rate_increase}`);
+                // console.log(`Crime Rate Increase    : ${crime_rate_increase}`);
                 let random_crime_rate_decrease = get_random_number(5, 10);
                 user_request.crime_rate_current += crime_rate_increase;
                 user_request.crime_rate_current -= random_crime_rate_decrease;
@@ -259,6 +288,7 @@ function main(case_datas, user_datas) {
         user_request.people_current = Math.trunc(user_request.people_current);
         user_request.prosperity_current = Math.trunc(user_request.prosperity_current);
         user_request.crime_rate_current = Math.trunc(user_request.crime_rate_current);
+        user_request.money_current = Math.trunc(user_request.money_current);
         user_model_1.default.findOneAndUpdate({ id: user_request.id }, {
             people_current: user_request.people_current,
             people_max: user_request.people_max,
@@ -302,8 +332,8 @@ function main(case_datas, user_datas) {
             user_request.prosperity_max = 100;
             user_request.crime_rate_current = 20;
             user_request.crime_rate_max = 100;
-            user_request.money_current = 50;
-            user_request.money_max = 100;
+            user_request.money_current = 100;
+            user_request.money_max = 1000;
             user_request.crime_case_taken = [random_case_theme];
             user_request.crime_case = [
                 {
@@ -413,8 +443,8 @@ function main(case_datas, user_datas) {
                 "prosperity_max": 100,
                 "crime_rate_current": 20,
                 "crime_rate_max": 100,
-                "money_current": 50,
-                "money_max": 100,
+                "money_current": 100,
+                "money_max": 1000,
                 "crime_case_taken": [random_case_theme],
                 "crime_case": [
                     {

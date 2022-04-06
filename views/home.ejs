@@ -53,7 +53,7 @@
                                     
                                     <div class="content-progress">
                                         <div class="text"><%= list_of_stat_attribute[i].current %>/<%= list_of_stat_attribute[i].max %></div>
-                                        <progress class="progress is-<%= list_of_stat_attribute[i].color %> is-medium" value="<%= list_of_stat_attribute[i].percentage %>" max=<%= list_of_stat_attribute[i].max %>><%= list_of_stat_attribute[i].percentage %>%</progress>
+                                        <progress class="progress is-<%= list_of_stat_attribute[i].color %> is-medium" value="<%= list_of_stat_attribute[i].current %>" max=<%= list_of_stat_attribute[i].max %>><%= list_of_stat_attribute[i].percentage %>%</progress>
                                     </div>
                                   </div>
                                 </div>
@@ -184,6 +184,13 @@
 
                         <div>Evaluasi anda:</div>
                         <div class="has-text-justified pr-1" id="modal-response-option"></div>
+                        
+                        <div id="modal-response-reward-container" style="display: none;">
+                            <br>
+                            <div>Imbalan:</div>
+                            <i class="fa-solid fa-coins has_color_yellow"></i>
+                            <span class="has-text-justified pr-1 has_color_yellow" id="modal-response-reward"></span>
+                        </div>
                     </section>
                 </div>
             </div>
@@ -211,17 +218,14 @@
             let previous_case_conclusion = url.searchParams.get('previous_case_conclusion');
             let previous_case_is_guilty = url.searchParams.get('previous_case_is_guilty');
             let previous_case_response_is_guilty = url.searchParams.get('previous_case_response_is_guilty');
+            let money_increase_total = url.searchParams.get('money_increase_total');
 
-            console.log(previous_case_crime);
-            console.log(previous_case_conclusion);
-            console.log(previous_case_is_guilty);
-            console.log(previous_case_response_is_guilty);
-
-            if(typeof(previous_case_crime) !== 'object' && typeof(previous_case_conclusion) !== 'object' && typeof(previous_case_is_guilty) !== 'object' && typeof(previous_case_response_is_guilty) !== 'object'){
+            if(typeof(previous_case_crime) !== 'object' && typeof(previous_case_conclusion) !== 'object' && typeof(previous_case_is_guilty) !== 'object' && typeof(previous_case_response_is_guilty) !== 'object' && typeof(money_increase_total) !== 'object'){
                 let title_text;
                 if(previous_case_is_guilty == previous_case_response_is_guilty){
                     title_text = "Evaluasi Anda Benar!";
                     document.getElementById('modal-response-body').classList.add('modal-success');
+                    document.getElementById('modal-response-reward-container').style.display = 'block';
                 }
 
                 else if(previous_case_is_guilty != previous_case_response_is_guilty){
@@ -242,6 +246,7 @@
                 document.getElementById('modal-response-description').innerHTML = previous_case_crime;
                 document.getElementById('modal-response-conclusion').innerHTML = previous_case_conclusion;
                 document.getElementById('modal-response-option').innerHTML = option_text;
+                document.getElementById('modal-response-reward').innerHTML = money_increase_total;
 
                 let element = document.getElementById('modal-response');
                 element.classList.add('is-active');

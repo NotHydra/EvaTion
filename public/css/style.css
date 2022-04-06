@@ -76,6 +76,10 @@
   border-bottom: 3px solid #363636;
 }
 
+.has_color_yellow {
+  color: #FFBB00;
+}
+
 #modal-confirmation {
   z-index: 100;
 }
