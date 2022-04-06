@@ -26,6 +26,12 @@
 #sidebar #sidebar-brand {
   height: 6rem;
   margin-bottom: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  border-radius: 0;
   border-bottom: 2px solid #363636;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -36,6 +42,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+#sidebar #sidebar-brand:hover {
+  background-color: whitesmoke;
+  color: #363636;
 }
 
 #sidebar .link-item-is-active {

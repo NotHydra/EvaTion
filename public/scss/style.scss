@@ -30,11 +30,20 @@
 
         margin-bottom: 0;
 
+        cursor: pointer;
+        user-select: none;
+
+        border-radius: 0;
         border-bottom: 2px solid hsl(0, 0%, 21%);
 
         display: flex;
         justify-content: center;
         align-items: center;
+
+        &:hover{
+            background-color: hsl(0, 0%, 96%);
+            color: hsl(0, 0%, 21%);
+        }
     }
 
     .link-item-is-active{
