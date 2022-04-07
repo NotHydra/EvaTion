@@ -1,3 +1,4 @@
+from this import d
 import openpyxl
 import json
 
@@ -90,19 +91,8 @@ class Excel():
 class Main():
     def main():
         Main.cases()
+        Main.upgrades()
         
-        wb_cases = Excel("excel/upgrades.xlsx")
-        upgrade_json_array = []
-        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D7", "I9")))
-        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D14", "I18")))
-        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D23", "I24")))
-        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D29", "I30")))
-
-        json_object = json.dumps(upgrade_json_array, indent = 4)
-
-        with open("json/upgrades.json", "a") as outfile:
-            outfile.write(json_object)
-
 
     def cases():
         wb_cases = Excel("excel/cases.xlsx")
@@ -130,8 +120,29 @@ class Main():
         with open("json/cases.json", "w") as outfile:
             outfile.write(json_object)
 
+    
+    def upgrades():
+        wb_cases = Excel("excel/upgrades.xlsx")
 
-    def upgrades(value):
+        json_array = []
+        upgrades_cell_range = [
+            ["D7", "I9"],
+            ["D14", "I18"],
+            ["D23", "I24"],
+            ["D29", "I30"]
+        ]
+
+        for i in upgrades_cell_range:
+            json_array.append(Main.get_upgrades_value(wb_cases.get_value_multiple_2d(i[0], i[1])))
+
+
+        json_object = json.dumps(json_array, indent = 4)
+
+        with open("json/upgrades.json", "w") as outfile:
+            outfile.write(json_object)
+
+
+    def get_upgrades_value(value):
         json_array = []
 
         for i in value:
