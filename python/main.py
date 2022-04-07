@@ -89,6 +89,22 @@ class Excel():
 
 class Main():
     def main():
+        Main.cases()
+        
+        wb_cases = Excel("excel/upgrades.xlsx")
+        upgrade_json_array = []
+        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D7", "I9")))
+        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D14", "I18")))
+        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D23", "I24")))
+        upgrade_json_array.append(Main.upgrades(wb_cases.get_value_multiple_2d("D29", "I30")))
+
+        json_object = json.dumps(upgrade_json_array, indent = 4)
+
+        with open("json/upgrades.json", "a") as outfile:
+            outfile.write(json_object)
+
+
+    def cases():
         wb_cases = Excel("excel/cases.xlsx")
 
         value = wb_cases.get_value_multiple_2d("A2", "F31")
@@ -113,6 +129,25 @@ class Main():
 
         with open("json/cases.json", "w") as outfile:
             outfile.write(json_object)
+
+
+    def upgrades(value):
+        json_array = []
+
+        for i in value:
+            temp_json_dictionary = {
+                "id": i[0],
+                "icon": i[1],
+                "name": i[2],
+                "type" : i[3],
+                "amount" : i[4],
+                "cost": i[5]
+            }
+
+            json_array.append(temp_json_dictionary)
+
+        
+        return json_array
 
 
 if(__name__ == "__main__"):

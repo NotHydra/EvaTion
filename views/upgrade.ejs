@@ -10,9 +10,68 @@
             document.getElementsByClassName('link-item')[2].classList.add('link-item-is-active');
         </script>
         
-        <div id="main-container" class="container is-fluid mb-0 pb-0">
+        <div id="upgrade-container" class="container is-fluid mb-0 pb-0">
             <section class="section mt-2 pt-2 mb-0 pb-0">
-                <div class="title is-4">Work In Progress</div>
+                <div class="columns mr-6 home-first-row-card">
+                    <%
+                        const list_of_stat_attribute = [
+                            {display : "Penduduk", icon : "fa-user-group", color : "info"},
+                            {display : "Kemakmuran", icon : "fa-face-smile", color : "success"},
+                            {display : "Kriminalitas", icon : "fa-radiation", color : "danger"},
+                            {display : "Keuangan", icon : "fa-coins", color : "warning"}
+                        ];
+                    %>                    
+
+                    <% for(let i = 0; i < list_of_stat_attribute.length; i++) { %>
+                        <div class="column">
+                            <div class="card" style="height: 720px;" id="<%= list_of_stat_attribute[i].color %>_card">
+                                <div class="card-content p-0">
+                                    <div class="content">
+                                        <div class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i].color %> p-5 mb-0" id="icon-title-card" style="white-space: nowrap;">
+                                            <div class="icon">
+                                                <i class="fa-solid <%= list_of_stat_attribute[i].icon %>"></i>
+                                            </div>
+        
+                                            <div class="text"><%= list_of_stat_attribute[i].display %></div>
+                                        </div>
+
+                                        <div class="mt-0" style="height: 630px; overflow: auto;">
+                                            <% for(let j = 0; j < 10; j++) { %>
+                                                <div class="card has-background-light mb-0 mt-3 ml-3 mr-3" style="box-shadow: 0 0 !important;">
+                                                    <div class="card-content p-0">
+                                                        <div class="content p-2" style="display: flex; flex-direction: row; justify-content: space-between;">
+                                                            <div style="display: flex; flex-direction: row;">
+                                                                <div class="icon has-background-white mr-3" style="height: 75px; width: 75px; display: flex; justify-content: center; align-items: center; border: 2px solid #363636; border-radius: 0.25rem; font-size: 2.25rem;">
+                                                                    <i class="fa-solid fa-school"></i>
+                                                                    <div class="icon-background">
+                                                                        <div class="icon-background-text">+</div>
+                                                                    </div>
+                                                                </div>
+    
+                                                                <div style="display: flex; flex-direction: column; justify-content: space-between;">
+                                                                    <div>
+                                                                        <div class="title m-0 p-0" style="font-size: 0.9rem;">Sekolah</div>
+                                                                        <div class="subtitle m-0 p-0" style="font-size: 0.9rem;">Lv. 1</div>
+                                                                    </div>
+
+                                                                    <div>
+                                                                        <div class="subtitle m-0 p-0" style="font-size: 0.85rem;">Max Kemakmuran : +10</div>
+                                                                        
+                                                                        <div class="subtitle m-0 p-0" style="font-size: 0.85rem;">Biaya peningkatan : <i class="fa-solid fa-coins has_color_yellow"></i> <span class="has_color_yellow">100</span></div>
+                                                                    </div>                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            <% } %>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% }; %>       
+                </div>
             </section>
         </div>
     </body>

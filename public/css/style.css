@@ -267,6 +267,100 @@
   background-color: #E74566 !important;
 }
 
+#upgrade-container {
+  margin-left: 8rem;
+}
+
+#upgrade-container ::-webkit-scrollbar {
+  width: 3px;
+  height: 3px;
+}
+
+#upgrade-container ::-webkit-scrollbar-thumb {
+  border-radius: 0px;
+}
+
+#upgrade-container .icon-background {
+  background-color: rgba(54, 54, 54, 0.65);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 75px;
+  height: 75px;
+  margin: 0.5rem;
+  cursor: pointer;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#upgrade-container .icon-background .icon-background-text {
+  color: white;
+  font-size: 4rem;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-bottom: 0.75rem;
+}
+
+#upgrade-container #icon-title-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#upgrade-container #info_card ::-webkit-scrollbar-thumb {
+  background-color: #3E8ED0;
+}
+
+#upgrade-container #info_card #icon-title-card {
+  border-bottom: 3px solid #3E8ED0;
+}
+
+#upgrade-container #success_card ::-webkit-scrollbar-thumb {
+  background-color: #48C78E;
+}
+
+#upgrade-container #success_card #icon-title-card {
+  border-bottom: 3px solid #48C78E;
+}
+
+#upgrade-container #danger_card ::-webkit-scrollbar-thumb {
+  background-color: #F14668;
+}
+
+#upgrade-container #danger_card #icon-title-card {
+  border-bottom: 3px solid #F14668;
+}
+
+#upgrade-container #warning_card ::-webkit-scrollbar-thumb {
+  background-color: #FFBB00;
+}
+
+#upgrade-container #warning_card #icon-title-card {
+  color: #FFBB00 !important;
+  border-bottom: 3px solid #FFBB00;
+}
+
 #login-container .hero-body, #register-container .hero-body {
   display: -webkit-box;
   display: -ms-flexbox;

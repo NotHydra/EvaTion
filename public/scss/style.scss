@@ -249,6 +249,99 @@
     }
 }
 
+#upgrade-container{
+    margin-left: 8rem;
+
+    ::-webkit-scrollbar{
+        width: 3px;
+        height: 3px;
+    }
+
+    ::-webkit-scrollbar-thumb{
+        border-radius: 0px;
+    }
+
+    .icon-background{
+        background-color: rgba(54, 54, 54, 0.65);
+        
+        position: absolute;
+        top: 0;
+        left: 0;
+                    
+        width: 75px;
+        height: 75px;
+
+        margin: 0.5rem;
+
+        cursor: pointer;
+
+        border-top-left-radius: 0.25rem;
+        border-top-right-radius: 0.25rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        .icon-background-text{
+            color: white;
+
+            font-size: 4rem;
+
+            user-select: none;
+
+            margin-bottom: 0.75rem;
+        }
+    }
+    
+    #icon-title-card{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #info_card{
+        ::-webkit-scrollbar-thumb{
+            background-color: #3E8ED0;
+        }
+
+        #icon-title-card{
+            border-bottom: 3px solid #3E8ED0;
+        }
+    }
+
+    #success_card{
+        ::-webkit-scrollbar-thumb{
+            background-color: #48C78E;
+        }
+
+        #icon-title-card{
+            border-bottom: 3px solid #48C78E;
+        }
+    }
+
+    #danger_card{
+        ::-webkit-scrollbar-thumb{
+            background-color: #F14668;
+        }
+
+        #icon-title-card{
+            border-bottom: 3px solid #F14668;
+        }
+    }
+
+    #warning_card{
+        ::-webkit-scrollbar-thumb{
+            background-color: #FFBB00;
+        }
+
+        #icon-title-card{
+            color: #FFBB00 !important;
+            border-bottom: 3px solid #FFBB00;
+        }
+    }
+}
+
 #login-container, #register-container{
     .hero-body{
         display: flex;
