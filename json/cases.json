@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pengedar narkotika ditangkap warga sekitar dan langsung dituntut atas hukum, setelah diperiksa Ia mendapatkan narkotika tersebut dari sebuah farmasi.",
-        "conclusion": "Menurut UU No.35 tahun 2009, pasal 12, 112, dan 114. Pengedar itu bersalah.",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pengedar narkotika ditangkap warga sekitar, dan langsung dituntut atas hukum, setelah diperiksa Ia mendapatkan narkotika tersebut dari sebuah farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 12, 112, dan 114. Pengedar itu bersalah karena menyimpan, dan mengedarkan narkotika secara illegal.",
         "identity": [
             [
                 "Male",
@@ -18,8 +18,8 @@
     },
     {
         "id": 2,
-        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pengedar narkotika ditangkap warga sekitar dan langsung dituntut atas hukum, setelah diperiksa Ia mendapatkan narkotika tersebut dari sebuah farmasi.",
-        "conclusion": "Menurut UU No.35 tahun 2009 pasal 12, 14, 135, and 136. Farmasi bersalah.",
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pengedar narkotika ditangkap warga sekitar, dan langsung dituntut atas hukum, setelah diperiksa Ia mendapatkan narkotika tersebut dari sebuah farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 12, 14, 135, and 136. Farmasi bersalah karena mengedarkan narkotika kepada orang yang tidak berwenang.",
         "identity": [
             [
                 "Male",
@@ -36,7 +36,7 @@
     {
         "id": 3,
         "crime": "Industri farmasi dilaporkan memproduksi narkotika, setelah digrebek warga sekitar, pemiliknya setuju untuk datang ke Pengadilan.",
-        "conclusion": "Menurut pasal 11 dari UU no 35 tahun 2009, pemerintah dapat memberi izin kepada farmasi tertentu. Jadi pemilik farmasi tidak bersalah.",
+        "conclusion": "Menurut pasal 11 dari UU no 35 tahun 2009. Pemerintah dapat memberi izin kepada farmasi tertentu. Jadi pemilik farmasi tidak bersalah.",
         "identity": [
             [
                 "Male",
@@ -53,7 +53,7 @@
     {
         "id": 4,
         "crime": "Farmasi di sebuah desa tertangkap menyimpan ganja berbentuk tumbuhan, dan juga diketahui menanamnya tanpa izin, terhitung berat penyimpanan narkotikanya seberat 3,5 KG.",
-        "conclusion": "Sesuai UU no.35 tahun 2009 pasal 111 ayat 2. Pemilik farmasi itu bersalah.",
+        "conclusion": "Sesuai UU no.35 tahun 2009 pasal 111 ayat 2. Pemilik farmasi itu bersalah karena menyimpan, dan menanam tumbuhan illegal.",
         "identity": [
             [
                 "Male",
@@ -69,8 +69,8 @@
     },
     {
         "id": 5,
-        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu tertangkap dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama dan berizin memproduksi narkotika.",
-        "conclusion": "Menurut pasal 14 dalam UU no.35 tahun 2009. Farmasi bersalah dan akan dicabut izin produksinya.",
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu tertangkap, dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap, dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut pasal 14 dalam UU no.35 tahun 2009. Farmasi bersalah karena mengedarkan narkotika pada orang tidak berwenang, dan akan dicabut izin produksinya.",
         "identity": [
             [
                 "Male",
@@ -86,8 +86,8 @@
     },
     {
         "id": 6,
-        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu tertangkap dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama dan berizin memproduksi narkotika.",
-        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu tertangkap, dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap, dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 112, dan 114. Pengedar itu bersalah karena menyimpan, dan mengedarkan narkotika secara illegal.",
         "identity": [
             [
                 "Male",
@@ -103,8 +103,8 @@
     },
     {
         "id": 7,
-        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu tertangkap dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama dan berizin memproduksi narkotika.",
-        "conclusion": "Menurut UU no.35 tahun 2009, pasal  55, 112, 114, 127 dan 134 ayat (1). Pecandu bersalah dan akan direhabilitas sesuai pasal 56.",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu tertangkap, dan mengakui tempat dimana Ia mendapat narkotikanya, pengedar narkotika itupun tertangkap, dan diketahui bahwa sumber narkotika tersebut berasal dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 55, 112, 114, 127, dan 134 ayat 1. Pecandu bersalah, dan akan direhabilitas sesuai pasal 56.",
         "identity": [
             [
                 "Male",
@@ -120,8 +120,8 @@
     },
     {
         "id": 8,
-        "crime": "Kasus ini diarahkan kepada keluarga pecandu. Seorang pecandu tertangkap polisi dan setelah diselidiki Ia mengaku bahwa keluarganya tidak ada melarangnya sama sekali.",
-        "conclusion": "Sesuai UU no.35 tahun 2009 pasal 134 ayat (2). Keluarga itu melawan pasal 55 dan bersalah.",
+        "crime": "Kasus ini diarahkan kepada keluarga pecandu. Seorang pecandu tertangkap polisi, dan setelah diselidiki Ia mengaku bahwa keluarganya membiarkannya memakai narkoba.",
+        "conclusion": "Sesuai UU no.35 tahun 2009 pasal 134 ayat 2. Keluarga itu melawan pasal 55 dengan tidak melaporkan anaknya, dan bersalah.",
         "identity": [
             [
                 "Male",
@@ -137,8 +137,8 @@
     },
     {
         "id": 9,
-        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu tertangkap polisi dan setelah diselidiki Ia mengaku bahwa keluarganya tidak ada melarangnya sama sekali.",
-        "conclusion": "Menurut UU no.35 tahun 2009, pasal  55, 112, 114, 127 dan 134 ayat (1). Pecandu bersalah dan akan direhabilitas sesuai pasal 56.",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu tertangkap polisi, dan setelah diselidiki Ia mengaku bahwa keluarganya membiarkannya memakai narkoba.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 55, 112, 114, 127, dan 134 ayat 1. Pecandu bersalah, dan akan direhabilitas sesuai pasal 56.",
         "identity": [
             [
                 "Male",
@@ -154,15 +154,23 @@
     },
     {
         "id": 10,
-        "crime": "Sebuah rumah sakit dilaporkan memproduksi dan menggunakan narkotika.",
-        "conclusion": "Menurut UU no.35 tahun 2009 pasal 11 ayat(1). Hanya industri farmasi yang dapat diizinkan pemerintah untuk memproduksi narkotika, rumah sakit bersalah.",
+        "crime": "Sebuah rumah sakit dilaporkan memproduksi, dan menggunakan narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 11 ayat 1. Hanya industri farmasi yang dapat diizinkan pemerintah untuk memproduksi narkotika, rumah sakit bersalah.",
         "identity": [
             [
                 "Male",
-                1,
+                3,
                 [
                     25,
                     35
+                ]
+            ],
+            [
+                "Female",
+                2,
+                [
+                    20,
+                    40
                 ]
             ]
         ],
@@ -171,8 +179,8 @@
     },
     {
         "id": 11,
-        "crime": "Seorang staff menemukan narkotika didalam kabinet obat-obatan farmasi lain dan langsung melaporkannya.",
-        "conclusion": "Menurut pasal 14  ayat (1) UU no.35 tahun 2009. Narkotika harus disimpan secara khusus, ini berarti farmasi itu bersalah dan kemungkinan akan dicabut izin khususnya.",
+        "crime": "Kasus diarakan kepada pemimpin rumah sakit. Seorang staff menemukan narkotika didalam kabinet obat-obatan farmasi lain, dan langsung melaporkannya.",
+        "conclusion": "Menurut pasal 14  ayat 1 UU no.35 tahun 2009. Narkotika harus disimpan secara khusus, ini berarti farmasi itu bersalah, dan kemungkinan akan dicabut izin khususnya.",
         "identity": [
             [
                 "Male",
@@ -188,12 +196,12 @@
     },
     {
         "id": 12,
-        "crime": "Saat sedang melakukan pengecekan, sebuah narkotika yang berada pada tablet obat tanpa label ditemukan dalam sebuah farmasi. ",
+        "crime": "Saat sedang melakukan pengecekan, sebuah narkotika yang berada pada tablet obat tanpa label ditemukan dalam sebuah farmasi.",
         "conclusion": "Menurut UU no.35 tahun 2009 pasal 135. Pengurus industri bersalah karena tidak melabel narkotika tersebut.",
         "identity": [
             [
                 "Male",
-                1,
+                5,
                 [
                     25,
                     35
@@ -205,8 +213,8 @@
     },
     {
         "id": 13,
-        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
-        "conclusion": "Menurut  pasal 16 UU no.35 tahun 2009. Tanggung jawab pengimporan dibawa oleh perusahaan dagang, dan farmasi tidak bersalah.",
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu melaporkan dirinya sendiri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Tanggung jawab pengimporan dibawa oleh perusahaan dagang, dan farmasi tidak bersalah.",
         "identity": [
             [
                 "Male",
@@ -222,8 +230,8 @@
     },
     {
         "id": 14,
-        "crime": "Kasus ini diarahkan kepada industri perdagangan. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
-        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Perdagangan bersalah dan kemungkinan akan diberhentikan aktifitas impor-ekspornya.",
+        "crime": "Kasus ini diarahkan kepada perusahaan perdagangan. Seorang pecandu melaporkan dirinya sendiri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Perdagangan bersalah, dan kemungkinan akan diberhentikan aktifitas impor-ekspornya.",
         "identity": [
             [
                 "Male",
@@ -239,8 +247,8 @@
     },
     {
         "id": 15,
-        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
-        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan dirinya sendiri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 112, dan 114. Pengedar itu bersalah karena menyimpan, dan mengedarkan narkotika secara illegal.",
         "identity": [
             [
                 "Male",
@@ -256,8 +264,8 @@
     },
     {
         "id": 16,
-        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan dirinya sendiri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
-        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah dan hanya akan diberi rehabilitasi.",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan dirinya sendiri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di perusahaan perdagangan yang memberikan sedikit narkotika kepada staff yang bekerja pada narkotika itu, dengan cara membeli lebih dari permintaan farmasi.",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah, dan hanya akan diberi rehabilitasi.",
         "identity": [
             [
                 "Male",
@@ -274,7 +282,7 @@
     {
         "id": 17,
         "crime": "Pimpinan rumah sakit ditangkap setelah dilaporkan mengedarkan narkotika.",
-        "conclusion": "Menurut UU no.35 tahun 2009. Pasal 147 a, pimpinan rumah sakit itu bersalah.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 147 a. Pimpinan rumah sakit itu bersalah karena tidak melakukan tugasnya untuk mengamankan narkotika yang disimpan.",
         "identity": [
             [
                 "Male",
@@ -308,7 +316,7 @@
     {
         "id": 19,
         "crime": "Kasus ini diarahkan kepada pemilik rumah. Sebuah rumah digrebek setelah dilaporkan menyimpan narkotika, tetangga rumah tersebut menyangkal adanya narkotika dalam rumah itu tetapi setelah di periksa ternyata rumah tersebut memiliki narkotika.",
-        "conclusion": "Menurut UU no.35 tahun 2009 pasal 112. Pemilik rumah bersalah.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 112. Pemilik rumah bersalah karena menyimpan narkotika tanpa perizinan.",
         "identity": [
             [
                 "Male",
@@ -325,7 +333,7 @@
     {
         "id": 20,
         "crime": "Kasus ini diarahkan kepada tetangga rumah tersangka. Sebuah rumah digrebek setelah dilaporkan menyimpan narkotika, tetangga rumah tersebut menyangkal adanya narkotika dalam rumah itu tetapi setelah di periksa ternyata rumah tersebut memiliki narkotika.",
-        "conclusion": "Menurut UU no.35 tahun 2009 pasal 143. Tetangga itu bersalah.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 143. Tetangga itu bersalah karena memberikan informasi yang salah, dan dapat dilihat sebagai percobaan menutupi kriminalitas.",
         "identity": [
             [
                 "Male",
@@ -341,8 +349,8 @@
     },
     {
         "id": 21,
-        "crime": "Kasus ini diarahkan kepada rumah sakit. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
-        "conclusion": "Menurut UU no.35 tahun 2009 pasal 11 ayat (1) hanya industri farmasi yang dapat diizinkan pemerintah untuk mengimpor narkotika. Rumah sakit bersalah.",
+        "crime": "Kasus ini diarahkan kepada rumah sakit. Seorang pecandu melaporkan diri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 11 ayat 1. Hanya industri farmasi yang dapat diizinkan pemerintah untuk mengimpor narkotika. Rumah sakit bersalah.",
         "identity": [
             [
                 "Male",
@@ -358,8 +366,8 @@
     },
     {
         "id": 22,
-        "crime": "Kasus ini diarahkan kepada industri perdagangan. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
-        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Perdagangan bersalah karena tidak memastikan surat permintaan impor dan kemungkinan akan diberhentikan aktifitas impor-ekspornya.",
+        "crime": "Kasus ini diarahkan kepada industri perdagangan. Seorang pecandu melaporkan diri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff.",
+        "conclusion": "Menurut pasal 16 UU no.35 tahun 2009. Perdagangan bersalah karena tidak memastikan surat permintaan impor, dan kemungkinan akan diberhentikan aktifitas impor-ekspornya.",
         "identity": [
             [
                 "Male",
@@ -375,8 +383,8 @@
     },
     {
         "id": 23,
-        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
-        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan diri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 112, dan 114. Pengedar itu bersalah karena menyimpan, dan mengedarkan narkotika secara illegal.",
         "identity": [
             [
                 "Male",
@@ -392,8 +400,8 @@
     },
     {
         "id": 24,
-        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan diri dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff. ",
-        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah dan hanya akan diberi rehabilitasi.",
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan diri, dan memberi tau siapa pengedarnya, setelah ditangkap pengedar mengaku bekerja di rumah sakit yang dapat meminta impor narkotika. Perusahaan perdagangan mengimpor sesuai keinginan rumah sakit tetapi rumah sakit menyimpan sedikit untuk diberi ke staff.",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah, dan hanya akan diberi rehabilitasi.",
         "identity": [
             [
                 "Male",
@@ -410,7 +418,7 @@
     {
         "id": 25,
         "crime": "Seorang pecandu dari luar negeri tertangkap di indonesia.",
-        "conclusion": "Menurut pasal 146 UU no.35 tahun 2009. Pecandu itu bersalah dan setelah selesai dipidana akan diusir dari negara.",
+        "conclusion": "Menurut pasal 146 UU no.35 tahun 2009. Pecandu itu bersalah, dan setelah selesai dipidana akan diusir dari negara.",
         "identity": [
             [
                 "Male",
@@ -426,8 +434,8 @@
     },
     {
         "id": 26,
-        "crime": "Kasus ini diarahkan kepada nahkoda. Narkotika ditemukan berada di tempat obat-obatan lain pada saat trasportasi",
-        "conclusion": "Menurut pasal 139 UU no.35 tahun 2009 nahkoda itu bersalah.",
+        "crime": "Kasus ini diarahkan kepada nahkoda. Narkotika ditemukan berada di tempat obat-obatan lain pada saat trasportasi.",
+        "conclusion": "Menurut pasal 139 UU no.35 tahun 2009. Nahkoda itu bersalah karena tidak mengecek isi kapal yang membuat narkotika disimpan secara tidak sesuai standar.",
         "identity": [
             [
                 "Male",
@@ -444,7 +452,7 @@
     {
         "id": 27,
         "crime": "Seseorang tertangkap membawa narkotika dalam bungkusan di dalam airport.",
-        "conclusion": "Menurut UU no.35 tahun 2009 pasal 112. Orang itu bersalah.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 112. Orang itu bersalah karena menyimpan narkotika pada saat bertransportasi tanpa adanya perizinan.",
         "identity": [
             [
                 "Male",
@@ -460,8 +468,8 @@
     },
     {
         "id": 28,
-        "crime": "Kasus ini diarahkan kepada pengusaha. Pecandu narkoba tertangkap dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri dan diimpor oleh seorang pengusaha tanpa izin.",
-        "conclusion": "Menurut pasal 118 UU no.35 tahun 2009. Pengusaha bersalah.",
+        "crime": "Kasus ini diarahkan kepada pengusaha. Pecandu narkoba tertangkap, dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri, dan diimpor oleh seorang pengusaha tanpa izin.",
+        "conclusion": "Menurut pasal 118 UU no.35 tahun 2009. Pengusaha bersalah karena mengimpor narkotika tanpa adanya pelaporan ataupun mendapat izin.",
         "identity": [
             [
                 "Female",
@@ -478,7 +486,7 @@
     {
         "id": 29,
         "crime": "Kasus ini diarahkan kepada pengedar. Pecandu narkoba tertangkap dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri dan diimpor oleh seorang pengusaha tanpa izin.",
-        "conclusion": "Menurut UU No.35 tahun 2009, pasal 112 dan 114. Pengedar itu bersalah.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 112 dan 114. Pengedar itu bersalah karena menyimpan, dan mengedarkan narkotika secara illegal.",
         "identity": [
             [
                 "Male",
@@ -494,8 +502,8 @@
     },
     {
         "id": 30,
-        "crime": "Kasus ini diarahkan kepada pecandu. Pecandu narkoba tertangkap dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri dan diimpor oleh seorang pengusaha tanpa izin.",
-        "conclusion": "Menurut UU no.35 tahun 2009, pasal 55, 112, 114, 127, dan 134 ayat (1). Pecandu bersalah dan akan direhabilitas sesuai pasal 56.",
+        "crime": "Kasus ini diarahkan kepada pecandu. Pecandu narkoba tertangkap, dan mengakui dimana pengedar narkotika berada, setelah ditangkap pengedar itu memberi tahu bahwa sumber narkotika berasal dari luar negeri, dan diimpor oleh seorang pengusaha tanpa izin.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 55, 112, 114, 127, dan 134 ayat 1. Pecandu bersalah, dan akan diberikan rehabilitasi sesuai pasal 56.",
         "identity": [
             [
                 "Male",
@@ -508,5 +516,515 @@
         ],
         "case_is_guilty": true,
         "rank": 2
+    },
+    {
+        "id": 31,
+        "crime": "Pegawai perdagangan dilaporkan mengemas kembali narkotika yang diimpor dari saksi, pejabat bea dan cukai berada di tempat pengemasan tersebut.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 31. Narkotika yang rusak kemasannya saat diimpor dapat dikemas kembali dalam pengawasan pejabat tertentu, pegawai tidak bersalah.",
+        "identity": [
+            [
+                "Female",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 32,
+        "crime": "Kasus ini diarahkan kepada farmasi. Sebuah rumah sakit dilaporkan menyimpan narkotika, pemilik rumah sakit menyatakan bahwa nakotika itu bersumber dari farmasi, setelah diteliti, farmasi juga menyalurkan narkotika ke apotek.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Farmasi dapat menyalurkan narkotika pada perusahaan tertentu, farmasi tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                5,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 33,
+        "crime": "Kasus ini diarahkan kepada rumah sakit. Sebuah rumah sakit dilaporkan menyimpan narkotika, pemilik rumah sakit menyatakan bahwa nakotika itu bersumber dari farmasi, setelah diteliti, farmasi juga menyalurkan narkotika ke apotek.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 1. Rumah sakit dapat mendapat narkotika dari farmasi setelah mendapat izin, rumah sakit tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 34,
+        "crime": "Kasus ini diarahkan kepada apotek. Sebuah rumah sakit dilaporkan menyimpan narkotika, pemilik rumah sakit menyatakan bahwa nakotika itu bersumber dari farmasi, setelah diteliti, farmasi juga menyalurkan narkotika ke apotek.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 1. Apotek hanya bisa mendapatkan narkotika dari farmasi setelah mendapat izin, apotek tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 35,
+        "crime": "Kasus ini diarahkan kepada farmasi. Sebuah perdagangan dilaporkan mendapat narkotika, setelah ditanyai, perdagangan menyatakan bahwa narkotika itu legal karena disalurkan dari farmasi.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Farmasi dapat menyalurkan narkotika pada perusahaan tertentu, farmasi tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                5,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 36,
+        "crime": "Kasus ini diarahkan kepada perdagangan. Sebuah perdagangan dilaporkan mendapat narkotika, setelah ditanyai, perdagangan menyatakan bahwa narkotika itu legal karena disalurkan dari farmasi.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 1. Perdagangan hanya bisa mendapatkan narkotika dari farmasi setelah mendapat izin, perdagangan tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                10,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 37,
+        "crime": "Kasus ini diarahkan kepada perdagangan. Sebuah perdagangan dilaporkan mendapat narkotika, setelah ditanyai, perdagangan menyatakan bahwa narkotika disalurkan dari perdagangan lain, setelah ditelusuri, sebuah apotek juga mendapat narkotika dari perdagangan itu.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Perdagangan besar dapat menyalurkan narkotika pada perusahaan tertentu, perdagangan tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 38,
+        "crime": "Kasus ini diarahkan kepada perdagangan penerima. Sebuah perdagangan dilaporkan mendapat narkotika, setelah ditanyai, perdagangan menyatakan bahwa narkotika disalurkan dari perdagangan lain, setelah ditelusuri, sebuah apotek juga mendapat narkotika dari perdagangan itu.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 2. Perdagangan hanya bisa mendapatkan narkotika dari industri perdagangan lain setelah mendapat izin, perusahaan perdagangan tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 39,
+        "crime": "Kasus ini diarahkan kepada apotek. Sebuah perdagangan dilaporkan mendapat narkotika, setelah ditanyai, perdagangan menyatakan bahwa narkotika disalurkan dari perdagangan lain, setelah ditelusuri, sebuah apotek juga mendapat narkotika dari perdagangan itu.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 2. Apotek hanya bisa mendapatkan narkotika dari perusahaan perdagangan lain setelah mendapat izin, apotek tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 40,
+        "crime": "kasus ini diarahkan kepada perdagangan. Sebuah rumah sakit dilaporkan menyimpan narkotika, setelah ditanyai pemimpin rumah sakit menyatakan bahwa narkotika disalurkan dari perdagangan besar.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Perdagangan besar dapat menyalurkan narkotika pada perusahaan tertentu, perdagangan tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 41,
+        "crime": "kasus ini diarahkan kepada rumah sakit. Sebuah rumah sakit dilaporkan menyimpan narkotika, setelah ditanyai pemimpin rumah sakit menyatakan bahwa narkotika disalurkan dari perdagangan besar.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 2. Rumah sakit hanya bisa mendapatkan narkotika dari perusahaan perdagangan lain setelah mendapat izin, rumah sakit tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 42,
+        "crime": "kasus ini diarahkan kepada perdagangan. Sebuah industri dilaporkan menyimpan narkotika, pemimpin industri menyatakan bahwa narkotika disalurkan dari perdagangan besar, dan digunakan untuk ilmu pengetahuan, dan dia mempunyai bukti narkotika benar-benar digunakan untuk ilmu pengetahuan.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Perdagangan besar dapat menyalurkan narkotika pada perusahaan tertentu, perdagangan tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 43,
+        "crime": "kasus ini diarahkan kepada industri. Sebuah industri dilaporkan menyimpan narkotika, pemimpin industri menyatakan bahwa narkotika disalurkan dari perdagangan besar, dan digunakan untuk ilmu pengetahuan, dan dia mempunyai bukti narkotika benar-benar digunakan untuk ilmu pengetahuan.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 2. Industri hanya bisa mendapatkan narkotika dari perusahaan perdagangan lain untuk kepentingan ilmu pengetahuan setelah mendapat izin, industri tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 44,
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Farmasi dapat menyalurkan narkotika pada perusahaan tertentu, farmasi tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 45,
+        "crime": "Kasus ini diarahkan kepada perdagangan. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut pasal 14 dalam UU no.35 tahun 2009. Perdagangan bersalah karena mengedarkan narotika pada orang tidak berwenang, dan akan dicabut izin perdagangannya.",
+        "identity": [
+            [
+                "Male",
+                5,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 4
+    },
+    {
+        "id": 46,
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah, dan hanya akan diberi rehabilitasi.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 47,
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari rumah sakit, rumah sakit mendapat stok dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah, dan hanya akan diberi rehabilitasi.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 48,
+        "crime": "Kasus ini diarahkan kepada rumah sakit. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari rumah sakit, rumah sakit mendapat stok dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut pasal 14 dalam UU no.35 tahun 2009. Rumah sakit bersalah karena mengedarkan narkotika pada orang tidak berwenang.",
+        "identity": [
+            [
+                "Male",
+                3,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 4
+    },
+    {
+        "id": 49,
+        "crime": "Kasus ini diarahkan kepada perdagangan. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari rumah sakit, rumah sakit mendapat stok dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 40 ayat 1. Perdagangan hanya bisa mendapatkan narkotika dari farmasi setelah mendapat izin, perdagangan tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 50,
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu melaporkan diri, dan mengakui tempat dimana Ia mendapat narkotikanya adalah dari rumah sakit, rumah sakit mendapat stok dari perdagangan yang mendapat stok dari sebuah farmasi ternama, dan berizin memproduksi narkotika.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Farmasi dapat menyalurkan narkotika pada perusahaan tertentu, farmasi tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 51,
+        "crime": "Kasus ini diarahkan kepada dokter. Seseorang ditangkap setelah dilaporkan membawa narkotika, Ia menyatakan bahwa itu adalah pengobatannya dari dokter.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 53 ayat 1. Dokter dapat memberikan narkotika dalam jumlah terbatas kepada pasien untuk pengobatan, dokter tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 52,
+        "crime": "Kasus ini diarahkan kepada pasien. Seseorang ditangkap setelah dilaporkan membawa narkotika, Ia menyatakan bahwa itu adalah pengobatannya dari dokter.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 53 ayat 2. Pasien dapat membawa narkotika pemberian dokter untuk pengobatan, pasien tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 53,
+        "crime": "Kasus ini diarahkan kepada penjual. Seorang pecandu melaporkan diri, dan memberi tau dimana dia mendapat narkotika, setelah ditangkap penjual tersebut mengaku Ia hanya perantara, dan pengedar mendapat narkotika dari rumah sakit yang memesan narkotika ke farmasi yang memang sudah terizin.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 112, dan 114. Penjual itu bersalah karena menjadi perantara pengedaran obat narkotika.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 2
+    },
+    {
+        "id": 54,
+        "crime": "Kasus ini diarahkan kepada pengedar. Seorang pecandu melaporkan diri, dan memberi tau dimana dia mendapat narkotika, setelah ditangkap penjual tersebut mengaku Ia hanya perantara, dan pengedar mendapat narkotika dari rumah sakit yang memesan narkotika ke farmasi yang memang sudah terizin.",
+        "conclusion": "Menurut UU No.35 tahun 2009 pasal 112, dan 114. Pengedar itu bersalah  karena menyimpan, dan mengedarkan narkotika secara illegal.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 3
+    },
+    {
+        "id": 55,
+        "crime": "Kasus ini diarahkan kepada farmasi. Seorang pecandu melaporkan diri, dan memberi tau dimana dia mendapat narkotika, setelah ditangkap penjual tersebut mengaku Ia hanya perantara, dan pengedar mendapat narkotika dari rumah sakit yang memesan narkotika ke farmasi yang memang sudah terizin.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 39 ayat 1. Farmasi dapat menyalurkan narkotika pada perusahaan tertentu, farmasi tidak bersalah.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 56,
+        "crime": "Kasus ini diarahkan kepada rumah sakit. Seorang pecandu melaporkan diri, dan memberi tau dimana dia mendapat narkotika, setelah ditangkap penjual tersebut mengaku Ia hanya perantara, dan pengedar mendapat narkotika dari rumah sakit yang memesan narkotika ke farmasi yang memang sudah terizin.",
+        "conclusion": "Menurut pasal 14 dalam UU no.35 tahun 2009. Rumah sakit bersalah karena mengedarkan narotika pada orang tidak berwenang.",
+        "identity": [
+            [
+                "Male",
+                4,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 4
+    },
+    {
+        "id": 57,
+        "crime": "Kasus ini diarahkan kepada pecandu. Seorang pecandu melaporkan diri, dan memberi tau dimana dia mendapat narkotika, setelah ditangkap penjual tersebut mengaku Ia hanya perantara, dan pengedar mendapat narkotika dari rumah sakit yang memesan narkotika ke farmasi yang memang sudah terizin.",
+        "conclusion": "Menurut pasal 55 UU no.35 tahun 2009. Pecandu yang melaporkan diri tidak bersalah, dan hanya akan diberi rehabilitasi.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": false,
+        "rank": 0
+    },
+    {
+        "id": 58,
+        "crime": "Seseorang ditangkap setelah ketahuan memberikan narkoba kepada minuman temannya.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 116. Orang itu bersalah karena melawan hukum dengan menggunakan narkoba pada orang lain.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 4
+    },
+    {
+        "id": 59,
+        "crime": "Seseorang tertangkap setelah memberikan anak dibawah umur permen dengan diberi serbuk narkoba.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 133. Orang itu bersalah karena menyediakan narkotika kepada anak dibawah umur.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 5
+    },
+    {
+        "id": 60,
+        "crime": "Seseorang dilaporkan menyuruh anaknya untuk membeli narkotika, dan menyuruhnya untuk mengatakan bahwa itu tepung jika ditanyai.",
+        "conclusion": "Menurut UU no.35 tahun 2009 pasal 133. Orang itu bersalah karena menyuruh anak dibawah umur untuk menjadi perantara dalam pembelian narkotika.",
+        "identity": [
+            [
+                "Male",
+                1,
+                [
+                    20,
+                    45
+                ]
+            ]
+        ],
+        "case_is_guilty": true,
+        "rank": 5
     }
 ]

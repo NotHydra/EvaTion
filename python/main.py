@@ -96,7 +96,7 @@ class Main():
     def cases():
         wb_cases = Excel("excel/cases.xlsx")
 
-        value = wb_cases.get_value_multiple_2d("A2", "F31")
+        value = wb_cases.get_value_multiple_2d("A2", "F61")
         json_array = []
 
         for i in value:
