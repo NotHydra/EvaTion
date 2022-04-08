@@ -66,12 +66,6 @@
     }
 }
 
-.notification{
-    position: absolute;
-    left: 0;
-    right: 0;
-}
-
 .has_title_underline{
     border-bottom: 3px solid hsl(0, 0%, 21%)
 }
@@ -331,6 +325,16 @@
                         }
                     }
 
+                    .upgrade-card-icon-disabled{
+                        background-color: rgba(54, 54, 54, 1) !important;
+
+                        &:hover{
+                            background-color: rgba(54, 54, 54, 1) !important;
+                        }
+
+                        cursor: not-allowed !important;
+                    }
+
                     .upgrade-card-text{
                         display: flex;
                         flex-direction: column;
@@ -392,6 +396,12 @@
 }
 
 #login-container, #register-container{
+    .notification{
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+
     .hero-body{
         display: flex;
         flex-direction: column;

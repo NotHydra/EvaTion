@@ -49,6 +49,10 @@ const user_schema = new mongoose_1.default.Schema({
         type: Number,
         required: true
     },
+    upgrades: {
+        type: Array,
+        required: true
+    },
     crime_case_taken: {
         type: Array,
         required: true

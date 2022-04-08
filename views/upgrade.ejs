@@ -12,7 +12,7 @@
         
         <div id="upgrade-container" class="container is-fluid mb-0 pb-0">
             <section class="section mt-2 pt-2 mb-0 pb-0">
-                <div class="columns mr-6 home-first-row-card">
+                <div class="columns mr-6">
                     <%
                         const list_of_stat_attribute = [
                             {display : "Penduduk", icon : "fa-user-group", color : "info"},
@@ -40,33 +40,64 @@
                                                 <div class="card has-background-light mb-0 mt-3 ml-3 mr-3 upgrade-card-item">
                                                     <div class="card-content p-0">
                                                         <div class="content p-2 upgrade-card-content">
-                                                            <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon">
-                                                                <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
+                                                            <% 
+                                                                let final_amount_value = upgrade_datas[i][j].amount
+                                                                let final_cost_value = upgrade_datas[i][j].cost
+                                                                for(let k = 0; k < user_data.upgrades[i][j][1] - 1; k++) {
+                                                                    final_amount_value = final_amount_value * 1.5
+                                                                    final_cost_value = final_cost_value * 1.5
+                                                                }
 
-                                                                <% if(list_of_stat_attribute[i].color == 'warning') { %>
-                                                                    <div class="icon-background-text has_color_yellow upgrade-icon-symbol">+</div>
-                                                                <% } else { %>
-                                                                    <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
-                                                                <% } %>
-                                                            </div>
+                                                                if(upgrade_datas[i][j].type == "Max"){
+                                                                    final_amount_value = Math.trunc(final_amount_value)
+                                                                }
+
+                                                                else if(upgrade_datas[i][j].type == "Growth"){
+                                                                    final_amount_value = Math.ceil(final_amount_value)
+                                                                }
+
+                                                                final_cost_value = Math.trunc(final_cost_value)
+                                                            %>
+
+                                                            <% if(final_cost_value <= user_data.money_current) { %>
+                                                                <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon" onclick="upgrade('<%= i+1 %>', '<%= upgrade_datas[i][j].id %>', '<%= upgrade_datas[i][j].type %>', '<%= final_amount_value %>', '<%= final_cost_value %>')">
+                                                                    <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
+    
+                                                                    <% if(list_of_stat_attribute[i].color == 'warning') { %>
+                                                                        <div class="icon-background-text has_color_yellow upgrade-icon-symbol">+</div>
+                                                                    <% } else { %>
+                                                                        <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
+                                                                    <% } %>
+                                                                </div>
+                                                            <% } else if (final_cost_value > user_data.money_current) { %>
+                                                                <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon upgrade-card-icon-disabled">
+                                                                    <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
+    
+                                                                    <% if(list_of_stat_attribute[i].color == 'warning') { %>
+                                                                        <div class="icon-background-text has_color_yellow upgrade-icon-symbol">+</div>
+                                                                    <% } else { %>
+                                                                        <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
+                                                                    <% } %>
+                                                                </div>
+                                                            <% } %>
 
                                                             <div class="upgrade-card-text">
                                                                 <div>
                                                                     <div class="title m-0 p-0 upgrade-card-title"><%= upgrade_datas[i][j].name %></div>
-                                                                    <div class="subtitle m-0 p-0 upgrade-card-title">Lv. 1</div>
+                                                                    <div class="subtitle m-0 p-0 upgrade-card-title">Lv. <%= user_data.upgrades[i][j][1] %></div>
                                                                 </div>
 
                                                                 <div>
                                                                     <% if(upgrade_datas[i][j].type == "Max") { %>
                                                                         <div class="subtitle m-0 p-0 upgrade-card-subtitle">
                                                                             <span>Max : </span>
-                                                                            <span class="card_upgrade_amount_<%= i %>">+<%= upgrade_datas[i][j].amount %></span>
+                                                                            <span class="card_upgrade_amount_<%= i %>">+<%= final_amount_value %></span>
                                                                         </div>
 
                                                                     <% } else if(upgrade_datas[i][j].type == "Growth") { %>
                                                                         <div class="subtitle m-0 p-0 upgrade-card-subtitle">
                                                                             <span>Perkembangan : </span>
-                                                                            <span class="card_upgrade_amount_<%= i %>">+<%= upgrade_datas[i][j].amount %>%</span>
+                                                                            <span class="card_upgrade_amount_<%= i %>">+<%= final_amount_value %>%</span>
                                                                         </div>
                                                                     <% } %>
                                                                     
@@ -78,7 +109,7 @@
                                                                     
                                                                     <div class="subtitle m-0 p-0 upgrade-card-subtitle">
                                                                         <span>Biaya peningkatan : </span>
-                                                                        <span><i class="fa-solid fa-coins has_color_yellow"></i> <span class="has_color_yellow"><%= upgrade_datas[i][j].cost %></span></span>
+                                                                        <span><i class="fa-solid fa-coins has_color_yellow"></i> <span class="has_color_yellow"><%= final_cost_value %></span></span>
                                                                     </div>
                                                                 </div>                                                                    
                                                             </div>
@@ -95,5 +126,41 @@
                 </div>
             </section>
         </div>
+
+        <div class="card m-2" style="position: absolute; right: 0; bottom: 0;">
+            <div class="card-content p-0">
+                <div class="content p-2">
+                    <div class="icon-text title is-5">
+                        <span class="has_color_yellow">Sisa Uang : </span> 
+
+                        <span class="icon">
+                            <i class="fa-solid fa-coins has_color_yellow"></i>
+                        </span>
+
+                        <span class="has_color_yellow"><%= user_data.money_current %></span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form action="/upgrade" method="POST" id="form-upgrade" style="display: none;">
+            <input id="form-upgrade-stat-id" type="hidden" name="stat_id" value="">
+            <input id="form-upgrade-upgrade-id" type="hidden" name="upgrade_id" value="">
+            <input id="form-upgrade-type" type="hidden" name="type" value="">
+            <input id="form-upgrade-amount" type="hidden" name="amount" value="">
+            <input id="form-upgrade-cost" type="hidden" name="cost" value="">
+        </form>
     </body>
+
+    <script>
+        function upgrade(stat_id, upgrade_id, type, amount, cost){
+            document.getElementById("form-upgrade-stat-id").value = parseInt(stat_id);
+            document.getElementById("form-upgrade-upgrade-id").value = parseInt(upgrade_id);
+            document.getElementById("form-upgrade-type").value = type;
+            document.getElementById("form-upgrade-amount").value = parseInt(amount);
+            document.getElementById("form-upgrade-cost").value = parseInt(cost);
+
+            document.getElementById('form-upgrade').submit();
+        };
+    </script>
 </html>

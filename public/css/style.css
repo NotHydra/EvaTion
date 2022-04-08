@@ -66,12 +66,6 @@
   border-top: 2px solid #363636;
 }
 
-.notification {
-  position: absolute;
-  left: 0;
-  right: 0;
-}
-
 .has_title_underline {
   border-bottom: 3px solid #363636;
 }
@@ -370,6 +364,15 @@
   pointer-events: none;
 }
 
+#upgrade-container .main-card-container .upgrade-card-container .upgrade-card-item .upgrade-card-content .upgrade-card-icon-disabled {
+  background-color: #363636 !important;
+  cursor: not-allowed !important;
+}
+
+#upgrade-container .main-card-container .upgrade-card-container .upgrade-card-item .upgrade-card-content .upgrade-card-icon-disabled:hover {
+  background-color: #363636 !important;
+}
+
 #upgrade-container .main-card-container .upgrade-card-container .upgrade-card-item .upgrade-card-content .upgrade-card-text {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -422,6 +425,12 @@
 #upgrade-container #warning_card .main-card-title {
   color: #FFBB00 !important;
   border-bottom: 3px solid #FFBB00;
+}
+
+#login-container .notification, #register-container .notification {
+  position: absolute;
+  left: 0;
+  right: 0;
 }
 
 #login-container .hero-body, #register-container .hero-body {

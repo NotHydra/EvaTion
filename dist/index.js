@@ -298,6 +298,7 @@ function main(user_datas, case_datas, upgrade_datas) {
             crime_rate_max: user_request.crime_rate_max,
             money_current: user_request.money_current,
             money_max: user_request.money_max,
+            upgrades: user_request.upgrades,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
         })
@@ -313,6 +314,51 @@ function main(user_datas, case_datas, upgrade_datas) {
     });
     app.get('/upgrade', check_authenticated, (req, res) => {
         res.render('upgrade', { title: 'Peningkatan', user_data: req.user, upgrade_datas });
+    });
+    app.post('/upgrade', check_authenticated, (req, res) => {
+        let post_upgrade_stat_id = parseInt(req.body.stat_id);
+        let post_upgrade_upgrade_id = parseInt(req.body.upgrade_id);
+        let post_upgrade_type = req.body.type;
+        let post_upgrade_amount = parseInt(req.body.amount);
+        let post_upgrade_cost = parseInt(req.body.cost);
+        let user_request = req.user;
+        if (post_upgrade_cost <= user_request.money_current) {
+            if (post_upgrade_type == 'Max') {
+                user_request.money_current -= post_upgrade_cost;
+                if (post_upgrade_stat_id == 1) {
+                    user_request.people_max += post_upgrade_amount;
+                }
+                else if (post_upgrade_stat_id == 2) {
+                    user_request.prosperity_max += post_upgrade_amount;
+                }
+                else if (post_upgrade_stat_id == 3) {
+                    user_request.money_max += post_upgrade_amount;
+                }
+                ;
+                user_request.upgrades[post_upgrade_stat_id - 1][post_upgrade_upgrade_id - 1][1] += 1;
+            }
+            ;
+        }
+        res.redirect('/upgrade');
+        user_model_1.default.findOneAndUpdate({ id: user_request.id }, {
+            people_current: user_request.people_current,
+            people_max: user_request.people_max,
+            prosperity_current: user_request.prosperity_current,
+            prosperity_max: user_request.prosperity_max,
+            crime_rate_current: user_request.crime_rate_current,
+            crime_rate_max: user_request.crime_rate_max,
+            money_current: user_request.money_current,
+            money_max: user_request.money_max,
+            upgrades: user_request.upgrades,
+            crime_case_taken: user_request.crime_case_taken,
+            crime_case: user_request.crime_case
+        })
+            .then(() => {
+            console.log(`Resetting User ${user_request.id} Data`);
+        })
+            .catch((err) => {
+            console.log(err);
+        });
     });
     app.get('/history', check_authenticated, (req, res) => {
         res.render('history', { title: 'Berita', user_data: req.user });
@@ -334,7 +380,12 @@ function main(user_datas, case_datas, upgrade_datas) {
             user_request.crime_rate_max = 100;
             user_request.money_current = 100;
             user_request.money_max = 1000;
-            user_request.crime_case_taken = [random_case_theme];
+            user_request.upgrades = [
+                [[1, 1], [2, 1], [3, 1], [4, 1]],
+                [[1, 1], [2, 1], [3, 1], [4, 1], [5, 1]],
+                [[1, 1], [2, 1]]
+            ],
+                user_request.crime_case_taken = [random_case_theme];
             user_request.crime_case = [
                 {
                     "day": 1,
@@ -349,7 +400,7 @@ function main(user_datas, case_datas, upgrade_datas) {
                     ]
                 }
             ];
-            res.redirect('/setting');
+            res.redirect('/home');
         }
         let user_request = req.user;
         user_model_1.default.findOneAndUpdate({ id: user_request.id }, {
@@ -361,6 +412,7 @@ function main(user_datas, case_datas, upgrade_datas) {
             crime_rate_max: user_request.crime_rate_max,
             money_current: user_request.money_current,
             money_max: user_request.money_max,
+            upgrades: user_request.upgrades,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
         })
@@ -445,6 +497,11 @@ function main(user_datas, case_datas, upgrade_datas) {
                 "crime_rate_max": 100,
                 "money_current": 100,
                 "money_max": 1000,
+                "upgrades": [
+                    [[1, 1], [2, 1], [3, 1], [4, 1]],
+                    [[1, 1], [2, 1], [3, 1], [4, 1], [5, 1]],
+                    [[1, 1], [2, 1]]
+                ],
                 "crime_case_taken": [random_case_theme],
                 "crime_case": [
                     {
