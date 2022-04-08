@@ -1,4 +1,3 @@
-from this import d
 import openpyxl
 import json
 
@@ -126,10 +125,10 @@ class Main():
 
         json_array = []
         upgrades_cell_range = [
-            ["D7", "I9"],
-            ["D14", "I18"],
-            ["D23", "I24"],
-            ["D29", "I30"]
+            ["D7", "I10"],
+            ["K7", "P11"],
+            # ["R7", "W8"],
+            ["Y7", "AD8"]
         ]
 
         for i in upgrades_cell_range:

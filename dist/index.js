@@ -24,7 +24,7 @@ const express_session_1 = __importDefault(require("express-session"));
 const method_override_1 = __importDefault(require("method-override"));
 const alea_1 = __importDefault(require("alea"));
 const mongoose_1 = __importDefault(require("mongoose"));
-const case_model_1 = __importDefault(require("./models/case_model"));
+const fs_1 = __importDefault(require("fs"));
 const user_model_1 = __importDefault(require("./models/user_model"));
 const app = (0, express_1.default)();
 const prng = new alea_1.default();
@@ -38,17 +38,17 @@ app.use(passport_1.default.initialize());
 app.use(passport_1.default.session());
 app.use((0, method_override_1.default)('_method'));
 function find_data() {
-    case_model_1.default.find().sort({ id: 'asc' })
+    user_model_1.default.find().sort({ id: 'asc' })
         .then((result) => {
-        let case_datas = result;
-        user_model_1.default.find().sort({ id: 'asc' })
-            .then((result) => {
-            let user_datas = result;
-            main(case_datas, user_datas);
-        });
+        let user_datas = result;
+        let case_datas = JSON.parse(fs_1.default.readFileSync('./json/cases.json', 'utf-8'));
+        ;
+        let upgrade_datas = JSON.parse(fs_1.default.readFileSync('./json/upgrades.json', 'utf-8'));
+        ;
+        main(user_datas, case_datas, upgrade_datas);
     });
 }
-function main(case_datas, user_datas) {
+function main(user_datas, case_datas, upgrade_datas) {
     let crime_rate_increase = 0;
     const initializePassport = require('./passport-config');
     initializePassport(passport_1.default, 
@@ -312,7 +312,7 @@ function main(case_datas, user_datas) {
         res.render('stats', { title: 'Informasi', user_data: req.user });
     });
     app.get('/upgrade', check_authenticated, (req, res) => {
-        res.render('upgrade', { title: 'Peningkatan', user_data: req.user });
+        res.render('upgrade', { title: 'Peningkatan', user_data: req.user, upgrade_datas });
     });
     app.get('/history', check_authenticated, (req, res) => {
         res.render('history', { title: 'Berita', user_data: req.user });

@@ -4,7 +4,7 @@
             "id": 1,
             "icon": "fa-house-chimney",
             "name": "Rumah",
-            "type": "max",
+            "type": "Max",
             "amount": 10,
             "cost": 100
         },
@@ -12,7 +12,7 @@
             "id": 2,
             "icon": "fa-building",
             "name": "Apartemen",
-            "type": "max",
+            "type": "Max",
             "amount": 25,
             "cost": 250
         },
@@ -20,49 +20,15 @@
             "id": 3,
             "icon": "fa-hotel",
             "name": "Hotel",
-            "type": "max",
+            "type": "Max",
             "amount": 50,
             "cost": 500
-        }
-    ],
-    [
-        {
-            "id": 1,
-            "icon": "fa-cart-shopping",
-            "name": "Toko",
-            "type": "max",
-            "amount": 10,
-            "cost": 100
-        },
-        {
-            "id": 2,
-            "icon": "fa-school",
-            "name": "Sekolah",
-            "type": "max",
-            "amount": 25,
-            "cost": 250
-        },
-        {
-            "id": 3,
-            "icon": "fa-bus-simple",
-            "name": "Transportasi",
-            "type": "max",
-            "amount": 35,
-            "cost": 350
         },
         {
             "id": 4,
-            "icon": "fa-hospital",
-            "name": "Rumah Sakit",
-            "type": "max",
-            "amount": 75,
-            "cost": 750
-        },
-        {
-            "id": 5,
-            "icon": "fa-industry",
-            "name": "Perusahaan",
-            "type": "growth",
+            "icon": "fa-city",
+            "name": "Kompleks",
+            "type": "Growth",
             "amount": 1,
             "cost": 1000
         }
@@ -70,17 +36,41 @@
     [
         {
             "id": 1,
-            "icon": "fa-handcuffs",
-            "name": "Penjara",
-            "type": "max",
-            "amount": 50,
-            "cost": 500
+            "icon": "fa-cart-shopping",
+            "name": "Toko",
+            "type": "Max",
+            "amount": 10,
+            "cost": 100
         },
         {
             "id": 2,
-            "icon": "fa-shield",
-            "name": "Keamanan",
-            "type": "growth",
+            "icon": "fa-school",
+            "name": "Sekolah",
+            "type": "Max",
+            "amount": 25,
+            "cost": 250
+        },
+        {
+            "id": 3,
+            "icon": "fa-bus-simple",
+            "name": "Transportasi",
+            "type": "Max",
+            "amount": 35,
+            "cost": 350
+        },
+        {
+            "id": 4,
+            "icon": "fa-hospital",
+            "name": "Rumah Sakit",
+            "type": "Max",
+            "amount": 75,
+            "cost": 750
+        },
+        {
+            "id": 5,
+            "icon": "fa-industry",
+            "name": "Perusahaan",
+            "type": "Growth",
             "amount": 1,
             "cost": 1000
         }
@@ -90,7 +80,7 @@
             "id": 1,
             "icon": "fa-landmark",
             "name": "Bank",
-            "type": "max",
+            "type": "Max",
             "amount": 500,
             "cost": 500
         },
@@ -98,7 +88,7 @@
             "id": 2,
             "icon": "fa-money-bill-trend-up",
             "name": "Investasi",
-            "type": "growth",
+            "type": "Growth",
             "amount": 1,
             "cost": 1000
         }

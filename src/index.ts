@@ -10,8 +10,8 @@ import session from 'express-session';
 import methodOverride from 'method-override';
 import alea from 'alea';
 import mongoose from 'mongoose';
+import fs from 'fs';
 
-import Case from './models/case_model';
 import User from './models/user_model';
 
 const app: Application = express();
@@ -27,20 +27,17 @@ app.use(passport.session());
 app.use(methodOverride('_method'));
 
 function find_data(){
-    Case.find().sort({ id: 'asc' })
+    User.find().sort({ id: 'asc' })
         .then((result) => {
-            let case_datas = result;
+            let user_datas = result;
+            let case_datas = JSON.parse(fs.readFileSync('./json/cases.json', 'utf-8'));;
+            let upgrade_datas = JSON.parse(fs.readFileSync('./json/upgrades.json', 'utf-8'));;
 
-            User.find().sort({ id: 'asc' })
-                .then((result) => {
-                    let user_datas = result;
-
-                    main(case_datas, user_datas)
-                });
+            main(user_datas, case_datas, upgrade_datas)
         });
 }
 
-function main(case_datas: any, user_datas: any){
+function main(user_datas: any, case_datas: any, upgrade_datas: any){
     let crime_rate_increase = 0;
 
     const initializePassport = require('./passport-config');
@@ -351,7 +348,7 @@ function main(case_datas: any, user_datas: any){
     });
 
     app.get('/upgrade', check_authenticated, (req: Request, res: Response) => {
-        res.render('upgrade', { title: 'Peningkatan', user_data: req.user });
+        res.render('upgrade', { title: 'Peningkatan', user_data: req.user, upgrade_datas });
     });
 
     app.get('/history', check_authenticated, (req: Request, res: Response) => {

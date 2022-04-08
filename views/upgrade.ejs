@@ -17,17 +17,17 @@
                         const list_of_stat_attribute = [
                             {display : "Penduduk", icon : "fa-user-group", color : "info"},
                             {display : "Kemakmuran", icon : "fa-face-smile", color : "success"},
-                            {display : "Kriminalitas", icon : "fa-radiation", color : "danger"},
+                            // {display : "Kriminalitas", icon : "fa-radiation", color : "danger"},
                             {display : "Keuangan", icon : "fa-coins", color : "warning"}
                         ];
                     %>                    
 
                     <% for(let i = 0; i < list_of_stat_attribute.length; i++) { %>
                         <div class="column">
-                            <div class="card" style="height: 720px;" id="<%= list_of_stat_attribute[i].color %>_card">
+                            <div class="card main-card-container" id="<%= list_of_stat_attribute[i].color %>_card">
                                 <div class="card-content p-0">
                                     <div class="content">
-                                        <div class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i].color %> p-5 mb-0" id="icon-title-card" style="white-space: nowrap;">
+                                        <div class="icon-text title is-5 has-text-<%= list_of_stat_attribute[i].color %> p-5 mb-0 main-card-title">
                                             <div class="icon">
                                                 <i class="fa-solid <%= list_of_stat_attribute[i].icon %>"></i>
                                             </div>
@@ -35,31 +35,52 @@
                                             <div class="text"><%= list_of_stat_attribute[i].display %></div>
                                         </div>
 
-                                        <div class="mt-0" style="height: 630px; overflow: auto;">
-                                            <% for(let j = 0; j < 10; j++) { %>
-                                                <div class="card has-background-light mb-0 mt-3 ml-3 mr-3" style="box-shadow: 0 0 !important;">
+                                        <div class="mt-0 upgrade-card-container">
+                                            <% for(let j = 0; j < upgrade_datas[i].length; j++) { %>
+                                                <div class="card has-background-light mb-0 mt-3 ml-3 mr-3 upgrade-card-item">
                                                     <div class="card-content p-0">
-                                                        <div class="content p-2" style="display: flex; flex-direction: row; justify-content: space-between;">
-                                                            <div style="display: flex; flex-direction: row;">
-                                                                <div class="icon has-background-white mr-3" style="height: 75px; width: 75px; display: flex; justify-content: center; align-items: center; border: 2px solid #363636; border-radius: 0.25rem; font-size: 2.25rem;">
-                                                                    <i class="fa-solid fa-school"></i>
-                                                                    <div class="icon-background">
-                                                                        <div class="icon-background-text">+</div>
-                                                                    </div>
-                                                                </div>
-    
-                                                                <div style="display: flex; flex-direction: column; justify-content: space-between;">
-                                                                    <div>
-                                                                        <div class="title m-0 p-0" style="font-size: 0.9rem;">Sekolah</div>
-                                                                        <div class="subtitle m-0 p-0" style="font-size: 0.9rem;">Lv. 1</div>
-                                                                    </div>
+                                                        <div class="content p-2 upgrade-card-content">
+                                                            <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon">
+                                                                <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
 
-                                                                    <div>
-                                                                        <div class="subtitle m-0 p-0" style="font-size: 0.85rem;">Max Kemakmuran : +10</div>
-                                                                        
-                                                                        <div class="subtitle m-0 p-0" style="font-size: 0.85rem;">Biaya peningkatan : <i class="fa-solid fa-coins has_color_yellow"></i> <span class="has_color_yellow">100</span></div>
-                                                                    </div>                                                                    
+                                                                <% if(list_of_stat_attribute[i].color == 'warning') { %>
+                                                                    <div class="icon-background-text has_color_yellow upgrade-icon-symbol">+</div>
+                                                                <% } else { %>
+                                                                    <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
+                                                                <% } %>
+                                                            </div>
+
+                                                            <div class="upgrade-card-text">
+                                                                <div>
+                                                                    <div class="title m-0 p-0 upgrade-card-title"><%= upgrade_datas[i][j].name %></div>
+                                                                    <div class="subtitle m-0 p-0 upgrade-card-title">Lv. 1</div>
                                                                 </div>
+
+                                                                <div>
+                                                                    <% if(upgrade_datas[i][j].type == "Max") { %>
+                                                                        <div class="subtitle m-0 p-0 upgrade-card-subtitle">
+                                                                            <span>Max : </span>
+                                                                            <span class="card_upgrade_amount_<%= i %>">+<%= upgrade_datas[i][j].amount %></span>
+                                                                        </div>
+
+                                                                    <% } else if(upgrade_datas[i][j].type == "Growth") { %>
+                                                                        <div class="subtitle m-0 p-0 upgrade-card-subtitle">
+                                                                            <span>Perkembangan : </span>
+                                                                            <span class="card_upgrade_amount_<%= i %>">+<%= upgrade_datas[i][j].amount %>%</span>
+                                                                        </div>
+                                                                    <% } %>
+                                                                    
+                                                                    <% if(list_of_stat_attribute[i].color == 'warning') { %>
+                                                                        <script>document.getElementsByClassName('card_upgrade_amount_<%= i %>')['<%= j %>'].classList.add('has_color_yellow')</script>
+                                                                    <% } else { %>
+                                                                        <script>document.getElementsByClassName('card_upgrade_amount_<%= i %>')['<%= j %>'].classList.add('has-text-<%= list_of_stat_attribute[i].color %>')</script>
+                                                                    <% }%>
+                                                                    
+                                                                    <div class="subtitle m-0 p-0 upgrade-card-subtitle">
+                                                                        <span>Biaya peningkatan : </span>
+                                                                        <span><i class="fa-solid fa-coins has_color_yellow"></i> <span class="has_color_yellow"><%= upgrade_datas[i][j].cost %></span></span>
+                                                                    </div>
+                                                                </div>                                                                    
                                                             </div>
                                                         </div>
                                                     </div>
