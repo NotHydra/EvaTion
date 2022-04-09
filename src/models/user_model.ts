@@ -26,12 +26,22 @@ const user_schema = new mongoose.Schema({
         required: true
     },
 
+    people_growth: {
+        type: Number,
+        required: true
+    },
+
     prosperity_current: {
         type: Number,
         required: true
     },
 
     prosperity_max: {
+        type: Number,
+        required: true
+    },
+
+    prosperity_growth: {
         type: Number,
         required: true
     },
@@ -52,6 +62,11 @@ const user_schema = new mongoose.Schema({
     },
 
     money_max: {
+        type: Number,
+        required: true
+    },
+
+    money_growth: {
         type: Number,
         required: true
     },

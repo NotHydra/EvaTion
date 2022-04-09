@@ -171,7 +171,7 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
                     user_request.money_current += money_increase_based_on_case;
                 };
 
-                money_increase_based_on_max = user_request.money_max * (5 / 100);
+                money_increase_based_on_max = user_request.money_max * (user_request.money_growth / 100);
                 user_request.money_current += money_increase_based_on_max;
 
                 money_increase_based_on_random = get_random_number(1, 5) * 10;
@@ -266,7 +266,7 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
                     user_request.crime_rate_current = user_request.crime_rate_max;
                 };
 
-                let user_people_current_increase = user_request.people_max * (10 / 100);
+                let user_people_current_increase = user_request.people_max * (user_request.people_growth / 100);
                 let user_people_current_decrease = (user_request.people_current * (user_request.crime_rate_current / 100)) / 2;
                 let user_people_current_base_random_value = Math.trunc(user_people_current_increase / 4);
                 let user_people_current_random = get_random_number(-1 * user_people_current_base_random_value, user_people_current_base_random_value);
@@ -283,8 +283,8 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
                     user_request.people_current = user_request.people_max;
                 };
 
-                let user_prosperity_current_increase = user_request.prosperity_max * (((100 - user_request.crime_rate_current) / 100) / 4);
-                let user_prosperity_current_decrease = user_request.prosperity_current * ((user_request.crime_rate_current / 100) / 2);
+                let user_prosperity_current_increase = user_request.prosperity_max * ((100 - user_request.crime_rate_current) * user_request.prosperity_growth / 10000 * 2);
+                let user_prosperity_current_decrease = user_request.prosperity_current * (user_request.crime_rate_current * user_request.prosperity_growth / 10000 * 4);
                 let user_prosperity_current_base_random_value = Math.trunc(user_prosperity_current_increase / 4);
                 let user_prosperity_current_random = get_random_number(-1 * user_prosperity_current_base_random_value, user_prosperity_current_base_random_value);
 
@@ -324,12 +324,15 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
         User.findOneAndUpdate({id: user_request.id}, {
             people_current: user_request.people_current,
             people_max: user_request.people_max,
+            people_growth: user_request.people_growth,
             prosperity_current: user_request.prosperity_current,
             prosperity_max: user_request.prosperity_max,
+            prosperity_growth: user_request.prosperity_growth,
             crime_rate_current: user_request.crime_rate_current,
             crime_rate_max: user_request.crime_rate_max,
             money_current: user_request.money_current,
             money_max: user_request.money_max,
+            money_growth: user_request.money_growth,
             upgrades: user_request.upgrades,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
@@ -363,8 +366,6 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
 
         if(post_upgrade_cost <= user_request.money_current){
             if(post_upgrade_type == 'Max'){
-                user_request.money_current -= post_upgrade_cost;
-
                 if(post_upgrade_stat_id == 1){
                     user_request.people_max += post_upgrade_amount;
                 }
@@ -376,9 +377,24 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
                 else if(post_upgrade_stat_id == 3){
                     user_request.money_max += post_upgrade_amount;
                 };
+            }
 
-                user_request.upgrades[post_upgrade_stat_id - 1][post_upgrade_upgrade_id - 1][1] += 1;
-            };            
+            else if(post_upgrade_type == 'Growth'){
+                if(post_upgrade_stat_id == 1){
+                    user_request.people_growth += post_upgrade_amount;
+                }
+
+                else if(post_upgrade_stat_id == 2){
+                    user_request.prosperity_growth += post_upgrade_amount;
+                }
+
+                else if(post_upgrade_stat_id == 3){
+                    user_request.money_growth += post_upgrade_amount;
+                };  
+            };
+            
+            user_request.money_current -= post_upgrade_cost;
+            user_request.upgrades[post_upgrade_stat_id - 1][post_upgrade_upgrade_id - 1][1] += 1;
         }
         
         res.redirect('/upgrade');
@@ -386,12 +402,15 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
         User.findOneAndUpdate({id: user_request.id}, {
             people_current: user_request.people_current,
             people_max: user_request.people_max,
+            people_growth: user_request.people_growth,
             prosperity_current: user_request.prosperity_current,
             prosperity_max: user_request.prosperity_max,
+            prosperity_growth: user_request.prosperity_growth,
             crime_rate_current: user_request.crime_rate_current,
             crime_rate_max: user_request.crime_rate_max,
             money_current: user_request.money_current,
             money_max: user_request.money_max,
+            money_growth: user_request.money_growth,
             upgrades: user_request.upgrades,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
@@ -423,12 +442,15 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
             let user_request: any = req.user;
             user_request.people_current = 80;
             user_request.people_max = 100;
+            user_request.people_growth = 10;
             user_request.prosperity_current = 90;
             user_request.prosperity_max = 100;
+            user_request.prosperity_growth = 10;
             user_request.crime_rate_current = 20;
             user_request.crime_rate_max = 100;
             user_request.money_current = 100;
             user_request.money_max = 1000;
+            user_request.money_growth = 5;
             user_request.upgrades = [
                 [[1, 1], [2, 1], [3, 1], [4, 1]],
                 [[1, 1], [2, 1], [3, 1], [4, 1], [5, 1]],
@@ -457,12 +479,15 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
         User.findOneAndUpdate({id: user_request.id}, {
             people_current: user_request.people_current,
             people_max: user_request.people_max,
+            people_growth: user_request.people_growth,
             prosperity_current: user_request.prosperity_current,
             prosperity_max: user_request.prosperity_max,
+            prosperity_growth: user_request.prosperity_growth,
             crime_rate_current: user_request.crime_rate_current,
             crime_rate_max: user_request.crime_rate_max,
             money_current: user_request.money_current,
             money_max: user_request.money_max,
+            money_growth: user_request.money_growth,
             upgrades: user_request.upgrades,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
@@ -554,12 +579,15 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
                 "password": hashedPassword,
                 "people_current": 80,
                 "people_max": 100,
+                "people_growth": 10,
                 "prosperity_current": 90,
                 "prosperity_max": 100,
+                "prosperity_growth": 10,
                 "crime_rate_current": 20,
                 "crime_rate_max": 100,
                 "money_current": 100,
                 "money_max": 1000,
+                "money_growth": 5,
                 "upgrades": [
                     [[1, 1], [2, 1], [3, 1], [4, 1]],
                     [[1, 1], [2, 1], [3, 1], [4, 1], [5, 1]],
