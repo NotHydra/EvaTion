@@ -65,6 +65,10 @@ const user_schema = new mongoose_1.default.Schema({
         type: Array,
         required: true
     },
+    crime_case_correct: {
+        type: Number,
+        required: true
+    },
     crime_case_taken: {
         type: Array,
         required: true

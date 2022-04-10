@@ -76,6 +76,11 @@ const user_schema = new mongoose.Schema({
         required: true
     },
 
+    crime_case_correct: {
+        type: Number,
+        required: true
+    },
+
     crime_case_taken: {
         type: Array,
         required: true

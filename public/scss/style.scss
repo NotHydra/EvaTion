@@ -226,6 +226,18 @@
         }
     }
 
+    .home-final-row-card{
+        .card{
+            height: 585px;
+
+            .content{
+                height: 505px;
+
+                overflow-y: auto;
+            }
+        }
+    }
+
     #modal-response{
         z-index: 100;
 

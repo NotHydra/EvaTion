@@ -245,6 +245,15 @@
   cursor: not-allowed;
 }
 
+#main-container .home-final-row-card .card {
+  height: 585px;
+}
+
+#main-container .home-final-row-card .card .content {
+  height: 505px;
+  overflow-y: auto;
+}
+
 #main-container #modal-response {
   z-index: 100;
 }

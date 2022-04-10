@@ -42,9 +42,7 @@ function find_data() {
         .then((result) => {
         let user_datas = result;
         let case_datas = JSON.parse(fs_1.default.readFileSync('./json/cases.json', 'utf-8'));
-        ;
         let upgrade_datas = JSON.parse(fs_1.default.readFileSync('./json/upgrades.json', 'utf-8'));
-        ;
         main(user_datas, case_datas, upgrade_datas);
     });
 }
@@ -152,6 +150,7 @@ function main(user_datas, case_datas, upgrade_datas) {
             let money_increase_based_on_max = 0;
             let money_increase_based_on_random = 0;
             if (current_case_response_is_guilty == current_case_is_guilty) {
+                user_request.crime_case_correct += 1;
                 if (current_case_rank != 0) {
                     money_increase_based_on_case = current_case_rank * 50;
                     user_request.money_current += money_increase_based_on_case;
@@ -175,7 +174,7 @@ function main(user_datas, case_datas, upgrade_datas) {
                 ;
             }
             ;
-            let money_increase_total = money_increase_based_on_case + money_increase_based_on_max + money_increase_based_on_random;
+            let money_increase_total = Math.trunc(money_increase_based_on_case + money_increase_based_on_max + money_increase_based_on_random);
             // console.log(money_increase_based_on_case, money_increase_based_on_max, money_increase_based_on_random, money_increase_total);
             crime_case_data[current_day_length].case_current += 1;
             if (crime_case_data[current_day_length].case_current < crime_case_data[current_day_length].case_max) {
@@ -202,32 +201,37 @@ function main(user_datas, case_datas, upgrade_datas) {
         }
         if (req.body.type == 'next') {
             if (crime_case_data[current_day_length].case_current >= crime_case_data[current_day_length].case_max) {
-                const random_case_max = get_random_number(1, 2);
-                let random_case_theme = get_random_case();
-                // @ts-ignore
-                let crime_case_taken = req.user.crime_case_taken;
-                for (let i = 0; i < crime_case_taken.length; i++) {
-                    if (random_case_theme == crime_case_taken[i]) {
-                        random_case_theme = get_random_case();
-                        i = -1;
+                if (crime_case_data.length != 30) {
+                    const random_case_max = get_random_number(1, 2);
+                    // @ts-ignore
+                    let crime_case_taken = req.user.crime_case_taken;
+                    let random_case_theme = get_random_case();
+                    for (let i = 0; i < crime_case_taken.length; i++) {
+                        if (random_case_theme == crime_case_taken[i]) {
+                            random_case_theme = get_random_case();
+                            i = -1;
+                        }
+                        ;
                     }
                     ;
+                    let random_case_identity = get_random_case_identity(random_case_theme);
+                    crime_case_data.push({
+                        "day": crime_case_data.length + 1,
+                        "case_current": 0,
+                        "case_max": random_case_max,
+                        "case": [
+                            {
+                                "case_id": random_case_theme,
+                                "case_response": null,
+                                "case_identity": random_case_identity
+                            }
+                        ]
+                    });
+                    crime_case_taken.push(random_case_theme);
                 }
-                ;
-                let random_case_identity = get_random_case_identity(random_case_theme);
-                crime_case_data.push({
-                    "day": crime_case_data.length + 1,
-                    "case_current": 0,
-                    "case_max": random_case_max,
-                    "case": [
-                        {
-                            "case_id": random_case_theme,
-                            "case_response": null,
-                            "case_identity": random_case_identity
-                        }
-                    ]
-                });
-                crime_case_taken.push(random_case_theme);
+                else if (crime_case_data.length == 30) {
+                    crime_case_data.push({ "status": "Done" });
+                }
                 // console.log(`Crime Rate Increase    : ${crime_rate_increase}`);
                 let random_crime_rate_decrease = get_random_number(5, 10);
                 user_request.crime_rate_current += crime_rate_increase;
@@ -302,6 +306,7 @@ function main(user_datas, case_datas, upgrade_datas) {
             money_max: user_request.money_max,
             money_growth: user_request.money_growth,
             upgrades: user_request.upgrades,
+            crime_case_correct: user_request.crime_case_correct,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
         })
@@ -368,6 +373,7 @@ function main(user_datas, case_datas, upgrade_datas) {
             money_max: user_request.money_max,
             money_growth: user_request.money_growth,
             upgrades: user_request.upgrades,
+            crime_case_correct: user_request.crime_case_correct,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
         })
@@ -406,6 +412,7 @@ function main(user_datas, case_datas, upgrade_datas) {
                 [[1, 1], [2, 1], [3, 1], [4, 1], [5, 1]],
                 [[1, 1], [2, 1]]
             ],
+                user_request.crime_case_correct = 0,
                 user_request.crime_case_taken = [random_case_theme];
             user_request.crime_case = [
                 {
@@ -437,6 +444,7 @@ function main(user_datas, case_datas, upgrade_datas) {
             money_max: user_request.money_max,
             money_growth: user_request.money_growth,
             upgrades: user_request.upgrades,
+            crime_case_correct: user_request.crime_case_correct,
             crime_case_taken: user_request.crime_case_taken,
             crime_case: user_request.crime_case
         })
@@ -529,6 +537,7 @@ function main(user_datas, case_datas, upgrade_datas) {
                     [[1, 1], [2, 1], [3, 1], [4, 1], [5, 1]],
                     [[1, 1], [2, 1]]
                 ],
+                "crime_case_correct": 0,
                 "crime_case_taken": [random_case_theme],
                 "crime_case": [
                     {

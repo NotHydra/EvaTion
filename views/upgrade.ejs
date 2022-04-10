@@ -7,7 +7,7 @@
     <body>
         <%- include('partials/nav', { user_data }); %>
         <script>
-            document.getElementsByClassName('link-item')[2].classList.add('link-item-is-active');
+            document.getElementsByClassName('link-item')[1].classList.add('link-item-is-active');
         </script>
         
         <div id="upgrade-container" class="container is-fluid mb-0 pb-0">
@@ -59,8 +59,8 @@
                                                                 final_cost_value = Math.trunc(final_cost_value)
                                                             %>
 
-                                                            <% if(final_cost_value <= user_data.money_current) { %>
-                                                                <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon" onclick="upgrade('<%= i+1 %>', '<%= upgrade_datas[i][j].id %>', '<%= upgrade_datas[i][j].type %>', '<%= final_amount_value %>', '<%= final_cost_value %>')">
+                                                            <% if (final_cost_value > user_data.money_current || user_data.crime_case[user_data.crime_case.length - 1].status == "Done") { %>
+                                                                <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon upgrade-card-icon-disabled">
                                                                     <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
     
                                                                     <% if(list_of_stat_attribute[i].color == 'warning') { %>
@@ -69,8 +69,8 @@
                                                                         <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
                                                                     <% } %>
                                                                 </div>
-                                                            <% } else if (final_cost_value > user_data.money_current) { %>
-                                                                <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon upgrade-card-icon-disabled">
+                                                            <% } else if(final_cost_value <= user_data.money_current) { %>
+                                                                <div class="icon mr-3 has_border_<%= list_of_stat_attribute[i].color %> upgrade-card-icon" onclick="upgrade('<%= i+1 %>', '<%= upgrade_datas[i][j].id %>', '<%= upgrade_datas[i][j].type %>', '<%= final_amount_value %>', '<%= final_cost_value %>')">
                                                                     <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
     
                                                                     <% if(list_of_stat_attribute[i].color == 'warning') { %>
