@@ -1,12 +1,12 @@
 @import url("https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css");
 ::-webkit-scrollbar {
-  width: 6px;
-  height: 6px;
+  width: 3px;
+  height: 3px;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #A4A4A4;
-  border-radius: 10px;
+  border-radius: 0px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -130,6 +130,39 @@
 #modal-confirmation section button {
   width: 200px;
   height: 75px;
+}
+
+#info_card ::-webkit-scrollbar-thumb {
+  background-color: #3E8ED0;
+}
+
+#info_card .main-card-title {
+  border-bottom: 3px solid #3E8ED0;
+}
+
+#success_card ::-webkit-scrollbar-thumb {
+  background-color: #48C78E;
+}
+
+#success_card .main-card-title {
+  border-bottom: 3px solid #48C78E;
+}
+
+#danger_card ::-webkit-scrollbar-thumb {
+  background-color: #F14668;
+}
+
+#danger_card .main-card-title {
+  border-bottom: 3px solid #F14668;
+}
+
+#warning_card ::-webkit-scrollbar-thumb {
+  background-color: #FFBB00;
+}
+
+#warning_card .main-card-title {
+  color: #FFBB00 !important;
+  border-bottom: 3px solid #FFBB00;
 }
 
 #main-container {
@@ -286,20 +319,8 @@
   border: 3px solid #f14668 !important;
 }
 
-#setting-container {
+#stat-container {
   margin-left: 8rem;
-}
-
-#setting-container .card-button {
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  cursor: pointer;
-}
-
-#setting-container #card-button-danger:hover {
-  background-color: #E74566 !important;
 }
 
 #upgrade-container {
@@ -419,37 +440,20 @@
   font-size: 0.9rem;
 }
 
-#upgrade-container #info_card ::-webkit-scrollbar-thumb {
-  background-color: #3E8ED0;
+#setting-container {
+  margin-left: 8rem;
 }
 
-#upgrade-container #info_card .main-card-title {
-  border-bottom: 3px solid #3E8ED0;
+#setting-container .card-button {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
 }
 
-#upgrade-container #success_card ::-webkit-scrollbar-thumb {
-  background-color: #48C78E;
-}
-
-#upgrade-container #success_card .main-card-title {
-  border-bottom: 3px solid #48C78E;
-}
-
-#upgrade-container #danger_card ::-webkit-scrollbar-thumb {
-  background-color: #F14668;
-}
-
-#upgrade-container #danger_card .main-card-title {
-  border-bottom: 3px solid #F14668;
-}
-
-#upgrade-container #warning_card ::-webkit-scrollbar-thumb {
-  background-color: #FFBB00;
-}
-
-#upgrade-container #warning_card .main-card-title {
-  color: #FFBB00 !important;
-  border-bottom: 3px solid #FFBB00;
+#setting-container #card-button-danger:hover {
+  background-color: #E74566 !important;
 }
 
 #login-container .notification, #register-container .notification {

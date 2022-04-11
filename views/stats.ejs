@@ -10,10 +10,215 @@
             document.getElementsByClassName('link-item')[1].classList.add('link-item-is-active');
         </script>
         
-        <div id="main-container" class="container is-fluid mb-0 pb-0">
-            <section class="section mt-2 pt-2 mb-0 pb-0">
-                <div class="title is-4">Work In Progress</div>
+        <div id="stat-container" class="container is-fluid mb-0 pb-0">
+            <section class="section mt-2 pt-2 mb-0 pb-0" style="display: flex; flex-direction: row;">
+                <div class="mr-4" style="width: 30%;">
+                    <%
+                        const list_of_stat_attribute = [
+                            {display : "Penduduk", icon : "fa-user-group", color : "info"},
+                            {display : "Kemakmuran", icon : "fa-face-smile", color : "success"},
+                            {display : "Kriminalitas", icon : "fa-radiation", color : "danger"},
+                            {display : "Keuangan", icon : "fa-coins", color : "warning"}
+                        ];
+
+                        const value_of_stat_attribute = [
+                            [user_data.people_current, user_data.people_max, user_data.people_growth],
+                            [user_data.prosperity_current, user_data.prosperity_max, user_data.prosperity_growth],
+                            [user_data.crime_rate_current, user_data.crime_rate_max],
+                            [user_data.money_current, user_data.money_max, user_data.money_growth]
+                        ];
+                    %>
+
+                    <% for(let i = 0; i < list_of_stat_attribute.length; i++){ %>
+                        <%
+                            let color_class = `has-text-${list_of_stat_attribute[i].color}`
+                            if(list_of_stat_attribute[i].color == 'warning'){
+                                color_class = 'has_color_warning';
+                            }
+                        %>
+
+                        <div class="card mb-4" style="height: 168px;" id="<%= list_of_stat_attribute[i].color %>_card">
+                            <div class="card-content p-0">
+                                <div class="content">
+                                    <div class="icon-text title is-5 <%= color_class %> p-5 mb-2 main-card-title" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                        <div class="icon">
+                                            <i class="fa-solid <%= list_of_stat_attribute[i].icon %>"></i>
+                                        </div>
+
+                                        <div class="text"><%= list_of_stat_attribute[i].display %></div>
+                                    </div>
+
+                                    <div class="mr-3 ml-3">
+                                        <div>
+                                            <span>Saat Ini :</span>
+                                            <span class="<%= color_class %>"><%= value_of_stat_attribute[i][0] %></span> 
+                                        </div>
+
+                                        <div>
+                                            <span>Maksimal :</span>
+                                            <span class="<%= color_class %>"><%= value_of_stat_attribute[i][1] %></span> 
+                                        </div>
+
+                                        <% if(value_of_stat_attribute[i].length == 3){ %>
+                                            <div>
+                                                <span>Perkembangan :</span>
+                                                <span class="<%= color_class %>"><%= value_of_stat_attribute[i][2] %>%</span> 
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div class="mr-4" style="width: 30%;">
+                    <%
+                        const list_of_upgrade_attribute = [
+                            {display : "Penduduk", icon : "fa-user-group", color : "info"},
+                            {display : "Kemakmuran", icon : "fa-face-smile", color : "success"},
+                            // {display : "Kriminalitas", icon : "fa-radiation", color : "danger"},
+                            {display : "Keuangan", icon : "fa-coins", color : "warning"}
+                        ];
+                    %> 
+
+                    <% for(let i = 0; i < list_of_upgrade_attribute.length; i++){ %>
+                        <%
+                            let color_class = `has-text-${list_of_upgrade_attribute[i].color}`
+                            if(list_of_upgrade_attribute[i].color == 'warning'){
+                                color_class = 'has_color_warning';
+                            }
+                        %>
+
+                        <div class="card mb-4" style="height: 229px;" id="<%= list_of_upgrade_attribute[i].color %>_card">
+                            <div class="card-content p-0">
+                                <div class="content">
+                                    <div class="icon-text title is-5 <%= color_class %> p-5 mb-2 main-card-title" style="display: flex; flex-direction: row; justify-content: center; align-items: center;">
+                                        <div class="icon">
+                                            <i class="fa-solid <%= list_of_upgrade_attribute[i].icon %>"></i>
+                                        </div>
+    
+                                        <div class="text">Peningkatan <%= list_of_upgrade_attribute[i].display %></div>
+                                    </div>
+
+                                    <div style="height: 138px; overflow: auto;">
+                                        <% for(let j = 0; j < upgrade_datas[i].length; j++) { %>
+                                            <%
+                                                let total_max_value = upgrade_datas[i][j].amount;
+                                                let multiplier_max_value = upgrade_datas[i][j].amount;
+                                                for(let k = 0; k < user_data.upgrades[i][j][1] - 1; k++){
+                                                    multiplier_max_value = Math.trunc(multiplier_max_value * 15 / 10);
+                                                    total_max_value = total_max_value + multiplier_max_value;
+                                                };
+                                            %>
+
+                                            <div class="card has-background-light m-0 mr-3 ml-3 mb-2" style="box-shadow: 0px 0px !important;">
+                                                <div class="card-content p-2">
+                                                    <div class="content">
+                                                        <div class="icon-text title is-6 <%= color_class %>" style="display: flex; flex-direction: row; align-items: center;">
+                                                            <div class="icon">
+                                                                <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
+                                                            </div>
+                        
+                                                            <div class="text">
+                                                                <%= upgrade_datas[i][j].name %>
+                                                                Lv. <%= user_data.upgrades[i][j][1] %>
+
+                                                                <% if(upgrade_datas[i][j].type == 'Max'){ %>
+                                                                    Max <%= total_max_value %>
+                                                                <% } else if(upgrade_datas[i][j].type == 'Growth'){ %>
+                                                                    Growth <%= total_max_value %>%
+                                                                <% } %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        <% } %>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                </div>
+
+                <div style="width: 33.5%;">
+                    <div class="card" style="height: 720px;">
+                        <div class="card-content">
+                            <div class="content">
+                                <div class="title is-4 m-0 p-0 mb-2 has_title_underline" style="white-space: nowrap;">
+                                    Kasus-Kasus Terdahulu
+                                </div>
+
+                                <div class="content pr-1" style="height: 645px; overflow: auto;">
+                                    <%
+                                        let case_count = 0;
+                                    %>
+
+                                    <% for(let i = 0; i < user_data.crime_case.length - 1; i++){ %>
+                                        <% for(let j = 0; j < user_data.crime_case[i].case.length; j++){ %>
+                                            <%
+                                                let case_response_is_guilty = true;
+                                                if(user_data.crime_case[i].case[j].case_response == 'innocent'){
+                                                    case_response_is_guilty = false;
+                                                };
+
+                                                let card_border_color = 'success';
+                                                if(case_response_is_guilty != case_datas[user_data.crime_case[i].case[j].case_id - 1].case_is_guilty ){
+                                                    card_border_color = 'danger';
+                                                };
+                                            %>
+
+                                            <div class="card has-background-light mb-2 has_border_<%= card_border_color %>" style="box-shadow: 0px 0px !important;">
+                                                <div class="card-content">
+                                                    <div class="content has-text-justified">
+                                                        <div class="title is-6 m-0 p-0" style="white-space: nowrap;">
+                                                            Kasus Ke-<%= case_count+1 %>
+                                                        </div>
+        
+                                                        <div>
+                                                            <div class="mb-3">Hari Ke-<%= i+1 %>, Kasus Ke-<%= j+1 %></div>
+                                                            <div class="mb-3"><%= case_datas[user_data.crime_case[i].case[j].case_id - 1].crime %></div>
+                                                            
+                                                            <div class="mb-3">
+                                                                <div>Sedangkan :</div>
+                                                                <div><%= case_datas[user_data.crime_case[i].case[j].case_id - 1].conclusion %></div>
+                                                            </div>
+                                                            
+                                                            <div>
+                                                                <div>Evaluasi Anda :</div>
+
+                                                                <% if(case_response_is_guilty){ %>
+                                                                    <div>Bersalah</div>
+                                                                <% } %>
+
+                                                                <% if(!case_response_is_guilty){ %>
+                                                                    <div>Tidak Bersalah</div>
+                                                                <% } %>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <% case_count += 1%>
+                                        <% }; %>
+                                    <% }; %>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
             </section>
         </div>
     </body>
+    
+    <%
+        // console.log(user_data.crime_case)
+        // console.log(user_data.crime_case.length)
+        // console.log(user_data.crime_case[0].case.length)
+        // console.log(user_data.crime_case[0].case[0])
+        // console.log(case_datas[user_data.crime_case[0].case[0].case_id - 1].crime)
+    %>
 </html>
