@@ -64,9 +64,9 @@
                                                                     <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
     
                                                                     <% if(list_of_stat_attribute[i].color == 'warning') { %>
-                                                                        <div class="icon-background-text has_color_yellow upgrade-icon-symbol">+</div>
+                                                                        <div class="icon-background-text has_color_warning_dark upgrade-icon-symbol">+</div>
                                                                     <% } else { %>
-                                                                        <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
+                                                                        <div class="icon-background-text has_color_<%= list_of_stat_attribute[i].color %>_dark upgrade-icon-symbol">+</div>
                                                                     <% } %>
                                                                 </div>
                                                             <% } else if(final_cost_value <= user_data.money_current) { %>
@@ -74,7 +74,7 @@
                                                                     <i class="fa-solid <%= upgrade_datas[i][j].icon %>"></i>
     
                                                                     <% if(list_of_stat_attribute[i].color == 'warning') { %>
-                                                                        <div class="icon-background-text has_color_yellow upgrade-icon-symbol">+</div>
+                                                                        <div class="icon-background-text has_color_warning upgrade-icon-symbol">+</div>
                                                                     <% } else { %>
                                                                         <div class="icon-background-text has-text-<%= list_of_stat_attribute[i].color %> upgrade-icon-symbol">+</div>
                                                                     <% } %>
@@ -102,14 +102,14 @@
                                                                     <% } %>
                                                                     
                                                                     <% if(list_of_stat_attribute[i].color == 'warning') { %>
-                                                                        <script>document.getElementsByClassName('card_upgrade_amount_<%= i %>')['<%= j %>'].classList.add('has_color_yellow')</script>
+                                                                        <script>document.getElementsByClassName('card_upgrade_amount_<%= i %>')['<%= j %>'].classList.add('has_color_warning')</script>
                                                                     <% } else { %>
                                                                         <script>document.getElementsByClassName('card_upgrade_amount_<%= i %>')['<%= j %>'].classList.add('has-text-<%= list_of_stat_attribute[i].color %>')</script>
                                                                     <% }%>
                                                                     
                                                                     <div class="subtitle m-0 p-0 upgrade-card-subtitle">
                                                                         <span>Biaya peningkatan : </span>
-                                                                        <span><i class="fa-solid fa-coins has_color_yellow"></i> <span class="has_color_yellow"><%= final_cost_value %></span></span>
+                                                                        <span><i class="fa-solid fa-coins has_color_warning"></i> <span class="has_color_warning"><%= final_cost_value %></span></span>
                                                                     </div>
                                                                 </div>                                                                    
                                                             </div>
@@ -131,13 +131,13 @@
             <div class="card-content p-0">
                 <div class="content p-2">
                     <div class="icon-text title is-5">
-                        <span class="has_color_yellow">Sisa Uang : </span> 
+                        <span class="has_color_warning">Sisa Uang : </span> 
 
                         <span class="icon">
-                            <i class="fa-solid fa-coins has_color_yellow"></i>
+                            <i class="fa-solid fa-coins has_color_warning"></i>
                         </span>
 
-                        <span class="has_color_yellow"><%= user_data.money_current %></span> 
+                        <span class="has_color_warning"><%= user_data.money_current %></span> 
                     </div>
                 </div>
             </div>

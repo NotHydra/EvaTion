@@ -70,8 +70,24 @@
   border-bottom: 3px solid #363636;
 }
 
-.has_color_yellow {
+.has_color_warning {
   color: #FFBB00;
+}
+
+.has_color_info_dark {
+  color: #0e446f;
+}
+
+.has_color_success_dark {
+  color: #085734;
+}
+
+.has_color_danger_dark {
+  color: #F14668;
+}
+
+.has_color_warning_dark {
+  color: #846512;
 }
 
 .has_border_info {
