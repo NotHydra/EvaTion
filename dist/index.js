@@ -317,8 +317,8 @@ function main(user_datas, case_datas, upgrade_datas) {
             console.log(err);
         });
     });
-    app.get('/stats', check_authenticated, (req, res) => {
-        res.render('stats', { title: 'Informasi', user_data: req.user });
+    app.get('/information', check_authenticated, (req, res) => {
+        res.render('information', { title: 'Informasi', user_data: req.user, case_datas, upgrade_datas });
     });
     app.get('/upgrade', check_authenticated, (req, res) => {
         res.render('upgrade', { title: 'Peningkatan', user_data: req.user, upgrade_datas });

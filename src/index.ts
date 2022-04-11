@@ -355,8 +355,8 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
         });
     });
 
-    app.get('/stats', check_authenticated, (req: Request, res: Response) => {
-        res.render('stats', { title: 'Informasi', user_data: req.user, case_datas, upgrade_datas });
+    app.get('/information', check_authenticated, (req: Request, res: Response) => {
+        res.render('information', { title: 'Informasi', user_data: req.user, case_datas, upgrade_datas });
     });
 
     app.get('/upgrade', check_authenticated, (req: Request, res: Response) => {
