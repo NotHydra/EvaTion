@@ -513,6 +513,10 @@ function main(user_datas: any, case_datas: any, upgrade_datas: any){
         })
     });
 
+    app.get('/contributor', check_authenticated, (req: Request, res: Response) => {
+        res.render('contributor', { title: 'Kontributor', user_data: req.user });
+    });
+
     //#endregion Main Request
 
     //#region Authentication Request

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" class="has-background-light">
+    <head>
+        <%- include('partials/head', { title }); %>
+    </head>
+
+    <body>
+        <%- include('partials/nav', { user_data }); %>
+        <script>
+            document.getElementsByClassName('link-item')[4].classList.add('link-item-is-active');
+        </script>
+
+        <div id="setting-container" class="container is-fluid mb-0 pb-0">
+            <section class="section mt-2 pt-2 mb-0 pb-0">
+                <div class="columns mr-6">
+                    <div class="column">
+                        <%
+                            const list_of_contributor = [
+                                {name: "Rizky Irswanda Ramadhana", picture: "rizky", description: "Anak Sekolah Menengah Kejuruan yang berada di jurusan Software Engineering yang suka menghabiskan waktunya di bidang Data Science dan Back-End Development.", title: "Lead Developer", social: [
+                                    {icon: "fa-instagram", link: "https://www.instagram.com/rz_irswanda/"},
+                                    {icon: "fa-google", link: "mailto: rizky.irswanda115@gmail.com"},
+                                    {icon: "fa-github", link: "https://github.com/NotHydra"},
+                                ]},
+                                {name: "Muhammad Farhan", picture: "farhan", description: "Anak SMK Software Engineering yang saat ini sedang mempelajari Web Development terutama Back-End dan Web Graphic, Biasa menghabiskan waktu dengan membaca novel.", title: "Question Writer", social: [
+                                    {icon: "fa-google", link: "mailto: farhanmuhammad25420@gmail.com"},
+                                    {icon: "fa-github", link: "https://github.com/sorystia1"},
+                                ]},
+                                {name: "Yehezkiel Dio Sinolungan", picture: "dio", description: "Web Developer yang berspesialisasi di bidang Front-End, Design Infrastructure dan Architecture. Saat ini sedang bekerja sebagai seorang Freelancer dan tertarik kepada Open-Source Software.", title: "System Admin", social: [
+                                    {icon: "fa-instagram", link: "https://www.instagram.com/yhezkiel.dio/"},
+                                    {icon: "fa-discord", link: "https://discord.com/users/327849142774923266"},
+                                    {icon: "fa-github", link: "https://github.com/yehezkieldio"},
+                                ]}
+                            ]
+                        %>
+
+                        <% list_of_contributor.forEach(contributor => { %>
+                            <div class="card mb-4">
+                                <div class="card-content">
+                                    <div class="columns">
+                                        <div class="column is-1">
+                                            <figure class="image">
+                                                <img src="/image/profile/<%= contributor.picture %>.jpg" alt="<%= contributor.name %> Profile Picture" style="border: 4px solid rgba(54, 54, 54, 1) !important; border-radius: 8px;">
+                                            </figure>
+                                        </div>
+                                        <div class="column is-10">
+                                            <h1 class="title is-4">
+                                                <%= contributor.name %> - <%= contributor.title %>
+                                            </h1>
+                                            <p class="subtitle is-5">
+                                                <%= contributor.description %>
+                                            </p>
+                                            <p>
+                                                <% contributor.social.forEach(social => { %>
+                                                    <a href="<%= social.link %>" class="mr-2" style="color: rgba(54, 54, 54, 1) !important">
+                                                        <span class="is-icon">
+                                                            <i class="fab <%= social.icon %> fa-lg"></i>
+                                                        </span>
+                                                    </a>
+                                                <% }) %>
+                                            </p>
+                                        </div>
+                                    </div>  
+                                </div>
+                            </div>
+                        <% }) %> 
+
+                    </div>             
+                </div>
+            </section>
+        </div>
+    </body>
+</html>
