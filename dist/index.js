@@ -455,6 +455,9 @@ function main(user_datas, case_datas, upgrade_datas) {
             console.log(err);
         });
     });
+    app.get('/contributor', check_authenticated, (req, res) => {
+        res.render('contributor', { title: 'Kontributor', user_data: req.user });
+    });
     //#endregion Main Request
     //#region Authentication Request
     app.get('/login', check_not_authenticated, (req, res) => {
